@@ -4,11 +4,11 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # install deps first (better layer caching)
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # app code + vendored engine + data
-COPY . .
+COPY backend/ .
 
 # App Platform / most hosts inject $PORT; default to 8080 locally
 ENV PORT=8080
