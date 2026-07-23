@@ -1,0 +1,505 @@
+{
+  "patterns": [
+    {
+      "pattern_id": "TCM_YIN_XU",
+      "name": "Yin Deficiency",
+      "framework": "tcm",
+      "thermal": "cool_empty_heat",
+      "excess_deficiency": "deficiency",
+      "can_be_root": true,
+      "expected_evidence": [
+        {
+          "code": "FIVE_PALM_HEAT",
+          "weight": 3
+        },
+        {
+          "code": "NIGHT_SWEATS",
+          "weight": 3
+        },
+        {
+          "code": "AFTERNOON_HEAT",
+          "weight": 2
+        },
+        {
+          "code": "MALAR_FLUSH",
+          "weight": 2
+        },
+        {
+          "code": "DRY_MOUTH_NIGHT",
+          "weight": 2
+        },
+        {
+          "code": "DRY_EYES_SKIN",
+          "weight": 1
+        },
+        {
+          "code": "WAKE_1_3AM",
+          "weight": 1
+        },
+        {
+          "code": "STOOL_DRY_FRAGMENTED",
+          "weight": 2
+        },
+        {
+          "code": "TONGUE_RED",
+          "weight": 3
+        },
+        {
+          "code": "TONGUE_CRIMSON",
+          "weight": 3
+        },
+        {
+          "code": "TONGUE_CENTRAL_CRACK",
+          "weight": 3
+        },
+        {
+          "code": "COAT_PEELED",
+          "weight": 4
+        },
+        {
+          "code": "COAT_DRY",
+          "weight": 2
+        },
+        {
+          "code": "PULSE_THIN",
+          "weight": 2
+        },
+        {
+          "code": "PULSE_RAPID",
+          "weight": 2
+        },
+        {
+          "code": "KNOWN_YIN_DEF",
+          "weight": 5
+        }
+      ],
+      "mutually_exclusive_with": [],
+      "treatment_principle": "Nourish Yin & fluids; clear empty-heat; do NOT dry or over-warm.",
+      "formulas": [
+        "Liu Wei Di Huang Wan",
+        "Sha Shen Mai Dong Tang",
+        "(Ayur) Shatavari, Amalaki, Guduchi"
+      ],
+      "caution": "no_warm_dry"
+    },
+    {
+      "pattern_id": "TCM_XUE_XU",
+      "name": "Blood Deficiency",
+      "framework": "tcm",
+      "thermal": "neutral_dry",
+      "excess_deficiency": "deficiency",
+      "can_be_root": true,
+      "expected_evidence": [
+        {
+          "code": "PALE_COMPLEXION",
+          "weight": 2
+        },
+        {
+          "code": "DIZZINESS",
+          "weight": 2
+        },
+        {
+          "code": "NUMBNESS_CRAMP",
+          "weight": 1
+        },
+        {
+          "code": "PALPITATIONS",
+          "weight": 1
+        },
+        {
+          "code": "POOR_MEMORY",
+          "weight": 1
+        },
+        {
+          "code": "SCANTY_MENSES",
+          "weight": 2
+        },
+        {
+          "code": "BRITTLE_HAIR_NAILS",
+          "weight": 1
+        },
+        {
+          "code": "DREAM_SLEEP",
+          "weight": 2
+        },
+        {
+          "code": "DARK_CIRCLES",
+          "weight": 1
+        },
+        {
+          "code": "TONGUE_PALE",
+          "weight": 2
+        },
+        {
+          "code": "TONGUE_THIN",
+          "weight": 3
+        },
+        {
+          "code": "PULSE_THIN",
+          "weight": 3
+        },
+        {
+          "code": "PULSE_CHOPPY",
+          "weight": 1
+        },
+        {
+          "code": "KNOWN_BLOOD_DEF",
+          "weight": 5
+        }
+      ],
+      "mutually_exclusive_with": [],
+      "treatment_principle": "Nourish blood; build rakta; gentle warm-sweet nourishment.",
+      "formulas": [
+        "Si Wu Tang",
+        "Ba Zhen Tang",
+        "Gui Pi Tang",
+        "(Ayur) Shatavari, Draksha, Lohasava"
+      ],
+      "caution": "no_warm_dry"
+    },
+    {
+      "pattern_id": "TCM_QI_XU",
+      "name": "Qi Deficiency",
+      "framework": "tcm",
+      "thermal": "neutral",
+      "excess_deficiency": "deficiency",
+      "can_be_root": true,
+      "expected_evidence": [
+        {
+          "code": "FATIGUE",
+          "weight": 2
+        },
+        {
+          "code": "SOB_EXERTION",
+          "weight": 2
+        },
+        {
+          "code": "LOW_VOICE",
+          "weight": 1
+        },
+        {
+          "code": "SPONTANEOUS_SWEAT",
+          "weight": 2
+        },
+        {
+          "code": "PALPITATIONS",
+          "weight": 1
+        },
+        {
+          "code": "STOOL_LOOSE",
+          "weight": 1
+        },
+        {
+          "code": "TONGUE_SWOLLEN_TEETHMARK",
+          "weight": 3
+        },
+        {
+          "code": "PULSE_WEAK",
+          "weight": 3
+        }
+      ],
+      "mutually_exclusive_with": [],
+      "treatment_principle": "Tonify qi; strengthen Spleen & Lung.",
+      "formulas": [
+        "Si Jun Zi Tang",
+        "Bu Zhong Yi Qi Tang",
+        "(Ayur) Ashwagandha, Chyawanprash"
+      ],
+      "caution": null
+    },
+    {
+      "pattern_id": "TCM_YANG_XU",
+      "name": "Yang Deficiency",
+      "framework": "tcm",
+      "thermal": "cold",
+      "excess_deficiency": "deficiency",
+      "can_be_root": false,
+      "expected_evidence": [
+        {
+          "code": "COLD_LIMBS",
+          "weight": 2
+        },
+        {
+          "code": "FEELS_COLD",
+          "weight": 2
+        },
+        {
+          "code": "LOWBACK_COLD",
+          "weight": 2
+        },
+        {
+          "code": "NOCTURIA",
+          "weight": 2
+        },
+        {
+          "code": "WORSE_COLD",
+          "weight": 1
+        },
+        {
+          "code": "PUFFY_OEDEMA",
+          "weight": 1
+        },
+        {
+          "code": "DAWN_DIARRHEA",
+          "weight": 2
+        },
+        {
+          "code": "TONGUE_PALE",
+          "weight": 2
+        },
+        {
+          "code": "TONGUE_SWOLLEN_TEETHMARK",
+          "weight": 1
+        },
+        {
+          "code": "COAT_WHITE_THICK",
+          "weight": 1
+        },
+        {
+          "code": "PULSE_SLOW",
+          "weight": 2
+        },
+        {
+          "code": "PULSE_WEAK",
+          "weight": 2
+        },
+        {
+          "code": "KNOWN_YANG_DEF",
+          "weight": 4
+        }
+      ],
+      "mutually_exclusive_with": [],
+      "treatment_principle": "Warm & tonify yang; warm the Spleen/Kidney.",
+      "formulas": [
+        "Jin Gui Shen Qi Wan",
+        "Li Zhong Wan",
+        "(Ayur) Ashwagandha + Shunthi"
+      ],
+      "caution": null
+    },
+    {
+      "pattern_id": "TCM_QI_ZHI",
+      "name": "Liver Qi Stagnation",
+      "framework": "tcm",
+      "thermal": "neutral",
+      "excess_deficiency": "excess",
+      "can_be_root": true,
+      "expected_evidence": [
+        {
+          "code": "IRRITABILITY",
+          "weight": 2
+        },
+        {
+          "code": "SIGHING",
+          "weight": 2
+        },
+        {
+          "code": "CHEST_RIB_DISTENSION",
+          "weight": 2
+        },
+        {
+          "code": "PMS",
+          "weight": 1
+        },
+        {
+          "code": "THROAT_LUMP",
+          "weight": 2
+        },
+        {
+          "code": "WORSE_STRESS",
+          "weight": 2
+        },
+        {
+          "code": "GAS_BLOATING",
+          "weight": 1
+        },
+        {
+          "code": "STOOL_ALTERNATING",
+          "weight": 2
+        },
+        {
+          "code": "STOOL_DRY_FRAGMENTED",
+          "weight": 1
+        },
+        {
+          "code": "TONGUE_SIDES_RED",
+          "weight": 3
+        },
+        {
+          "code": "PULSE_WIRY",
+          "weight": 3
+        }
+      ],
+      "mutually_exclusive_with": [],
+      "treatment_principle": "Course the Liver & move qi; emotional outlet, movement.",
+      "formulas": [
+        "Xiao Yao San",
+        "Chai Hu Shu Gan San",
+        "(Ayur) Kumaryasava, Aloe, Hingvastak"
+      ],
+      "caution": null
+    },
+    {
+      "pattern_id": "TCM_XUE_YU",
+      "name": "Blood Stasis",
+      "framework": "tcm",
+      "thermal": "neutral",
+      "excess_deficiency": "excess",
+      "can_be_root": false,
+      "expected_evidence": [
+        {
+          "code": "FIXED_STABBING_PAIN",
+          "weight": 2
+        },
+        {
+          "code": "DARK_CLOTS",
+          "weight": 2
+        },
+        {
+          "code": "BRUISE_EASILY",
+          "weight": 2
+        },
+        {
+          "code": "DARK_CIRCLES",
+          "weight": 1
+        },
+        {
+          "code": "TONGUE_PURPLE",
+          "weight": 3
+        },
+        {
+          "code": "PULSE_CHOPPY",
+          "weight": 2
+        }
+      ],
+      "mutually_exclusive_with": [],
+      "treatment_principle": "Invigorate blood & dispel stasis.",
+      "formulas": [
+        "Xue Fu Zhu Yu Tang",
+        "Shi Xiao San",
+        "(Ayur) Manjishtha, Guggulu"
+      ],
+      "caution": null
+    },
+    {
+      "pattern_id": "TCM_TAN_SHI",
+      "name": "Phlegm-Damp",
+      "framework": "tcm",
+      "thermal": "cold_damp",
+      "excess_deficiency": "excess",
+      "can_be_root": false,
+      "expected_evidence": [
+        {
+          "code": "HEAVY_BODY",
+          "weight": 2
+        },
+        {
+          "code": "STICKY_MOUTH",
+          "weight": 2
+        },
+        {
+          "code": "PHLEGM_THROAT",
+          "weight": 2
+        },
+        {
+          "code": "PUFFY_OEDEMA",
+          "weight": 1
+        },
+        {
+          "code": "STOOL_MUCUS",
+          "weight": 2
+        },
+        {
+          "code": "STOOL_LOOSE",
+          "weight": 1
+        },
+        {
+          "code": "COAT_GREASY",
+          "weight": 3
+        },
+        {
+          "code": "TONGUE_SWOLLEN_TEETHMARK",
+          "weight": 2
+        },
+        {
+          "code": "PULSE_SLIPPERY",
+          "weight": 3
+        }
+      ],
+      "mutually_exclusive_with": [],
+      "treatment_principle": "Strengthen Spleen; dry damp & transform phlegm.",
+      "formulas": [
+        "Er Chen Tang",
+        "Ping Wei San",
+        "(Ayur) Trikatu, Punarnava"
+      ],
+      "caution": null
+    },
+    {
+      "pattern_id": "TCM_SHI_RE",
+      "name": "Damp-Heat / Heat",
+      "framework": "tcm",
+      "thermal": "hot",
+      "excess_deficiency": "excess",
+      "can_be_root": false,
+      "expected_evidence": [
+        {
+          "code": "FEELS_HOT",
+          "weight": 2
+        },
+        {
+          "code": "THIRST_COLD",
+          "weight": 2
+        },
+        {
+          "code": "BITTER_TASTE",
+          "weight": 2
+        },
+        {
+          "code": "STICKY_MOUTH",
+          "weight": 1
+        },
+        {
+          "code": "YELLOW_DISCHARGE",
+          "weight": 2
+        },
+        {
+          "code": "DARK_URINE",
+          "weight": 1
+        },
+        {
+          "code": "TONGUE_TIP_RED",
+          "weight": 2
+        },
+        {
+          "code": "COAT_YELLOW",
+          "weight": 3
+        },
+        {
+          "code": "COAT_GREASY",
+          "weight": 1
+        },
+        {
+          "code": "PULSE_SLIPPERY",
+          "weight": 1
+        },
+        {
+          "code": "PULSE_RAPID",
+          "weight": 2
+        },
+        {
+          "code": "PULSE_FLOODING",
+          "weight": 2
+        }
+      ],
+      "mutually_exclusive_with": [],
+      "treatment_principle": "Clear heat & resolve damp; avoid greasy-spicy-sweet, alcohol.",
+      "formulas": [
+        "Gan Lu Xiao Du Dan",
+        "Long Dan Xie Gan Tang",
+        "(Ayur) Neem, Guduchi, Avipattikar"
+      ],
+      "caution": null
+    }
+  ]
+}

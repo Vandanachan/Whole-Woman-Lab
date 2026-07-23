@@ -1,0 +1,30 @@
+{
+  "safety": [
+    {
+      "rule_id": "SAFE_NO_WARM_DRY",
+      "when_any_present": [
+        "TCM_YIN_XU",
+        "TCM_XUE_XU"
+      ],
+      "severity": "high",
+      "message": "Yin/Blood deficiency present: do NOT use strong warming, pungent-hot, drying or harsh-draining protocols (they consume yin/blood and worsen heat). Favour gentle, nourishing, moistening, cooling-neutral measures."
+    },
+    {
+      "rule_id": "SAFE_MIXED_COLD_HEAT",
+      "when_cold_and_heat": true,
+      "severity": "moderate",
+      "message": "Mixed cold & heat / deficiency masking heat: address root (move stagnation, gently clear heat, nourish) before strong warming."
+    },
+    {
+      "rule_id": "SAFE_STAG_COLD",
+      "when_all_present": [
+        "TCM_QI_ZHI"
+      ],
+      "when_any_present": [
+        "COLD_LIMBS"
+      ],
+      "severity": "advisory",
+      "message": "Cold extremities with qi stagnation may be yang failing to spread, not true yang vacuity: move qi before heavy warming."
+    }
+  ]
+}

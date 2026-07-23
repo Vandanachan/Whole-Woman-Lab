@@ -1,0 +1,22 @@
+{
+  "objective_multiplier": 3.0,
+  "present_threshold": 0.42,
+  "tendency_threshold": 0.22,
+  "diagnosis_threshold": 0.55,
+  "data_confidence": {
+    "symptom": 0.9,
+    "clinical_sign": 1.0,
+    "tongue_finding": 1.0,
+    "pulse_finding": 1.0,
+    "lab_result": 1.0,
+    "history_item": 1.0,
+    "htma_mineral": 1.0
+  },
+  "confidence_weights": {
+    "score": 0.55,
+    "objective": 0.25,
+    "coverage": 0.2
+  },
+  "coverage_target": 4,
+  "contradiction_penalty": 0.1
+}

@@ -1,0 +1,452 @@
+{
+  "FATIGUE": {
+    "label": "Tires easily / low stamina",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "SOB_EXERTION": {
+    "label": "Breathless on exertion",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "LOW_VOICE": {
+    "label": "Weak or low voice",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "SPONTANEOUS_SWEAT": {
+    "label": "Spontaneous daytime sweating",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "COLD_LIMBS": {
+    "label": "Cold hands and feet",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "FEELS_COLD": {
+    "label": "Feels colder than others",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "LOWBACK_COLD": {
+    "label": "Cold, sore low back and knees",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "NOCTURIA": {
+    "label": "Frequent clear urination / nocturia",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "WORSE_COLD": {
+    "label": "Worse in cold, better with warmth",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "FIVE_PALM_HEAT": {
+    "label": "Warm palms, soles or chest",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "AFTERNOON_HEAT": {
+    "label": "Afternoon/evening low-grade heat",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "NIGHT_SWEATS": {
+    "label": "Night sweats",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "MALAR_FLUSH": {
+    "label": "Red cheeks / malar flush",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "DRY_MOUTH_NIGHT": {
+    "label": "Dry mouth/throat worse at night",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "DRY_EYES_SKIN": {
+    "label": "Dry eyes and skin",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "TIRED_WIRED": {
+    "label": "Depleted yet unable to switch off",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "WAKE_1_3AM": {
+    "label": "Wakes 1-3am, hard to resettle",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "FEELS_HOT": {
+    "label": "Feels hot, seeks cool",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "THIRST_COLD": {
+    "label": "Strong thirst for cold drinks",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "PALE_COMPLEXION": {
+    "label": "Pale, lustreless complexion",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "DIZZINESS": {
+    "label": "Dizziness, floaters, blurred vision",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "NUMBNESS_CRAMP": {
+    "label": "Numbness / muscle cramps",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "PALPITATIONS": {
+    "label": "Palpitations",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "POOR_MEMORY": {
+    "label": "Poor memory / concentration",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "SCANTY_MENSES": {
+    "label": "Scanty, pale or delayed menses",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "BRITTLE_HAIR_NAILS": {
+    "label": "Dry brittle hair and nails",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "DREAM_SLEEP": {
+    "label": "Dream-disturbed sleep, easily startled",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "IRRITABILITY": {
+    "label": "Irritability, mood swings",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "SIGHING": {
+    "label": "Frequent sighing",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "CHEST_RIB_DISTENSION": {
+    "label": "Chest/rib/breast distension",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "PMS": {
+    "label": "Premenstrual irritability/breast tenderness",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "THROAT_LUMP": {
+    "label": "Lump-in-throat sensation",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "WORSE_STRESS": {
+    "label": "Symptoms clearly worse with stress",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "FIXED_STABBING_PAIN": {
+    "label": "Fixed, stabbing pains",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "DARK_CLOTS": {
+    "label": "Dark menstrual clots / dark blood",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "BRUISE_EASILY": {
+    "label": "Bruises easily / dark spots",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "DARK_CIRCLES": {
+    "label": "Dark circles under eyes",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "HEAVY_BODY": {
+    "label": "Heaviness of body/head, foggy head",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "STICKY_MOUTH": {
+    "label": "Sticky or greasy mouth",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "PHLEGM_THROAT": {
+    "label": "Phlegm in throat",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "PUFFY_OEDEMA": {
+    "label": "Puffiness / oedema",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "BITTER_TASTE": {
+    "label": "Bitter or foul-sticky taste",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "YELLOW_DISCHARGE": {
+    "label": "Yellow discharge / damp groin",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "DARK_URINE": {
+    "label": "Scanty dark/yellow urine",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "GAS_BLOATING": {
+    "label": "Gas and bloating, worse with stress",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "STOOL_DRY_FRAGMENTED": {
+    "label": "Stool dry, fragmented, broken pieces",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "STOOL_LOOSE": {
+    "label": "Stool loose or shapeless",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "STOOL_ALTERNATING": {
+    "label": "Alternating loose and dry stool",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "STOOL_MUCUS": {
+    "label": "Mucus in the stool",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "DAWN_DIARRHEA": {
+    "label": "Watery / dawn diarrhoea",
+    "modality": "symptom",
+    "type": "symptom",
+    "objective": false
+  },
+  "TONGUE_PALE": {
+    "label": "Pale tongue body",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "TONGUE_RED": {
+    "label": "Red tongue body",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "TONGUE_CRIMSON": {
+    "label": "Deep-red / crimson body",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "TONGUE_PURPLE": {
+    "label": "Purple / bluish body",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "TONGUE_THIN": {
+    "label": "Thin / small body",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "TONGUE_SWOLLEN_TEETHMARK": {
+    "label": "Swollen, teeth-marked body",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "TONGUE_CENTRAL_CRACK": {
+    "label": "Central (Stomach) crack",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "TONGUE_TIP_RED": {
+    "label": "Red tip",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "TONGUE_SIDES_RED": {
+    "label": "Red sides",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "COAT_WHITE_THICK": {
+    "label": "Thick white coat",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "COAT_YELLOW": {
+    "label": "Yellow coat",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "COAT_PEELED": {
+    "label": "Peeled / no coat",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "COAT_GREASY": {
+    "label": "Greasy / sticky coat",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "COAT_DRY": {
+    "label": "Dry coat",
+    "modality": "tongue",
+    "type": "tongue_finding",
+    "objective": true
+  },
+  "PULSE_SLOW": {
+    "label": "Slow pulse",
+    "modality": "pulse",
+    "type": "pulse_finding",
+    "objective": true
+  },
+  "PULSE_RAPID": {
+    "label": "Rapid pulse",
+    "modality": "pulse",
+    "type": "pulse_finding",
+    "objective": true
+  },
+  "PULSE_WEAK": {
+    "label": "Weak / empty pulse",
+    "modality": "pulse",
+    "type": "pulse_finding",
+    "objective": true
+  },
+  "PULSE_THIN": {
+    "label": "Thin / thready pulse",
+    "modality": "pulse",
+    "type": "pulse_finding",
+    "objective": true
+  },
+  "PULSE_WIRY": {
+    "label": "Wiry / taut pulse",
+    "modality": "pulse",
+    "type": "pulse_finding",
+    "objective": true
+  },
+  "PULSE_SLIPPERY": {
+    "label": "Slippery pulse",
+    "modality": "pulse",
+    "type": "pulse_finding",
+    "objective": true
+  },
+  "PULSE_CHOPPY": {
+    "label": "Choppy / rough pulse",
+    "modality": "pulse",
+    "type": "pulse_finding",
+    "objective": true
+  },
+  "PULSE_FLOODING": {
+    "label": "Big / flooding pulse",
+    "modality": "pulse",
+    "type": "pulse_finding",
+    "objective": true
+  },
+  "KNOWN_BLOOD_DEF": {
+    "label": "Confirmed Blood deficiency (anaemia / hx)",
+    "modality": "history",
+    "type": "history_item",
+    "objective": true
+  },
+  "KNOWN_YIN_DEF": {
+    "label": "Confirmed Yin deficiency (Stomach/Kidney/Lung)",
+    "modality": "history",
+    "type": "history_item",
+    "objective": true
+  },
+  "KNOWN_YANG_DEF": {
+    "label": "Confirmed Yang deficiency / cold-hypofunction",
+    "modality": "history",
+    "type": "history_item",
+    "objective": true
+  }
+}
