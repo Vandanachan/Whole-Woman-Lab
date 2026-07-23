@@ -66,3 +66,38 @@ def test_pdf_empty_case_still_valid():
     r = client.post("/report/pdf", json={"codes": ["FATIGUE"]})
     assert r.status_code == 200
     assert r.content[:5] == b"%PDF-"
+
+
+def test_treatment_plan_present_and_elaborate():
+    r = client.post("/diagnose", json={"codes": SAMPLE, "client": {"name": "Test", "age": 24}})
+    assert r.status_code == 200
+    tp = r.json()["report"]["treatment_plan"]
+    assert tp["narrative"]
+    assert tp["by_pattern"], "expected at least one pattern's nutrition/herb plan"
+    for p in tp["by_pattern"]:
+        assert p["favor"], f"{p['pattern']} missing favour foods"
+        assert p["avoid"], f"{p['pattern']} missing avoid foods"
+        assert p["herbs_detail"], f"{p['pattern']} missing herb detail"
+        assert p["lifestyle"], f"{p['pattern']} missing lifestyle guidance"
+        assert p["sample_day"], f"{p['pattern']} missing a sample day"
+    assert tp["master_avoid"]
+    assert tp["glossary"]["tastes"]["pungent"]
+    assert tp["glossary"]["thermal_properties"]["warming"]
+    # Yin Deficiency + Liver Qi Stagnation should trigger a reconciliation note
+    assert tp["reconciliation_notes"]
+
+
+def test_treatment_plan_empty_when_no_diagnosis():
+    r = client.post("/diagnose", json={"codes": ["FATIGUE"]})
+    tp = r.json()["report"]["treatment_plan"]
+    assert tp["by_pattern"] == []
+    assert "threshold" in tp["narrative"]
+
+
+def test_pdf_treatment_plan_is_elaborate():
+    """The PDF should now run to several pages of treatment content, not just
+    a one-page diagnostic summary."""
+    r = client.post("/report/pdf", json={"codes": SAMPLE, "client": {"name": "Test", "age": 24}})
+    assert r.status_code == 200
+    assert r.content[:5] == b"%PDF-"
+    assert len(r.content) > 20000  # the expanded nutrition/herb/lifestyle content is substantial

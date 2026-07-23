@@ -1,0 +1,752 @@
+{
+  "taste_glossary": {
+    "pungent": {
+      "also_called": "acrid / spicy",
+      "description": "The taste of foods and spices that you feel as heat, sharpness or a 'moving' sensation on the tongue and sinuses — ginger, chili, black pepper, mustard.",
+      "action": "Disperses and moves qi and blood outward and upward, opens the pores, induces a light sweat, warms the body, and breaks up stagnation.",
+      "when_helpful": "Cold patterns, stagnation, early-stage colds, sluggish digestion.",
+      "when_harmful": "In Yin/Blood deficiency or heat conditions, pungent-hot foods dry fluids and worsen internal heat.",
+      "example_foods_herbs": ["ginger", "garlic", "onion", "scallion / spring onion", "chili & cayenne", "black pepper", "mustard seed", "horseradish", "cinnamon bark", "clove", "star anise", "cardamom", "fennel seed", "fresh basil", "rosemary", "coriander seed"]
+    },
+    "bitter": {
+      "also_called": "tikta",
+      "description": "The sharp, sometimes astringent-edged taste of leafy greens, coffee, and unripe fruit rinds.",
+      "action": "Drains downward and outward, dries dampness, clears heat, descends rebellious qi, and has a mild purging quality.",
+      "when_helpful": "Heat, damp-heat, and excess conditions — bitter 'clears and drains'.",
+      "when_harmful": "In quantity it can damage the Spleen's digestive fire and further deplete fluids in an already-deficient person.",
+      "example_foods_herbs": ["bitter melon / bitter gourd", "dandelion greens", "arugula / rocket", "radicchio", "endive", "kale", "rapini", "grapefruit pith", "turmeric", "fenugreek leaves", "neem", "coffee (small amount)"]
+    },
+    "sweet": {
+      "also_called": "madhura — meaning wholesome complex sweetness, not sugar",
+      "description": "The taste of grains, root vegetables and cooked fruit — the body's primary 'building block' taste, very different from refined sugar.",
+      "action": "Tonifies, nourishes, harmonises other tastes, moistens, and relaxes tension.",
+      "when_helpful": "Any deficiency (qi, blood, yin, yang) — sweet (whole-food) is the foundational tonifying taste.",
+      "when_harmful": "Refined sugar and excess sweet in quantity creates dampness, phlegm and weakens the Spleen.",
+      "example_foods_herbs": ["rice", "oats", "sweet potato", "pumpkin & winter squash", "carrot", "dates & jujube", "figs", "licorice root", "honey (small amount)", "cooked apple", "congee / rice porridge", "most whole grains"]
+    },
+    "sour": {
+      "also_called": "amla",
+      "description": "The puckering taste of citrus, vinegar and unripe fruit.",
+      "action": "Astringes and consolidates — stops excessive sweating, diarrhoea or discharge, generates fluid, and gently contracts tissue.",
+      "when_helpful": "Fluid leakage (night sweats, spontaneous sweating, chronic loose stool), and to generate fluids in dryness.",
+      "when_harmful": "In excess it can constrain qi flow and worsen stagnation-type conditions.",
+      "example_foods_herbs": ["lemon", "lime", "rice vinegar / apple cider vinegar", "hawthorn (shan zha)", "umeboshi / sour plum", "pomegranate", "unripe fruit"]
+    },
+    "salty": {
+      "also_called": "lavana",
+      "description": "The taste of the sea — seaweed, miso, tamari, shellfish.",
+      "action": "Softens hardness and nodules, moistens, directs energy downward, and nourishes the Kidney system.",
+      "when_helpful": "Nodules, cysts, constipation from dryness, Kidney-yin support.",
+      "when_harmful": "In excess it burdens the Kidneys, raises blood pressure, and can damage blood/bone over time.",
+      "example_foods_herbs": ["kelp / kombu", "wakame", "nori", "miso", "tamari", "sea salt (moderate)", "shellfish"]
+    },
+    "astringent": {
+      "also_called": "kashaya",
+      "description": "The dry, puckering, 'unripe banana' mouthfeel taste — distinct from sour, though the two often overlap.",
+      "action": "Absorbs, dries, and tightens tissue; stops bleeding, excess sweating or diarrhoea.",
+      "when_helpful": "Leakage-type conditions — spontaneous sweating, loose stool, heavy bleeding.",
+      "when_harmful": "In excess it causes constipation, dryness and can lock in stagnation.",
+      "example_foods_herbs": ["pomegranate skin/rind", "unripe banana", "lentils", "cranberry", "turmeric", "green banana", "alum (topical)"]
+    }
+  },
+  "thermal_glossary": {
+    "warming": {
+      "description": "Foods that measurably raise the sensation of internal warmth and stimulate circulation and digestive fire.",
+      "action": "Dispels cold, invigorates circulation, raises metabolic activity.",
+      "when_helpful": "Cold, Yang deficiency, sluggish circulation.",
+      "when_harmful": "In heat or Yin-deficient patterns, warming foods generate more heat and consume fluids.",
+      "examples": ["ginger", "cinnamon", "black pepper", "garlic", "onion", "chili", "lamb", "chicken", "cherries", "walnuts", "chestnuts", "leek", "mustard greens", "basil", "rosemary", "clove", "nutmeg"]
+    },
+    "cooling": {
+      "description": "Foods that lower the sensation of internal heat and calm inflammation.",
+      "action": "Clears heat, calms inflammation, generates fluids.",
+      "when_helpful": "Heat, damp-heat, Yin deficiency with empty-heat symptoms.",
+      "when_harmful": "In cold or deficient patterns, cooling foods further weaken digestive fire and can create damp.",
+      "examples": ["cucumber", "watermelon", "mung bean", "tofu", "mint", "dandelion", "bitter melon", "pear", "lettuce", "seaweed", "crab", "most raw salad vegetables"]
+    },
+    "neutral": {
+      "description": "Foods that sit in the middle — safe, balanced staples that suit most constitutions.",
+      "action": "Tonify gently without pushing the body toward heat or cold.",
+      "when_helpful": "A safe daily base for almost any pattern.",
+      "when_harmful": "Rarely harmful on its own; only relevant in combination with other qualities.",
+      "examples": ["rice", "sweet potato", "carrot", "cabbage", "most beans", "pork", "beef", "eggs", "potato", "dates"]
+    },
+    "moistening": {
+      "description": "Foods that build fluids and lubricate tissue — the key quality for Yin and Blood deficiency.",
+      "action": "Nourishes Yin, generates fluids, lubricates dryness.",
+      "when_helpful": "Yin deficiency, Blood deficiency, dryness of skin/eyes/mouth.",
+      "when_harmful": "In damp or phlegm patterns, moistening foods can add to a feeling of heaviness or congestion.",
+      "examples": ["pear", "tofu", "soy milk", "spinach", "sesame seed", "honey", "milk", "egg yolk", "oyster", "mulberry", "white/snow fungus", "bone broth", "coconut"]
+    },
+    "drying": {
+      "description": "Foods and substances that consume fluids over time.",
+      "action": "Reduces internal moisture — useful only when dampness itself is the problem.",
+      "when_helpful": "Damp and phlegm-damp patterns.",
+      "when_harmful": "In Yin or Blood deficiency, drying foods worsen an already-depleted state.",
+      "examples": ["chili in excess", "alcohol", "coffee in excess", "fried spicy food", "excess raw garlic/onion", "cinnamon bark in excess"]
+    },
+    "damp_draining": {
+      "description": "A special sub-category of cooling/neutral foods that specifically promote healthy fluid movement and urination.",
+      "action": "Resolves dampness and mild fluid retention without being harshly cold.",
+      "when_helpful": "Phlegm-damp, puffiness/oedema, heaviness.",
+      "when_harmful": "Overuse can be mildly draining in an already-deficient person — balance with tonifying foods.",
+      "examples": ["barley", "job's tears / coix seed", "red azuki bean", "corn silk tea", "winter melon", "celery"]
+    }
+  },
+  "how_to_read_this_section": "Every food below is tagged with its taste (what it does energetically) and its thermal nature (warming / cooling / neutral / moistening / drying). Where a food appears on an 'avoid' list, the reason given is not a general health judgement — it is specific to the pattern identified in this reading. The same food can be encouraged for one person and discouraged for another, depending on their constitution.",
+  "patterns": {
+    "TCM_YIN_XU": {
+      "name": "Yin Deficiency",
+      "overview": "Yin is the body's cooling, moistening, substance-building aspect — the fluids, tissue-lubrication and 'brakes' that balance out activity and heat. When Yin is depleted, empty heat rises unchecked (night sweats, five-palm heat, a dry mouth at night, waking 1-3am). The entire nutritional strategy is to rebuild fluids gently: think 'gentle, nourishing, moistening, cooling-to-neutral' at every meal, and to firmly avoid anything warming, drying, spicy or stimulating, because those qualities burn through the little fluid reserve that is left.",
+      "favor": {
+        "grains_starches": [
+          {"food": "Mung bean", "taste": ["sweet"], "thermal": "cooling", "why": "Classic Yin-nourishing legume; gentle on digestion and builds fluid."},
+          {"food": "Barley", "taste": ["sweet"], "thermal": "cooling", "why": "Cooling and moistening without being heavy."},
+          {"food": "Rice congee / rice porridge", "taste": ["sweet"], "thermal": "neutral", "why": "The single most reliable Yin-building daily staple — soft, moist, easy to digest."},
+          {"food": "Oats", "taste": ["sweet"], "thermal": "neutral", "why": "Gentle, moistening, blood-sugar friendly."},
+          {"food": "Quinoa (well soaked/cooked)", "taste": ["sweet"], "thermal": "neutral", "why": "Nutrient-dense without being drying."}
+        ],
+        "vegetables": [
+          {"food": "Spinach", "taste": ["sweet"], "thermal": "cooling/moistening", "why": "Builds blood and fluid together."},
+          {"food": "Zucchini / courgette", "taste": ["sweet"], "thermal": "cooling", "why": "High water content, gentle on digestion."},
+          {"food": "Cucumber", "taste": ["sweet"], "thermal": "cooling", "why": "Direct fluid replenishment; best eaten at room temperature, not iced."},
+          {"food": "Asparagus", "taste": ["sweet", "bitter"], "thermal": "cooling", "why": "Nourishes Yin and gently clears empty heat."},
+          {"food": "Seaweed (kelp, kombu, wakame)", "taste": ["salty"], "thermal": "cooling", "why": "Deeply moistening, softens dryness."},
+          {"food": "Black fungus / white (snow) fungus", "taste": ["sweet"], "thermal": "neutral/moistening", "why": "A classic TCM Yin-tonic 'jelly' texture food, used in sweet soups for dryness."},
+          {"food": "Lotus root", "taste": ["sweet"], "thermal": "cooling", "why": "Clears heat while nourishing fluids."},
+          {"food": "Tomato (cooked)", "taste": ["sweet", "sour"], "thermal": "cooling", "why": "Generates fluid, clears mild heat."}
+        ],
+        "fruits": [
+          {"food": "Pear", "taste": ["sweet"], "thermal": "cooling/moistening", "why": "THE classic Yin/Lung-moistening fruit — excellent for dry mouth, dry cough, dry skin."},
+          {"food": "Mulberry", "taste": ["sweet", "sour"], "thermal": "cooling", "why": "Nourishes Yin and Blood together."},
+          {"food": "Goji berry", "taste": ["sweet"], "thermal": "neutral", "why": "Nourishes Liver/Kidney Yin; a small daily handful is ideal."},
+          {"food": "Watermelon (room temperature, moderate amount)", "taste": ["sweet"], "thermal": "cooling", "why": "Generates fluid quickly — good in small regular amounts, not iced."},
+          {"food": "Banana (ripe)", "taste": ["sweet"], "thermal": "cooling", "why": "Moistens dryness of the intestines."},
+          {"food": "Coconut water", "taste": ["sweet"], "thermal": "cooling", "why": "Excellent natural fluid/electrolyte replenisher."}
+        ],
+        "proteins": [
+          {"food": "Tofu", "taste": ["sweet"], "thermal": "cooling", "why": "Light, moistening, easy to digest protein."},
+          {"food": "Duck", "taste": ["sweet", "salty"], "thermal": "cooling/neutral", "why": "One of the few Yin-nourishing meats — unlike most meat, duck is considered cooling."},
+          {"food": "Pork (lean)", "taste": ["sweet", "salty"], "thermal": "neutral/moistening", "why": "Nourishes Yin and fluids in moderate amounts."},
+          {"food": "Oysters & clams", "taste": ["salty", "sweet"], "thermal": "cooling", "why": "Deeply nourishing to Yin, classic for night sweats and restlessness."},
+          {"food": "Egg (soft-cooked)", "taste": ["sweet"], "thermal": "neutral", "why": "Nourishes Yin and Blood together; the yolk especially."},
+          {"food": "Black sesame seed", "taste": ["sweet"], "thermal": "neutral/moistening", "why": "Nourishes Liver/Kidney Yin and blood; good for dry hair/skin."},
+          {"food": "Soy milk", "taste": ["sweet"], "thermal": "cooling", "why": "Gentle daily moistening protein source."}
+        ],
+        "herbs_spices_mild": [
+          {"food": "Mint (small amount)", "taste": ["pungent (mild)"], "thermal": "cooling", "why": "One of the very few 'pungent' herbs safe here because it is cooling, not heating."},
+          {"food": "Coriander/cilantro leaf", "taste": ["pungent (mild)", "sweet"], "thermal": "cooling", "why": "Light and fresh rather than drying."},
+          {"food": "Fennel (small amount, in soups)", "taste": ["sweet", "pungent (mild)"], "thermal": "neutral", "why": "Aids digestion without the drying heat of chili/cinnamon."}
+        ],
+        "beverages": [
+          {"food": "Room-temperature or warm (not hot) water", "taste": [], "thermal": "neutral", "why": "Baseline hydration; avoid ice-cold, which shocks digestion."},
+          {"food": "Chrysanthemum tea", "taste": ["sweet", "bitter"], "thermal": "cooling", "why": "Clears empty heat, gentle on the eyes and head."},
+          {"food": "Mulberry leaf tea", "taste": ["sweet", "bitter"], "thermal": "cooling", "why": "Nourishes Yin, clears mild heat."},
+          {"food": "White fungus (snow fungus) sweet soup", "taste": ["sweet"], "thermal": "neutral/moistening", "why": "A dessert-soup used specifically as a Yin tonic in Chinese food therapy."}
+        ]
+      },
+      "avoid": [
+        {"food": "Chili, cayenne, hot mustard, horseradish", "why": "Pungent and hot — they disperse and dry fluids, directly consuming Yin and stoking empty heat."},
+        {"food": "Fresh ginger, raw garlic, raw onion/scallion (in large amounts)", "why": "Pungent-warming; used generously over time they dry blood and Yin."},
+        {"food": "Cinnamon bark, clove, star anise, fennel seed in quantity", "why": "Warming-drying spices — same mechanism, they burn through fluid reserves."},
+        {"food": "Alcohol", "why": "Hot and drying by nature; directly damages Yin and generates empty heat — often the single biggest lifestyle aggravator of this pattern."},
+        {"food": "Coffee and energy drinks", "why": "Stimulating and drying, and disrupts the 11pm-3am sleep window when Yin is naturally replenished."},
+        {"food": "Fried, greasy, deep-fried food", "why": "Hard to digest, and the digestive struggle itself generates internal heat."},
+        {"food": "Excess sugar and refined carbohydrate", "why": "Generates internal heat and dampness, disrupting the delicate balance this pattern needs."},
+        {"food": "Lamb, heavily spiced red meat, char-grilled/BBQ meat", "why": "Warming and drying by nature — works directly against the goal of moistening."},
+        {"food": "Smoking", "why": "Heats and dries the body from the inside."},
+        {"food": "Staying up past 11pm", "why": "Not a food, but the single most important 'diet' change: Yin and Blood are physiologically restored between 11pm and 3am — no amount of correct eating compensates for chronic late nights."}
+      ],
+      "cooking_methods": {
+        "favor": ["Steaming", "gentle simmering", "congee / rice porridge", "poaching", "light braising with plenty of liquid"],
+        "avoid": ["Grilling", "deep frying", "high-heat wok-searing", "charring", "smoking food"]
+      },
+      "meal_rhythm": "Keep meal times regular and never skip meals — irregular eating itself generates internal heat. Stop eating at least 3 hours before bed. Avoid very hot or spicy food in the evening, as it can disturb the very sleep this pattern needs to repair Yin.",
+      "herbs_detail": [
+        {"name": "Shatavari", "tradition": "Ayurveda", "action": "The classic 'hundred spouses' Yin/fluid tonic for women — cooling and sweet, nourishes reproductive tissue and supports hormonal fluid balance.", "note": "Often taken as a milk decoction or powder; generally well tolerated daily."},
+        {"name": "Amalaki (Amla)", "tradition": "Ayurveda", "action": "The richest natural source of vitamin C used in Ayurveda — sour-sweet-astringent and cooling; a rejuvenative (rasayana) that nourishes all seven tissue layers.", "note": "Can be taken as fresh fruit, juice, or powder (churna)."},
+        {"name": "Guduchi", "tradition": "Ayurveda", "action": "Bitter-astringent and cooling; balances heat while supporting immune function without adding warmth.", "note": "Widely used as a daily tonic in Ayurvedic practice."},
+        {"name": "Liu Wei Di Huang Wan", "tradition": "TCM formula", "action": "The foundational Kidney-Yin tonic formula (rehmannia, cornus, dioscorea, alisma, poria, moutan).", "note": "A classical patent formula; use under practitioner guidance for dosing."},
+        {"name": "Sha Shen Mai Dong Tang", "tradition": "TCM formula", "action": "Nourishes Lung and Stomach Yin and moistens dryness — well suited to a dry cough or persistent dry mouth.", "note": "Often taken as a tea/decoction."},
+        {"name": "American ginseng (xi yang shen)", "tradition": "TCM herb", "action": "A cooling qi-and-Yin tonic — unlike warming Asian/Korean ginseng, this variety suits Yin-deficient heat patterns.", "note": "Can be simmered as a slice-tea."},
+        {"name": "Ophiopogon (mai men dong)", "tradition": "TCM herb", "action": "Moistens Lung and Stomach Yin; classic for dryness of the throat and mouth.", "note": "Commonly combined into formulas rather than used alone."}
+      ],
+      "lifestyle": [
+        "Prioritise 7-8 hours of sleep, ideally asleep before 11pm — this is the single highest-leverage change for this pattern.",
+        "Favour gentle, Yin-building movement — yin yoga, easy walking, swimming, tai chi. Avoid hot yoga, saunas and very intense training, all of which push the body to sweat out the fluids it is trying to rebuild.",
+        "Avoid overheated rooms and excessive sun exposure.",
+        "Reduce screen time before bed — both the light and the mental stimulation 'burn' Yin in TCM terms.",
+        "Calming practices (meditation, slow breathing) directly ease the irritability and night sweats that come with rising empty heat."
+      ],
+      "sample_day": {
+        "breakfast": "Warm rice congee with goji berries and a few soaked almonds.",
+        "lunch": "Steamed fish, sautéed spinach, quinoa, and a cucumber salad with rice vinegar.",
+        "dinner": "Mung bean and seaweed soup with steamed tofu and lightly cooked greens.",
+        "snack": "Pear slices, a few walnuts, coconut water.",
+        "drinks": "Room-temperature water through the day; chrysanthemum or mulberry leaf tea."
+      }
+    },
+    "TCM_XUE_XU": {
+      "name": "Blood Deficiency",
+      "overview": "Blood in TCM nourishes and moistens every tissue, houses the mind at night, and is built fresh from what the Spleen and Stomach digest each day. When Blood is deficient, the goal is twofold: eat foods that directly build blood (iron- and nutrient-dense, gently warming-sweet) and protect the digestive fire that manufactures blood in the first place — which means going easy on raw, cold and undercooked food, however 'healthy' it may look on paper.",
+      "favor": {
+        "grains_starches": [
+          {"food": "Red rice / black rice", "taste": ["sweet"], "thermal": "neutral/warm", "why": "Nutrient-dense, building grains traditionally associated with blood-nourishment."},
+          {"food": "Oats", "taste": ["sweet"], "thermal": "neutral", "why": "Gentle, easy to digest, good base for blood-building additions like dates."},
+          {"food": "Quinoa", "taste": ["sweet"], "thermal": "neutral", "why": "A more complete protein grain to support tissue-building."}
+        ],
+        "vegetables": [
+          {"food": "Beetroot", "taste": ["sweet"], "thermal": "neutral", "why": "Rich in iron and folate, classic blood-building vegetable."},
+          {"food": "Dark leafy greens (cooked)", "taste": ["sweet", "bitter"], "thermal": "neutral", "why": "Iron and folate rich — cooked rather than raw so digestion isn't taxed."},
+          {"food": "Carrot", "taste": ["sweet"], "thermal": "neutral/warm", "why": "Gently building and easy to digest."},
+          {"food": "Black fungus (wood ear)", "taste": ["sweet"], "thermal": "neutral", "why": "Specifically noted in Chinese food therapy for nourishing blood."},
+          {"food": "Shiitake mushroom", "taste": ["sweet"], "thermal": "neutral", "why": "Nutrient-dense, supports overall vitality."},
+          {"food": "Pumpkin", "taste": ["sweet"], "thermal": "warm", "why": "Building and easy on digestion."}
+        ],
+        "fruits": [
+          {"food": "Red dates / jujube (hong zao)", "taste": ["sweet"], "thermal": "warm", "why": "THE classic daily blood tonic in Chinese food therapy — can be eaten as a snack or simmered into tea."},
+          {"food": "Goji berry", "taste": ["sweet"], "thermal": "neutral", "why": "Nourishes blood and Liver/Kidney Yin together."},
+          {"food": "Longan fruit", "taste": ["sweet"], "thermal": "warm", "why": "Nourishes blood and calms the mind — good if blood deficiency is causing poor sleep."},
+          {"food": "Black grapes", "taste": ["sweet", "sour"], "thermal": "neutral", "why": "Traditionally associated with blood nourishment."},
+          {"food": "Figs, cherries, mulberry", "taste": ["sweet"], "thermal": "neutral/warm", "why": "Gently building, iron-supportive."}
+        ],
+        "proteins": [
+          {"food": "Liver (small amount, occasional)", "taste": ["sweet"], "thermal": "warm", "why": "Extremely nutrient- and iron-dense — a small weekly serving goes a long way."},
+          {"food": "Red meat (moderate, grass-fed where possible)", "taste": ["sweet"], "thermal": "warm", "why": "Direct source of haem iron and B12 for blood building."},
+          {"food": "Bone broth", "taste": ["sweet"], "thermal": "warm/neutral", "why": "Deeply nourishing and easy to absorb — a food-therapy staple for deficiency of any kind."},
+          {"food": "Egg yolk", "taste": ["sweet"], "thermal": "neutral", "why": "Nourishes blood and Yin together."},
+          {"food": "Dark poultry meat", "taste": ["sweet"], "thermal": "warm", "why": "More building than white meat."},
+          {"food": "Black beans, kidney beans", "taste": ["sweet"], "thermal": "neutral", "why": "Plant-based iron and protein source."},
+          {"food": "Oily fish (salmon, sardine)", "taste": ["sweet", "salty"], "thermal": "neutral/warm", "why": "Nutrient-dense, supports overall tissue building."}
+        ],
+        "herbs_spices_mild": [
+          {"food": "A little fresh ginger in cooking", "taste": ["pungent"], "thermal": "warm", "why": "Helps digestion break down blood-building foods; use lightly, not in excess."},
+          {"food": "Cinnamon (in cooking, moderate)", "taste": ["pungent", "sweet"], "thermal": "warm", "why": "Warms and aids absorption; avoid heavy daily excess."},
+          {"food": "Fennel", "taste": ["sweet", "pungent"], "thermal": "neutral", "why": "Supports digestion of richer, building foods."}
+        ],
+        "beverages": [
+          {"food": "Red date & goji tea", "taste": ["sweet"], "thermal": "warm", "why": "A daily gentle blood-tonic drink."},
+          {"food": "Warm bone broth", "taste": ["sweet", "salty"], "thermal": "warm", "why": "Nourishing, easy to absorb."},
+          {"food": "Beet juice (small amount)", "taste": ["sweet"], "thermal": "neutral", "why": "Concentrated source of blood-building nutrients."}
+        ]
+      },
+      "avoid": [
+        {"food": "Excess raw or cold food, iced drinks", "why": "Weaken the Spleen-Stomach digestive fire that is responsible for transforming food into blood in the first place — this pattern is often made worse, not better, by an all-raw diet."},
+        {"food": "Very restrictive or low-calorie dieting, skipping meals", "why": "Blood is literally built from what you eat; under-eating directly worsens blood deficiency."},
+        {"food": "Excess caffeine", "why": "Can interfere with iron absorption and overstimulates without nourishing."},
+        {"food": "Highly processed, nutrient-poor food", "why": "'Empty calories' do not supply the raw material blood is built from."},
+        {"food": "Excess bitter or strongly draining foods (large amounts of dandelion, bitter melon)", "why": "The draining, descending action of bitter taste can further deplete an already-deficient state."},
+        {"food": "Alcohol", "why": "Depletes blood and Yin and taxes the Liver, which is said to store blood."}
+      ],
+      "cooking_methods": {
+        "favor": ["Slow-cooked stews", "soups", "braises (these 'pre-digest' food so the body doesn't have to work as hard)", "congee with blood-building additions"],
+        "avoid": ["Relying on large raw salads as a meal replacement", "juice cleanses / very low-calorie regimens"]
+      },
+      "meal_rhythm": "Keep three consistent meals a day, never skip breakfast, and include a protein source at each meal.",
+      "herbs_detail": [
+        {"name": "Shatavari", "tradition": "Ayurveda", "action": "Sweet, building, gentle rejuvenative that supports blood and reproductive tissue.", "note": "Often taken with warm milk or water."},
+        {"name": "Draksha", "tradition": "Ayurveda", "action": "A raisin-based fermented tonic, gently building and easy to digest.", "note": "Traditionally taken in small daily doses."},
+        {"name": "Lohasava", "tradition": "Ayurveda", "action": "A fermented iron preparation classically used to support blood-building/anaemia.", "note": "Should be used under practitioner guidance regarding dose."},
+        {"name": "Si Wu Tang (Four Substance Decoction)", "tradition": "TCM formula", "action": "The foundational blood tonic formula — dang gui, chuan xiong, bai shao, shu di huang.", "note": "Base formula that many other blood-nourishing formulas build on."},
+        {"name": "Ba Zhen Tang", "tradition": "TCM formula", "action": "Combines the blood tonic (Si Wu Tang) with the qi tonic (Si Jun Zi Tang) — recognising that qi is needed to generate and move blood.", "note": "A common choice when both qi and blood are low."},
+        {"name": "Gui Pi Tang", "tradition": "TCM formula", "action": "Nourishes blood by strengthening the Spleen (the 'source' of blood production) and calms the mind — useful when blood deficiency also causes insomnia or palpitations.", "note": "Often used for stress-related blood deficiency presentations."},
+        {"name": "Dang Gui (Angelica sinensis)", "tradition": "TCM herb", "action": "The premier 'woman's herb' — sweet, pungent and warm; nourishes and moves blood together.", "note": "Widely used in cooking (as a soup ingredient) as well as in formulas."},
+        {"name": "Red dates (da zao)", "tradition": "TCM food-herb", "action": "A gentle, daily, food-safe blood tonic.", "note": "Can simply be eaten as a snack or added to any soup/tea."},
+        {"name": "Longan (long yan rou)", "tradition": "TCM herb", "action": "Nourishes blood and calms the shen (spirit/mind).", "note": "Good added to tea or congee, especially in the evening."}
+      ],
+      "lifestyle": [
+        "Gentle, regular movement (walking, easy yoga) to stimulate circulation without overexerting, since intense exercise itself consumes blood.",
+        "Moderate screen and close-eye-work time — in TCM the eyes are said to be nourished by blood, so eye strain is thought to consume it.",
+        "If menstruating heavily, prioritise iron-rich intake and discuss with a practitioner.",
+        "Prioritise sleep — Blood is said to return to and be replenished by the Liver overnight."
+      ],
+      "sample_day": {
+        "breakfast": "Oatmeal with red dates and goji berries.",
+        "lunch": "Beef and black bean stew with a beetroot side salad.",
+        "dinner": "Chicken bone broth soup with mushrooms and dark leafy greens.",
+        "snack": "Dried dates, a few longan.",
+        "drinks": "Red date tea, warm water."
+      }
+    },
+    "TCM_QI_XU": {
+      "name": "Qi Deficiency",
+      "overview": "Qi is the body's functional energy — what powers digestion, immunity, voice, and stamina. This pattern responds best to warm, well-cooked, easily-digestible food that supports rather than burdens the Spleen and Lung. The guiding idea: give the digestive system as little work as possible so the energy it does have can go toward building qi, not fighting cold, raw or heavy food.",
+      "favor": {
+        "grains_starches": [
+          {"food": "White or brown rice (well-cooked, congee ideal)", "taste": ["sweet"], "thermal": "warm/neutral", "why": "The classic qi-building staple — soft, warm and easy to extract energy from."},
+          {"food": "Oats", "taste": ["sweet"], "thermal": "neutral", "why": "Gentle and sustaining."},
+          {"food": "Sweet potato", "taste": ["sweet"], "thermal": "neutral/warm", "why": "Nourishes Spleen qi directly."},
+          {"food": "Millet", "taste": ["sweet"], "thermal": "neutral", "why": "Traditionally used to strengthen digestion."}
+        ],
+        "vegetables": [
+          {"food": "Pumpkin / winter squash", "taste": ["sweet"], "thermal": "warm", "why": "A classic Spleen-qi tonic vegetable."},
+          {"food": "Carrot", "taste": ["sweet"], "thermal": "neutral/warm", "why": "Gentle, building, easy to digest."},
+          {"food": "Shiitake mushroom", "taste": ["sweet"], "thermal": "neutral", "why": "Supports immune and overall qi."},
+          {"food": "Chinese yam (shan yao)", "taste": ["sweet"], "thermal": "neutral", "why": "A food-and-herb both — tonifies Spleen and Lung qi directly."},
+          {"food": "Green beans", "taste": ["sweet"], "thermal": "neutral", "why": "Easy-to-digest vegetable protein/fibre source."}
+        ],
+        "fruits": [
+          {"food": "Dates", "taste": ["sweet"], "thermal": "warm", "why": "Building and easy on digestion."},
+          {"food": "Cherries", "taste": ["sweet"], "thermal": "warm", "why": "Gently warming and nourishing."},
+          {"food": "Figs (stewed/cooked preferred)", "taste": ["sweet"], "thermal": "neutral", "why": "Cooked fruit is easier on a weak digestive fire than raw/cold fruit."}
+        ],
+        "proteins": [
+          {"food": "Chicken", "taste": ["sweet"], "thermal": "warm", "why": "The classic qi-tonic meat in Chinese food therapy."},
+          {"food": "Beef (moderate)", "taste": ["sweet"], "thermal": "warm", "why": "Building, but use in moderation to avoid overburdening digestion."},
+          {"food": "Lentils, chickpeas", "taste": ["sweet"], "thermal": "neutral", "why": "Plant-based, easy-digest protein when well cooked."},
+          {"food": "Eggs", "taste": ["sweet"], "thermal": "neutral", "why": "Complete, easily absorbed protein."},
+          {"food": "White fish", "taste": ["sweet"], "thermal": "neutral/warm", "why": "Light, easy-digest protein."}
+        ],
+        "herbs_spices_mild": [
+          {"food": "Ginger (small amount, cooked in)", "taste": ["pungent"], "thermal": "warm", "why": "Supports digestion without being overly dispersing."},
+          {"food": "Cardamom", "taste": ["pungent", "sweet"], "thermal": "warm", "why": "Aids digestion and reduces bloating."},
+          {"food": "Fennel", "taste": ["sweet", "pungent"], "thermal": "neutral", "why": "Gentle digestive support."}
+        ],
+        "beverages": [
+          {"food": "Warm water throughout the day", "taste": [], "thermal": "warm", "why": "Cold water is thought to directly tax digestive qi."},
+          {"food": "Astragalus (huang qi) tea", "taste": ["sweet"], "thermal": "warm", "why": "A classic daily qi-tonic drink."},
+          {"food": "Warm congee-water", "taste": ["sweet"], "thermal": "warm", "why": "The cooking water from rice porridge, sipped, is a traditional gentle qi tonic."}
+        ]
+      },
+      "avoid": [
+        {"food": "Raw salads as a main meal, iced drinks, cold smoothies straight from the fridge", "why": "The Spleen 'dislikes cold and raw' in TCM theory — this is the fastest way to directly weaken an already-deficient digestive engine."},
+        {"food": "Excess dairy, especially cold dairy (ice cream)", "why": "Can create dampness and further burden digestion in a qi-deficient person."},
+        {"food": "Overeating, eating too fast, or eating while stressed", "why": "All further tax qi that is already in short supply."},
+        {"food": "Excess sugar and refined carbohydrate", "why": "Produces a short energy spike followed by a bigger qi crash."},
+        {"food": "Skipping meals then overeating later", "why": "Erratic eating exhausts digestive qi more than consistent smaller meals."},
+        {"food": "Heavy, greasy, hard-to-digest food (deep fried, very rich creamy sauces)", "why": "Requires more digestive qi to process than is available."}
+      ],
+      "cooking_methods": {
+        "favor": ["Slow-cooked", "well-cooked through", "congee", "soups", "steaming"],
+        "avoid": ["Raw preparations as a meal replacement", "very heavy cream-based sauces", "deep frying"]
+      },
+      "meal_rhythm": "Regular timing matters more here than almost anywhere else. Never skip a warm breakfast — Stomach and Spleen qi are traditionally considered strongest in the morning. Avoid large, heavy dinners late at night. If very fatigued, smaller and more frequent meals can be easier to process than three large ones.",
+      "herbs_detail": [
+        {"name": "Ashwagandha", "tradition": "Ayurveda", "action": "A warming adaptogen that builds ojas (vital reserve energy) and supports stamina and resilience to stress.", "note": "Commonly taken as a powder in warm milk or water."},
+        {"name": "Chyawanprash", "tradition": "Ayurveda", "action": "A classic amla-based herbal jam tonic that builds overall vitality and immune resilience.", "note": "Traditionally taken by the spoonful, often in the morning."},
+        {"name": "Si Jun Zi Tang (Four Gentlemen Decoction)", "tradition": "TCM formula", "action": "The foundational qi tonic — ren shen/dang shen, bai zhu, fu ling, gan cao.", "note": "The base formula many other qi-tonics are built from."},
+        {"name": "Bu Zhong Yi Qi Tang", "tradition": "TCM formula", "action": "Tonifies qi and specifically lifts 'sinking' qi — useful for prolapse-type symptoms or profound chronic fatigue.", "note": "Practitioner-guided; a well-known classical formula."},
+        {"name": "Astragalus (huang qi)", "tradition": "TCM herb", "action": "Sweet and warm; tonifies qi and strengthens immune resilience.", "note": "Commonly simmered into everyday soups — one of the safest daily food-herbs."},
+        {"name": "Codonopsis (dang shen)", "tradition": "TCM herb", "action": "A gentler, food-safe alternative to ginseng for everyday qi support.", "note": "Good for daily soups when a milder tonic is wanted."},
+        {"name": "Chinese yam (shan yao)", "tradition": "TCM food-herb", "action": "Tonifies Spleen and Lung qi.", "note": "Safe as a daily food, not just a medicinal herb."}
+      ],
+      "lifestyle": [
+        "Gentle, regular exercise — walking, qi gong, tai chi — enough to move qi but not so much it depletes it further.",
+        "Prioritise adequate rest and avoid pushing through exhaustion.",
+        "Manage worry and overthinking — in TCM these are said to 'knot' Spleen qi.",
+        "Keep a consistent sleep-wake schedule."
+      ],
+      "sample_day": {
+        "breakfast": "Warm rice congee with a poached egg and a few slices of ginger.",
+        "lunch": "Chicken and Chinese yam soup with steamed greens.",
+        "dinner": "Lentil dal with brown rice and sautéed carrots.",
+        "snack": "Steamed sweet potato.",
+        "drinks": "Warm water through the day; astragalus tea."
+      }
+    },
+    "TCM_YANG_XU": {
+      "name": "Yang Deficiency",
+      "overview": "Yang is the body's warmth and metabolic fire. When it runs low, cold settles in — cold limbs, a cold low back, feeling cold generally, frequent night-time urination. This is the one pattern where generous warming spices are actively encouraged rather than restricted, and where cold or raw food is the single biggest dietary mistake someone can make, because it directly douses the digestive fire this pattern depends on.",
+      "favor": {
+        "grains_starches": [
+          {"food": "Sticky / glutinous rice", "taste": ["sweet"], "thermal": "warm", "why": "Warming and grounding."},
+          {"food": "Oats cooked with warming spices", "taste": ["sweet"], "thermal": "warm", "why": "A warm, sustaining breakfast base."},
+          {"food": "Quinoa", "taste": ["sweet"], "thermal": "neutral", "why": "Building, cooked warm."}
+        ],
+        "vegetables": [
+          {"food": "Leek and onion (cooked)", "taste": ["pungent", "sweet"], "thermal": "warm", "why": "Warms the middle and supports circulation."},
+          {"food": "Pumpkin / winter squash", "taste": ["sweet"], "thermal": "warm", "why": "A classic warming, building vegetable."},
+          {"food": "Cooked cabbage", "taste": ["sweet"], "thermal": "neutral/warm", "why": "Easy on digestion when cooked, unlike raw."},
+          {"food": "Black beans", "taste": ["sweet"], "thermal": "neutral", "why": "Traditionally linked to Kidney support."}
+        ],
+        "fruits": [
+          {"food": "Cherries", "taste": ["sweet"], "thermal": "warm", "why": "One of the few warming fruits."},
+          {"food": "Longan", "taste": ["sweet"], "thermal": "warm", "why": "Warming and building."},
+          {"food": "Small amounts of dried fruit cooked into congee", "taste": ["sweet"], "thermal": "warm/neutral", "why": "Cooking offsets the cooling nature of most raw fruit."}
+        ],
+        "proteins": [
+          {"food": "Lamb", "taste": ["sweet"], "thermal": "hot", "why": "The single most classic Yang-tonic meat in Chinese food therapy."},
+          {"food": "Chicken", "taste": ["sweet"], "thermal": "warm", "why": "Warming and building."},
+          {"food": "Long-simmered bone broth", "taste": ["sweet", "salty"], "thermal": "warm", "why": "Deeply warming and fortifying."},
+          {"food": "Shrimp", "taste": ["sweet", "salty"], "thermal": "warm", "why": "Traditionally considered a Kidney-yang tonic food."},
+          {"food": "Walnuts and black sesame", "taste": ["sweet"], "thermal": "warm", "why": "Support Kidney function and warmth."},
+          {"food": "Venison", "taste": ["sweet"], "thermal": "warm", "why": "A warming, fortifying red meat."}
+        ],
+        "herbs_spices_generous": [
+          {"food": "Ginger (fresh and dried, generous use)", "taste": ["pungent"], "thermal": "hot", "why": "Directly warms the digestive fire — used liberally here, unlike in Yin deficiency."},
+          {"food": "Cinnamon bark", "taste": ["pungent", "sweet"], "thermal": "hot", "why": "Anchors warmth deep into the body; classic Kidney-yang spice."},
+          {"food": "Black pepper, clove, star anise, cardamom, nutmeg, mustard seed", "taste": ["pungent"], "thermal": "hot", "why": "All actively encouraged — this is the pattern where warming spices are medicine, not something to limit."}
+        ],
+        "beverages": [
+          {"food": "Warm ginger tea", "taste": ["pungent"], "thermal": "hot", "why": "Directly supports digestive warmth."},
+          {"food": "Cinnamon tea", "taste": ["pungent", "sweet"], "thermal": "hot", "why": "Warms from the inside."},
+          {"food": "Warm bone broth", "taste": ["sweet", "salty"], "thermal": "warm", "why": "Fortifying and warming."},
+          {"food": "Hot water first thing in the morning (never iced)", "taste": [], "thermal": "warm", "why": "Wakes digestive fire gently rather than shocking it cold."}
+        ]
+      },
+      "avoid": [
+        {"food": "Cold and iced drinks/food, ice cream, smoothies straight from the fridge", "why": "The single biggest dietary mistake for this pattern — it directly extinguishes digestive fire."},
+        {"food": "Raw salads as a meal, excess raw fruit (especially cooling fruit: watermelon, banana, most melon, citrus in quantity)", "why": "The cooling nature of raw and cold-natured produce works directly against the warming goal."},
+        {"food": "Excess dairy, especially cold dairy", "why": "Damp-forming and cooling in nature."},
+        {"food": "Very bitter/cold-natured food in excess (bitter melon, large amounts of seaweed or mung bean)", "why": "These are cooling and drain the very Yang this pattern needs to build."},
+        {"food": "Excess sugar", "why": "Weakens overall vitality over time."},
+        {"food": "Swimming in cold water; being outdoors in cold/damp/wind without covering the low back and feet", "why": "Kidney-yang is stored, in TCM theory, in the low-back/kidney area — direct cold exposure there is thought to deplete it."}
+      ],
+      "cooking_methods": {
+        "favor": ["Slow-braising", "roasting", "long-simmered soups and stews", "generous warming spice blends"],
+        "avoid": ["Raw preparations", "cold salads", "chilled desserts"]
+      },
+      "meal_rhythm": "A warm breakfast is essential and should never be skipped or eaten cold. Keep meal timing consistent. The last meal of the day should be warm and not too late.",
+      "herbs_detail": [
+        {"name": "Ashwagandha + Shunthi (dry ginger)", "tradition": "Ayurveda", "action": "A warming combination that builds vitality and digestive fire (agni).", "note": "Often taken together as a powder."},
+        {"name": "Jin Gui Shen Qi Wan (Kidney Qi Pill)", "tradition": "TCM formula", "action": "The classic Kidney-Yang tonic — a rehmannia base combined with cinnamon bark, aconite (prepared) and other warming tonics.", "note": "A well-known classical formula; practitioner-guided due to the potency of some ingredients."},
+        {"name": "Li Zhong Wan (Regulate the Middle Pill)", "tradition": "TCM formula", "action": "Warms Spleen/Stomach Yang directly — suited to cold-type digestive weakness (loose stool, cold limbs after eating).", "note": "A gentler, digestion-focused warming formula."},
+        {"name": "Cinnamon bark (rou gui)", "tradition": "TCM herb", "action": "Intensely warming; 'anchors fire back to its source' in TCM language, meaning it draws warmth deep into the Kidney.", "note": "Used in small amounts, often within formulas."},
+        {"name": "Dried ginger (gan jiang)", "tradition": "TCM herb", "action": "Warms the digestive middle directly — different in character from fresh ginger, which disperses more than it anchors.", "note": "Good for cold-type digestive discomfort."},
+        {"name": "Fennel seed", "tradition": "TCM herb", "action": "Warms and moves; helpful for cold-type digestive pain.", "note": "Can be taken as a simple seed tea."}
+      ],
+      "lifestyle": [
+        "Keep the low back, abdomen and feet warm at all times — avoid crop tops, cold floors, and going out with wet hair in cold weather.",
+        "Favour moderate, warming exercise (brisk walking, gentle strength training) over prolonged cardio in cold environments.",
+        "Prioritise warmth and rest, especially through the winter months.",
+        "Warm compresses over the low back/abdomen, or practitioner-guided moxibustion, can directly support this pattern."
+      ],
+      "sample_day": {
+        "breakfast": "Warm oats cooked with cinnamon, walnuts and a little ginger.",
+        "lunch": "Lamb or chicken stew with root vegetables and warming spices.",
+        "dinner": "Bone broth soup with leek, pumpkin and black beans.",
+        "snack": "Warm spiced milk or roasted walnuts.",
+        "drinks": "Hot water with ginger and a little cinnamon all day — no ice, ever."
+      }
+    },
+    "TCM_QI_ZHI": {
+      "name": "Liver Qi Stagnation",
+      "overview": "This pattern is about flow — qi (and with it, mood, digestion and the menstrual cycle) getting 'stuck' rather than moving smoothly, often from stress, suppressed emotion, or overwork. Nutritionally the goal is light, fresh, aromatic food that keeps things moving, and — just as importantly — eating in a calm rather than rushed or distracted state, since TCM specifically links how you eat to whether qi flows or stagnates.",
+      "favor": {
+        "grains_starches": [
+          {"food": "Barley", "taste": ["sweet"], "thermal": "cooling", "why": "Light and easy to move through the system."},
+          {"food": "Buckwheat", "taste": ["sweet", "bitter"], "thermal": "cooling/neutral", "why": "Light, non-stagnating grain."},
+          {"food": "Sprouted grains", "taste": ["sweet"], "thermal": "neutral", "why": "'Sprouting' energy is considered to support the Liver's own upward, spreading nature."}
+        ],
+        "vegetables": [
+          {"food": "Leafy greens", "taste": ["sweet", "bitter"], "thermal": "cooling", "why": "Light and freeing rather than heavy."},
+          {"food": "Celery", "taste": ["sweet", "bitter"], "thermal": "cooling", "why": "Traditionally used to ease Liver-qi tension."},
+          {"food": "Radish, mustard greens", "taste": ["pungent", "bitter"], "thermal": "cooling/neutral", "why": "Their slight pungency helps move stagnant qi."},
+          {"food": "Sprouts (any variety)", "taste": ["sweet"], "thermal": "neutral", "why": "Light and qi-moving."},
+          {"food": "Citrus peel (chenpi) added to cooking", "taste": ["pungent", "bitter"], "thermal": "warm", "why": "A classic Liver-qi-moving kitchen ingredient."}
+        ],
+        "fruits": [
+          {"food": "Orange, lemon, grapefruit, tangerine, kumquat", "taste": ["sour", "sweet"], "thermal": "cooling/neutral", "why": "The classic 'qi-moving' fruit family — their aromatic peel oils specifically ease constrained Liver qi."}
+        ],
+        "proteins": [
+          {"food": "Fish", "taste": ["sweet"], "thermal": "neutral", "why": "Light protein that doesn't add heaviness."},
+          {"food": "Tofu", "taste": ["sweet"], "thermal": "cooling", "why": "Light and easy."},
+          {"food": "Mung bean, chickpea", "taste": ["sweet"], "thermal": "cooling/neutral", "why": "Light plant protein."}
+        ],
+        "herbs_spices_aromatic": [
+          {"food": "Fresh mint", "taste": ["pungent"], "thermal": "cooling", "why": "Rises and disperses constrained qi in the chest and throat."},
+          {"food": "Rose (tea or rosewater)", "taste": ["sweet", "slightly bitter"], "thermal": "neutral", "why": "The gentlest, most specifically 'emotional constraint' qi-mover in food therapy."},
+          {"food": "Jasmine", "taste": ["sweet", "pungent"], "thermal": "neutral", "why": "Aromatic and uplifting."},
+          {"food": "Bergamot", "taste": ["sour", "pungent"], "thermal": "cooling", "why": "Aromatic citrus note that helps ease tension."},
+          {"food": "Fresh basil", "taste": ["pungent"], "thermal": "warm", "why": "Aromatic and qi-moving."},
+          {"food": "Turmeric (moderate)", "taste": ["pungent", "bitter"], "thermal": "warm", "why": "Moves qi and blood together."}
+        ],
+        "beverages": [
+          {"food": "Rose tea", "taste": ["sweet"], "thermal": "neutral", "why": "The signature drink for this pattern — gentle emotional-qi relief."},
+          {"food": "Jasmine tea", "taste": ["sweet", "pungent"], "thermal": "neutral", "why": "Aromatic and calming."},
+          {"food": "Chrysanthemum tea", "taste": ["sweet", "bitter"], "thermal": "cooling", "why": "Eases Liver heat that can build from long-standing stagnation."},
+          {"food": "Fresh citrus water", "taste": ["sour"], "thermal": "cooling", "why": "Light, qi-moving hydration."},
+          {"food": "Peppermint tea", "taste": ["pungent"], "thermal": "cooling", "why": "Releases tension in the chest/throat."}
+        ]
+      },
+      "avoid": [
+        {"food": "Alcohol", "why": "Most directly implicated in Liver qi stagnation in TCM theory — it offers a false sense of short-term release and worsens constraint over time."},
+        {"food": "Greasy, fried, heavy, rich food", "why": "Bogs down the Liver's smooth-flow function, and is often paired with emotional or stress-driven eating patterns."},
+        {"food": "Excess caffeine", "why": "Can increase irritability and further wire an already-tense nervous system."},
+        {"food": "Eating while angry, rushed, or distracted (phone, work)", "why": "TCM specifically links the emotional/mental state you eat in to whether qi flows or knots — this matters as much as what is on the plate."},
+        {"food": "Highly processed convenience food eaten 'on the run'", "why": "Reinforces the rushed, ungrounded eating pattern that aggravates this condition."},
+        {"food": "Excess dairy/cheese", "why": "Can be damp-forming and add to a feeling of being 'stuck'."}
+      ],
+      "cooking_methods": {
+        "favor": ["Quick stir-fry with aromatics", "light steaming", "fresh raw preparations (this is one of the few patterns where salads are genuinely well tolerated)"],
+        "avoid": ["Heavy braises eaten under stress", "greasy takeaway as a stress-coping habit"]
+      },
+      "meal_rhythm": "Eat sitting down, in a calm environment, without screens where possible. Regular meal timing helps regulate the nervous system, which is intimately tied to how smoothly Liver qi flows.",
+      "herbs_detail": [
+        {"name": "Kumaryasava", "tradition": "Ayurveda", "action": "An aloe-based fermented tonic that supports Liver and digestive function.", "note": "Traditionally taken in small measured doses."},
+        {"name": "Aloe vera", "tradition": "Ayurveda", "action": "Cooling, supports smooth digestive and Liver function.", "note": "Available as juice or gel preparations."},
+        {"name": "Hingvastak churna", "tradition": "Ayurveda", "action": "An asafoetida-based digestive spice blend that helps move stagnant digestive qi and gas.", "note": "Traditionally sprinkled on food."},
+        {"name": "Xiao Yao San (Free & Easy Wanderer)", "tradition": "TCM formula", "action": "The classic Liver-qi formula — bupleurum, dang gui, bai shao, bai zhu, poria, mint, ginger — literally named for relieving the feeling of being 'stuck'.", "note": "One of the most widely used formulas in TCM for stress-related presentations."},
+        {"name": "Chai Hu Shu Gan San", "tradition": "TCM formula", "action": "A stronger qi-moving formula, more suited to physical stagnation (rib/chest distension, stress-linked digestive bloating).", "note": "Practitioner-guided for more pronounced physical stagnation."},
+        {"name": "Bupleurum (chai hu)", "tradition": "TCM herb", "action": "The key Liver-qi-moving herb in Chinese medicine.", "note": "Almost always used within a formula rather than alone."},
+        {"name": "Rose (mei gui hua)", "tradition": "TCM herb", "action": "A gentle qi mover especially suited to emotional constraint.", "note": "Safe as a daily tea — one of the gentlest herbs in this whole reference."},
+        {"name": "Citrus peel (chen pi)", "tradition": "TCM herb", "action": "Moves qi in the digestive system and reduces bloating.", "note": "A kitchen-cabinet staple, easy to keep on hand."},
+        {"name": "Mint (bo he)", "tradition": "TCM herb", "action": "Light and rising; relieves tension in the chest and throat (the 'plum-pit throat' sensation).", "note": "Best as a light, fresh tea rather than a strong decoction."}
+      ],
+      "lifestyle": [
+        "Daily physical movement — walking, dance, yoga, any form of exercise — is often more medicinal here than any herb, because stagnant qi fundamentally needs to move.",
+        "Find outlets for emotional expression (journaling, talking it through, therapy) rather than suppression.",
+        "Spend time in nature where possible.",
+        "Practise deep, slow breathing.",
+        "Keep a regular sleep-wake cycle and reduce overscheduling/rushing where feasible."
+      ],
+      "sample_day": {
+        "breakfast": "Buckwheat porridge with citrus segments.",
+        "lunch": "A big fresh salad with mint, cilantro, chickpeas and a lemon-olive oil dressing.",
+        "dinner": "Stir-fried greens with tofu, ginger, garlic and a squeeze of lemon.",
+        "snack": "An orange or mandarin.",
+        "drinks": "Rose tea or fresh mint tea through the day."
+      }
+    },
+    "TCM_XUE_YU": {
+      "name": "Blood Stasis",
+      "overview": "Blood that isn't flowing smoothly tends to show up as fixed, stabbing pain, dark clots, or a purplish tongue. The nutritional strategy leans on warming, aromatic, circulation-promoting foods, while strictly avoiding anything cold, which TCM regards as literally congealing to blood — much like fat congeals in a cooling pan.",
+      "favor": {
+        "grains_starches": [
+          {"food": "Whole grains generally", "taste": ["sweet"], "thermal": "neutral", "why": "No specific restriction here beyond general wholefood eating."}
+        ],
+        "vegetables": [
+          {"food": "Dark leafy greens", "taste": ["sweet", "bitter"], "thermal": "neutral", "why": "General circulatory and nutrient support."},
+          {"food": "Beetroot", "taste": ["sweet"], "thermal": "neutral", "why": "Supports healthy blood flow."},
+          {"food": "Eggplant / aubergine", "taste": ["sweet"], "thermal": "cooling", "why": "Specifically considered blood-moving in Chinese food therapy."},
+          {"food": "Chives, onion, leek, garlic", "taste": ["pungent"], "thermal": "warm", "why": "Promote circulation."},
+          {"food": "Mushroom (shiitake), wood ear / black fungus", "taste": ["sweet"], "thermal": "neutral", "why": "Specifically noted for blood-moving properties."}
+        ],
+        "fruits": [
+          {"food": "Hawthorn (shan zha)", "taste": ["sour", "sweet"], "thermal": "warm/neutral", "why": "THE classic blood-moving fruit in Chinese medicine, available as tea, dried slices or candy."},
+          {"food": "Peach, plum, cherries, pomegranate", "taste": ["sweet", "sour"], "thermal": "neutral", "why": "Traditionally supportive of healthy circulation."}
+        ],
+        "proteins": [
+          {"food": "Small oily fish (sardine, mackerel)", "taste": ["sweet"], "thermal": "neutral/warm", "why": "Supportive fats for circulation."},
+          {"food": "Moderate red meat", "taste": ["sweet"], "thermal": "warm", "why": "Building without excess."}
+        ],
+        "herbs_spices": [
+          {"food": "Turmeric", "taste": ["pungent", "bitter"], "thermal": "warm", "why": "Moves blood and qi together."},
+          {"food": "Ginger", "taste": ["pungent"], "thermal": "warm", "why": "Supports circulation."},
+          {"food": "A little chili", "taste": ["pungent"], "thermal": "hot", "why": "Promotes circulation in moderate amounts."},
+          {"food": "Saffron", "taste": ["sweet", "slightly bitter"], "thermal": "warm", "why": "Classic blood-moving spice in both TCM and Ayurveda."},
+          {"food": "Rosemary, black pepper", "taste": ["pungent"], "thermal": "warm", "why": "Support circulation."}
+        ],
+        "beverages": [
+          {"food": "Hawthorn tea", "taste": ["sour", "sweet"], "thermal": "warm/neutral", "why": "The signature drink for this pattern."},
+          {"food": "Turmeric-ginger tea", "taste": ["pungent", "bitter"], "thermal": "warm", "why": "Supports circulation."},
+          {"food": "Warm water", "taste": [], "thermal": "warm", "why": "Cold water is thought to congeal blood; warm supports flow."}
+        ]
+      },
+      "avoid": [
+        {"food": "Cold and iced foods/drinks", "why": "'Cold causes stagnation' is a core TCM principle — much like cold fat congealing in a pan, cold is thought to thicken and slow blood flow."},
+        {"food": "Excess saturated or fried fatty food", "why": "Can thicken blood and worsen stasis over time."},
+        {"food": "Excess salty/processed food", "why": "Can affect healthy circulation and fluid balance."},
+        {"food": "Smoking", "why": "Directly damages blood vessels and worsens stasis."},
+        {"food": "Sitting for long periods, especially right after eating", "why": "Not a food, but pairs directly with this pattern — stillness slows everything the diet is trying to help."}
+      ],
+      "cooking_methods": {
+        "favor": ["Sautéing with aromatics (ginger, garlic, turmeric)", "warm soups and stews"],
+        "avoid": ["Cold, dense food eaten straight from the fridge"]
+      },
+      "meal_rhythm": "Nothing especially restrictive beyond regularity — pairing meals with a short walk afterward supports circulation more than any specific timing rule.",
+      "herbs_detail": [
+        {"name": "Manjishtha (Rubia cordifolia)", "tradition": "Ayurveda", "action": "A classic blood purifier and mover; also supports skin and lymphatic clarity.", "note": "Commonly used in powder or decoction form."},
+        {"name": "Guggulu", "tradition": "Ayurveda", "action": "A resin traditionally used to support healthy circulation and break up stagnation/nodules.", "note": "Available in various classical compound formulas."},
+        {"name": "Xue Fu Zhu Yu Tang", "tradition": "TCM formula", "action": "A major blood-moving formula (persica, carthamus, dang gui, chuan xiong and others) for fixed, stabbing pain.", "note": "One of the best-known blood-stasis formulas in TCM."},
+        {"name": "Shi Xiao San", "tradition": "TCM formula", "action": "A simpler two-herb pair (pu huang + wu ling zhi) for blood-stasis pain, often menstrual.", "note": "A focused, classical pain-formula."},
+        {"name": "Hawthorn (shan zha)", "tradition": "TCM herb", "action": "Sour-sweet; moves blood and aids digestion of fatty food.", "note": "Safe enough to use as a daily tea."},
+        {"name": "Safflower (hong hua)", "tradition": "TCM herb", "action": "Moves blood.", "note": "Used carefully — avoided in pregnancy and with heavy menstrual bleeding."},
+        {"name": "Turmeric (jiang huang / curcumin)", "tradition": "TCM & Ayurveda herb", "action": "Moves blood and qi together; anti-inflammatory.", "note": "Well tolerated as a daily culinary spice."},
+        {"name": "Salvia / Dan shen", "tradition": "TCM herb", "action": "Cools and moves blood, supports healthy circulation.", "note": "Practitioner-guided, especially alongside any cardiovascular medication."}
+      ],
+      "lifestyle": [
+        "Regular movement is essential — walking, swimming, gentle cardio, dry brushing, or warm baths all support circulation.",
+        "Avoid prolonged sitting.",
+        "Keep the body warm — cold is considered the direct enemy of moving blood.",
+        "Consider massage or bodywork to mechanically support circulation, alongside dietary measures."
+      ],
+      "sample_day": {
+        "breakfast": "Oats with turmeric, cinnamon and berries.",
+        "lunch": "Stir-fried greens with mushroom, onion and ginger over brown rice.",
+        "dinner": "Baked salmon with roasted beetroot and sautéed leeks.",
+        "snack": "A small handful of walnuts, or a few dried hawthorn slices.",
+        "drinks": "Hawthorn tea or warm turmeric-ginger tea."
+      },
+      "caution": "Blood-moving herbs are generally avoided, or used only under close supervision, in pregnancy and alongside heavy menstrual bleeding or anticoagulant medication. Always disclose current medications and pregnancy status to your practitioner."
+    },
+    "TCM_TAN_SHI": {
+      "name": "Phlegm-Damp",
+      "overview": "This pattern is about heaviness, fogginess and things being sticky rather than clear — heavy limbs, a sticky mouth, mucus, a greasy tongue coat. The Spleen is the organ responsible for transforming and moving fluid, and when it's overwhelmed, dampness and phlegm accumulate. This is the strictest 'avoid' list of all eight patterns, because a small number of very specific foods (dairy, sugar, fried food, cold raw food) are considered directly damp-generating.",
+      "favor": {
+        "grains_starches": [
+          {"food": "Barley", "taste": ["sweet"], "thermal": "cooling", "why": "Actively drains dampness."},
+          {"food": "Job's tears / coix seed (yi yi ren)", "taste": ["sweet", "bland"], "thermal": "cooling", "why": "THE classic damp-draining grain in Chinese food therapy."},
+          {"food": "Aduki / red bean", "taste": ["sweet"], "thermal": "neutral", "why": "Supports fluid drainage."},
+          {"food": "Rice (well-cooked, moderate amount)", "taste": ["sweet"], "thermal": "neutral", "why": "A safe base grain, but not in excess."}
+        ],
+        "vegetables": [
+          {"food": "Winter melon", "taste": ["sweet", "bland"], "thermal": "cooling", "why": "Classic damp-draining vegetable."},
+          {"food": "Daikon radish", "taste": ["pungent", "sweet"], "thermal": "cooling", "why": "Helps transform phlegm and move stagnant food."},
+          {"food": "Celery", "taste": ["sweet", "bitter"], "thermal": "cooling", "why": "Supports fluid drainage."},
+          {"food": "Cabbage", "taste": ["sweet"], "thermal": "neutral", "why": "Light and easy to digest."},
+          {"food": "Mushroom", "taste": ["sweet"], "thermal": "neutral", "why": "Nutrient-dense without being damp-forming."},
+          {"food": "Corn and corn silk (as tea)", "taste": ["sweet"], "thermal": "neutral", "why": "Corn silk tea is a traditional mild diuretic/damp-draining drink."}
+        ],
+        "fruits": ["Limited on this list — a little citrus is fine; large amounts of very sweet, juicy tropical fruit and dried fruit are best minimised as they can be damp-forming."],
+        "proteins": [
+          {"food": "White fish", "taste": ["sweet"], "thermal": "neutral", "why": "Light and lean."},
+          {"food": "Chicken (skinless)", "taste": ["sweet"], "thermal": "warm", "why": "Lean protein without excess fat."},
+          {"food": "Lentils, mung bean", "taste": ["sweet"], "thermal": "cooling/neutral", "why": "Light plant protein, supports drainage."},
+          {"food": "Tofu (plain, not fried)", "taste": ["sweet"], "thermal": "cooling", "why": "Light protein without added grease."}
+        ],
+        "herbs_spices": [
+          {"food": "Ginger", "taste": ["pungent"], "thermal": "warm", "why": "Helps transform phlegm and warm digestion."},
+          {"food": "Tangerine peel (chen pi)", "taste": ["pungent", "bitter"], "thermal": "warm", "why": "A cornerstone herb for drying damp and moving qi in the digestive system."},
+          {"food": "Cardamom, fennel, white pepper", "taste": ["pungent"], "thermal": "warm", "why": "Support digestion and help dry dampness."}
+        ],
+        "beverages": [
+          {"food": "Barley tea", "taste": ["sweet"], "thermal": "cooling", "why": "Supports damp drainage."},
+          {"food": "Job's tears tea", "taste": ["sweet"], "thermal": "cooling", "why": "The signature drink for this pattern."},
+          {"food": "Corn silk tea", "taste": ["sweet"], "thermal": "neutral", "why": "Mild diuretic action."},
+          {"food": "Tangerine peel tea", "taste": ["pungent", "bitter"], "thermal": "warm", "why": "Supports digestion and dries damp."}
+        ]
+      },
+      "avoid": [
+        {"food": "Dairy (cheese, milk, cream, ice cream)", "why": "Classically considered the number-one damp-forming food group in TCM — the most important single change for this pattern."},
+        {"food": "Sugar and sweets, including a lot of fruit juice, dried fruit, and very sweet fruit", "why": "Sugar is considered strongly damp-forming, feeding the exact mechanism behind this pattern."},
+        {"food": "Fried and greasy food", "why": "Directly creates phlegm-damp."},
+        {"food": "Cold, raw food and iced drinks", "why": "Weakens the Spleen's ability to transform and move fluid — the root mechanism generating damp in the first place."},
+        {"food": "Very starchy, heavily processed, wheat/gluten-dense food (in some constitutions)", "why": "Can add to a feeling of heaviness in sensitive individuals."},
+        {"food": "Alcohol, especially beer", "why": "Beer in particular is considered strongly damp-forming."},
+        {"food": "Overeating in general, and eating late at night", "why": "Overloads the Spleen's capacity to process and transform food, leaving the excess to turn into damp."}
+      ],
+      "cooking_methods": {
+        "favor": ["Steaming", "light sautéing with warming aromatics", "brothy rather than creamy soups"],
+        "avoid": ["Cream-based sauces", "battered/deep-fried food"]
+      },
+      "meal_rhythm": "Favour smaller, lighter meals. Stop eating well before bed and avoid grazing on snacks throughout the day, which keeps digestion constantly working.",
+      "herbs_detail": [
+        {"name": "Trikatu (three pungents: black pepper, long pepper, dry ginger)", "tradition": "Ayurveda", "action": "A classic digestive-fire-boosting, damp-drying combination.", "note": "Traditionally taken before meals in small amounts."},
+        {"name": "Punarnava", "tradition": "Ayurveda", "action": "Supports healthy fluid balance; traditionally used for puffiness/fluid retention.", "note": "Available as powder or decoction."},
+        {"name": "Er Chen Tang (Two Aged [Ingredients] Decoction)", "tradition": "TCM formula", "action": "Pinellia + tangerine peel + poria + licorice — the foundational phlegm-transforming formula in Chinese medicine.", "note": "The base formula many other damp/phlegm formulas build from."},
+        {"name": "Ping Wei San (Calm the Stomach Powder)", "tradition": "TCM formula", "action": "Dries damp and strengthens Spleen digestive function directly.", "note": "Suited to heaviness/bloating after meals."},
+        {"name": "Tangerine / citrus peel (chen pi)", "tradition": "TCM herb", "action": "Dries damp and moves qi.", "note": "A kitchen-cabinet staple — easy to add to soups and teas daily."},
+        {"name": "Poria (fu ling)", "tradition": "TCM herb", "action": "Gently drains damp while also tonifying the Spleen — a rare dual action.", "note": "Very commonly included in formulas."},
+        {"name": "Pinellia (ban xia)", "tradition": "TCM herb", "action": "Dries damp and transforms phlegm.", "note": "Used only in its prepared (processed) form — practitioner-guided."},
+        {"name": "Job's tears (yi yi ren)", "tradition": "TCM food-herb", "action": "A food-grade grain that drains damp.", "note": "Can simply be cooked into congee daily."}
+      ],
+      "lifestyle": [
+        "Regular movement is important to 'keep things moving' and prevent fluid stagnation — brisk walking or anything that produces a light sweat.",
+        "Avoid damp/humid environments where possible; keep the living space dry and well ventilated.",
+        "Avoid excessive daytime napping, which can worsen the heavy, foggy feeling.",
+        "Eat more slowly and mindfully — eating too fast is linked, in TCM theory, to poor digestion and damp formation."
+      ],
+      "sample_day": {
+        "breakfast": "Barley and job's tears congee with a little ginger.",
+        "lunch": "Steamed white fish with daikon and celery stir-fry.",
+        "dinner": "Mung bean and winter melon soup with tofu.",
+        "snack": "A small handful of plain roasted pumpkin seeds.",
+        "drinks": "Barley tea or tangerine peel tea — no sugary drinks."
+      }
+    },
+    "TCM_SHI_RE": {
+      "name": "Damp-Heat / Heat",
+      "overview": "This pattern combines the 'sticky, heavy' quality of dampness with active heat — showing up as a bitter taste in the mouth, yellow discharge, dark urine, a yellow-greasy tongue coating. The classic dietary trigger named directly in TCM texts is the combination of 'greasy, spicy and sweet' food together with alcohol — and the nutritional strategy is simply to remove that triad and favour cooling, light, simply-prepared food instead.",
+      "favor": {
+        "grains_starches": [
+          {"food": "Mung bean", "taste": ["sweet"], "thermal": "cooling", "why": "Cooling and easy to digest; a classic heat-clearing food."},
+          {"food": "Barley", "taste": ["sweet"], "thermal": "cooling", "why": "Cooling and drains damp simultaneously."},
+          {"food": "Plain rice", "taste": ["sweet"], "thermal": "neutral", "why": "A gentle, unaggravating base."}
+        ],
+        "vegetables": [
+          {"food": "Bitter melon / bitter gourd", "taste": ["bitter"], "thermal": "cooling", "why": "Directly clears heat and dampness together."},
+          {"food": "Cucumber", "taste": ["sweet"], "thermal": "cooling", "why": "Generates fluid and cools."},
+          {"food": "Daikon radish", "taste": ["pungent", "sweet"], "thermal": "cooling", "why": "Clears heat and aids digestion."},
+          {"food": "Celery", "taste": ["sweet", "bitter"], "thermal": "cooling", "why": "Clears heat, especially Liver heat."},
+          {"food": "Dandelion greens, watercress", "taste": ["bitter"], "thermal": "cooling", "why": "Classic heat-clearing bitter greens."},
+          {"food": "Winter melon, bamboo shoot", "taste": ["sweet"], "thermal": "cooling", "why": "Clear heat and drain damp together."},
+          {"food": "Seaweed", "taste": ["salty"], "thermal": "cooling", "why": "Cooling and moistening."}
+        ],
+        "fruits": [
+          {"food": "Watermelon", "taste": ["sweet"], "thermal": "cooling", "why": "One of the most cooling fruits available — classic for clearing heat."},
+          {"food": "Pear", "taste": ["sweet"], "thermal": "cooling", "why": "Clears heat and moistens."},
+          {"food": "Kiwi", "taste": ["sweet", "sour"], "thermal": "cooling", "why": "Cooling and nutrient-dense."}
+        ],
+        "proteins": [
+          {"food": "Mung bean, tofu (plain)", "taste": ["sweet"], "thermal": "cooling", "why": "Light, cooling protein sources."},
+          {"food": "White fish", "taste": ["sweet"], "thermal": "neutral", "why": "Light protein without added grease."},
+          {"food": "Small amounts of lean meat", "taste": ["sweet"], "thermal": "neutral", "why": "Keep preparations plain, never fried."}
+        ],
+        "herbs_spices_mild": [
+          {"food": "Mint", "taste": ["pungent"], "thermal": "cooling", "why": "Clears heat while still being aromatic."},
+          {"food": "Dandelion", "taste": ["bitter"], "thermal": "cooling", "why": "Directly clears heat."},
+          {"food": "Chrysanthemum", "taste": ["sweet", "bitter"], "thermal": "cooling", "why": "Clears heat, especially of the eyes and head."},
+          {"food": "Turmeric (small amount)", "taste": ["pungent", "bitter"], "thermal": "warm (used sparingly)", "why": "Generally fine in small culinary amounts even here."}
+        ],
+        "beverages": [
+          {"food": "Chrysanthemum tea", "taste": ["sweet", "bitter"], "thermal": "cooling", "why": "The signature drink for clearing heat."},
+          {"food": "Green tea (moderate)", "taste": ["bitter"], "thermal": "cooling", "why": "Clears heat, though moderate intake is wise if sensitive to caffeine."},
+          {"food": "Dandelion root tea", "taste": ["bitter"], "thermal": "cooling", "why": "A gentle daily heat-clearer."},
+          {"food": "Mung bean soup/water", "taste": ["sweet"], "thermal": "cooling", "why": "A classic heat-clearing home remedy."},
+          {"food": "Cucumber water, plenty of plain water", "taste": [], "thermal": "cooling/neutral", "why": "Baseline hydration and mild cooling."}
+        ]
+      },
+      "avoid": [
+        {"food": "Alcohol", "why": "A major direct contributor to damp-heat in TCM theory, especially beer and sugary cocktails."},
+        {"food": "Greasy / fried food", "why": "The 'grease' directly correlates to the damp half of damp-heat."},
+        {"food": "Spicy-hot food (chili, hot sauce, chili-heavy curry)", "why": "The 'spicy' directly correlates to the heat half."},
+        {"food": "Sugar and sweets", "why": "The third leg of the classic 'greasy-spicy-sweet' triad TCM specifically names as damp-heat-generating."},
+        {"food": "Red/fatty meat, especially BBQ, charred or processed meat", "why": "Heat- and damp-generating in combination."},
+        {"food": "Smoking", "why": "Adds heat and irritation."}
+      ],
+      "cooking_methods": {
+        "favor": ["Steaming", "blanching", "light stir-fry with minimal oil", "cold or room-temperature preparations (well tolerated here, unlike in cold-type patterns)"],
+        "avoid": ["Deep-frying", "heavy oil", "char-grilling/BBQ"]
+      },
+      "meal_rhythm": "Avoid eating late or heavy at night, as this pattern often correlates with poor sleep from internal heat. Keep portions moderate, and specifically avoid the 'greasy-spicy-sweet plus alcohol' combination, especially in the evening.",
+      "herbs_detail": [
+        {"name": "Neem", "tradition": "Ayurveda", "action": "Intensely bitter and cooling; a classic blood and skin purifier for heat conditions.", "note": "Often used in short courses rather than continuously."},
+        {"name": "Guduchi", "tradition": "Ayurveda", "action": "Bitter and cooling; balances heat while supporting immunity.", "note": "Generally well tolerated as a longer-term tonic."},
+        {"name": "Avipattikar churna", "tradition": "Ayurveda", "action": "A cooling digestive blend specifically for acid/heat-type digestive complaints.", "note": "Traditionally taken after meals."},
+        {"name": "Gan Lu Xiao Du Dan (Sweet Dew Special Pill)", "tradition": "TCM formula", "action": "Clears damp-heat, especially useful when there are early febrile/toxic-heat qualities.", "note": "A well-known classical damp-heat formula."},
+        {"name": "Long Dan Xie Gan Tang (Gentian Drain the Liver Decoction)", "tradition": "TCM formula", "action": "A strong heat-clearing formula for pronounced Liver/Gallbladder damp-heat (irritability, bitter taste, dark urine).", "note": "Potent — intended for short-term, practitioner-guided use only."},
+        {"name": "Gentian root (long dan cao)", "tradition": "TCM herb", "action": "Very bitter; strongly clears damp-heat.", "note": "Short-term use only, due to its intensity."},
+        {"name": "Dandelion (pu gong ying)", "tradition": "TCM herb", "action": "A gentle, food-safe heat-clearer.", "note": "Safe as a daily tea, unlike the stronger herbs above."},
+        {"name": "Coptis (huang lian)", "tradition": "TCM herb", "action": "Extremely bitter; clears heat and fire potently.", "note": "Practitioner-guided use only."},
+        {"name": "Chrysanthemum flower (ju hua)", "tradition": "TCM herb", "action": "Gentle and cooling; good for eye and head heat symptoms.", "note": "Safe as a daily tea."}
+      ],
+      "lifestyle": [
+        "Avoid excessive heat exposure (saunas, very hot baths, hot yoga), which adds external heat on top of internal heat.",
+        "Choose moderate rather than very intense exercise (which itself generates internal heat) — swimming and walking are ideal.",
+        "Manage stress, since suppressed anger or frustration is specifically linked to Liver heat in TCM theory.",
+        "Keep the living/sleeping environment cool and well ventilated."
+      ],
+      "sample_day": {
+        "breakfast": "Mung bean congee with cucumber.",
+        "lunch": "Steamed fish with bitter melon stir-fry and plain rice.",
+        "dinner": "Tofu and watercress soup with a side of blanched greens.",
+        "snack": "Watermelon or pear slices.",
+        "drinks": "Chrysanthemum or dandelion tea through the day, plenty of plain water."
+      }
+    }
+  },
+  "pattern_interactions": [
+    {
+      "when_all": ["TCM_QI_ZHI"],
+      "when_any_deficiency": ["TCM_YIN_XU", "TCM_XUE_XU", "TCM_QI_XU", "TCM_YANG_XU"],
+      "note": "Liver Qi Stagnation is present alongside a deficiency pattern. In TCM clinical practice, heavy tonifying/nourishing foods given without first easing stagnation can 'feed the knot' — the nourishment simply backs up behind the blockage instead of being absorbed. Practical approach: keep portions of tonifying food moderate rather than large, include a qi-moving element at the same meal (a squeeze of citrus, a few mint or coriander leaves, a short walk after eating), and treat movement and emotional outlet as equally important as the nourishing foods themselves."
+    },
+    {
+      "when_all": ["TCM_TAN_SHI"],
+      "when_any_deficiency": ["TCM_YIN_XU", "TCM_XUE_XU"],
+      "note": "Phlegm-Damp is present alongside a Yin or Blood deficiency that calls for moistening food. This is a genuine tension: classic Yin-nourishing foods (dairy, very rich or oily moisteners, heavy sweet fruit) can be exactly what a damp pattern needs to avoid. Favour the moistening foods that are also light and easy to digest — tofu, white/snow fungus, seaweed, pear in moderation, soy milk in small amounts — over heavier moisteners like dairy, and lean more on cooked, warm preparations rather than raw or iced ones. A practitioner should fine-tune this balance in person."
+    },
+    {
+      "when_all": ["TCM_YANG_XU"],
+      "when_any_deficiency": ["TCM_SHI_RE"],
+      "note": "Yang deficiency (needing warmth) and Damp-Heat/Heat (needing cooling) rarely present strongly together, but if both appear, this is a genuine mixed cold-heat picture — see the safety guardrail on mixed cold-heat above. Address the more prominent or more recently developed pattern first, under practitioner guidance, rather than applying both sets of dietary advice at full strength simultaneously."
+    },
+    {
+      "when_all": ["TCM_XUE_YU"],
+      "when_any_deficiency": ["TCM_XUE_XU"],
+      "note": "Blood Stasis and Blood Deficiency together are common and not contradictory — deficient blood often moves poorly simply because there isn't enough of it. Favour foods that both build and move blood (beetroot, dark leafy greens, a little warming spice like ginger or turmeric) over strongly deficiency-only or strongly stasis-only choices."
+    }
+  ],
+  "general_sequencing_note": "Where more than one pattern is confirmed, the pattern marked as 'root' in the diagnostic picture above is the foundation of the nutrition plan — build the daily diet around its favour/avoid guidance first. Layer the 'branch' pattern's guidance around that foundation, and where the two disagree, the reconciliation notes above take precedence over either list in isolation. This mirrors standard root-and-branch treatment sequencing in Chinese medicine: treat what is foundational to sustain long-term change, while easing what is most uncomfortable day-to-day."
+}

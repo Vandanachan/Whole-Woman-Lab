@@ -32,6 +32,7 @@ from .models import (
     Hypothesis, ProgressionPath, ReasoningStep, Resolution, SafetyFlag,
 )
 from .progression import build_progression
+from .recommendations import build_treatment_plan
 from .scoring import score_hypotheses
 
 
@@ -64,6 +65,7 @@ class Engine:
         self.progression_edges: list[dict] = json.loads((d / "progression.json").read_text())["edges"]
         self.conflict_rules: list[dict] = json.loads((d / "conflict_rules.json").read_text())["rules"]
         self.safety_rules: list[dict] = json.loads((d / "rules.json").read_text())["safety"]
+        self.nutrition_kb: dict = json.loads((d / "nutrition.json").read_text())
 
     # -- public API ---------------------------------------------------------
     def run(self, present_codes: list[str], case_id: str = "case") -> EngineResult:
@@ -156,6 +158,7 @@ class Engine:
 
     # -- structured report (LLM renders this; it performs no reasoning) ------
     def _report(self, case_id, present, differential, progression, diagnoses, safety, mixed) -> dict:
+        treatment_plan = build_treatment_plan(diagnoses, self.nutrition_kb)
         return {
             "case_id": case_id,
             "headline": self._headline(diagnoses, present, mixed),
@@ -182,9 +185,12 @@ class Engine:
             },
             "safety": [{"severity": f.severity, "message": f.message} for f in safety],
             "mixed_cold_heat": mixed,
+            "treatment_plan": treatment_plan,
             "disclaimer": ("Deterministic clinical-reasoning output for practitioner review. "
                            "Not a medical diagnosis; confirm with full examination. Red-flag or "
-                           "acute presentations require biomedical referral."),
+                           "acute presentations require biomedical referral. Nutrition and herb "
+                           "guidance is educational food-therapy information, not a prescription — "
+                           "check herb-drug interactions and allergies before use."),
         }
 
     @staticmethod

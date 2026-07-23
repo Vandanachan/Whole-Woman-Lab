@@ -63,6 +63,49 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .prog{font-size:13.6px;margin:4px 0}
 .disc{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;color:var(--muted);margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
 .empty{font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);text-align:center;padding:40px 20px}
+
+/* -- treatment plan (Engine 4: nutrition, herbs, lifestyle) -- */
+.plan-narrative{font-size:14.5px;line-height:1.7;margin:4px 0 2px}
+.plan-narrative p{margin:0 0 .9em}
+.pat-block{border:1px solid var(--line);border-radius:12px;margin:12px 0;background:var(--bg);overflow:hidden}
+.pat-block>summary{cursor:pointer;list-style:none;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-family:ui-sans-serif,system-ui,sans-serif;font-weight:700;font-size:14px}
+.pat-block>summary::-webkit-details-marker{display:none}
+.pat-block>summary::after{content:"+";font-size:18px;color:var(--muted);font-weight:400}
+.pat-block[open]>summary::after{content:"–"}
+.pat-block>summary .tag{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+.pat-body{padding:2px 16px 16px}
+.pat-overview{font-size:13.6px;margin:0 0 10px}
+.pat-sub{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--brand-ink);font-weight:700;margin:14px 0 6px}
+.food-cat{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:700;color:var(--muted);margin:8px 0 4px}
+.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+@media(max-width:680px){.food-grid{grid-template-columns:1fr}}
+.food-item{font-size:13px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+.food-item b{display:block;font-size:13.2px}
+.food-item .ftags{font-family:ui-sans-serif,system-ui,sans-serif;font-size:10.5px;color:var(--brand-ink);text-transform:uppercase;letter-spacing:.03em;margin:1px 0 3px}
+.food-item .fwhy{color:var(--muted);font-size:12.3px}
+.avoid-list{display:flex;flex-direction:column;gap:6px}
+.avoid-item{font-size:13px;padding:8px 11px;border-radius:8px;background:var(--warn-bg);border-left:3px solid var(--warn)}
+.avoid-item b{color:var(--warn)}
+.herb-item{font-size:13px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.herb-item:last-child{border-bottom:none}
+.herb-item b{display:inline}
+.herb-item .htrad{font-family:ui-sans-serif,system-ui,sans-serif;font-size:10.5px;color:var(--muted);text-transform:uppercase}
+.herb-item .hnote{display:block;color:var(--muted);font-size:12px;font-style:italic;margin-top:2px}
+.life-list,.cook-list{margin:0;padding-left:20px;font-size:13.2px}
+.life-list li,.cook-list li{margin:3px 0}
+.sample-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:13px}
+@media(max-width:680px){.sample-grid{grid-template-columns:1fr}}
+.sample-grid div{padding:6px 10px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.sample-grid b{text-transform:capitalize;display:block;font-size:11.5px;color:var(--muted)}
+.glossary-term{border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin:8px 0;background:var(--bg)}
+.glossary-term b{font-size:13.6px;text-transform:capitalize}
+.glossary-term .gmeta{font-size:12.6px;color:var(--muted);margin:3px 0}
+.glossary-term .gex{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.8px;color:var(--brand-ink)}
+.recon-note{background:var(--tend-bg);border-left:4px solid var(--tend);border-radius:9px;padding:10px 14px;margin:8px 0;font-size:13.2px}
+.master-avoid{display:flex;flex-direction:column;gap:5px}
+.master-avoid .mi{font-size:12.8px;padding:6px 10px;background:var(--warn-bg);border-radius:7px}
+.master-avoid .mi .patlist{font-family:ui-sans-serif,system-ui,sans-serif;font-size:10.5px;color:var(--muted);text-transform:uppercase}
+.caution-line{color:var(--warn);font-weight:600;font-size:13px;margin-top:10px}
 </style>
 </head>
 <body>
@@ -185,10 +228,110 @@ function renderReport(r){
   html+=`<div class="prog"><b>Heading toward:</b> ${p.projected_next.join(", ")||"—"} (${p.reversibility})</div>`;
   html+=`<div class="h3">Differential</div>`;
   r.differential.forEach(i=>{ html+=`<div class="diff">${i.rank}. ${i.pattern} — ${i.status} (${Math.round(i.confidence*100)}%)</div>`; });
+  if(r.treatment_plan) html+=renderTreatmentPlan(r.treatment_plan);
   html+=`<div class="disc">${r.disclaimer}</div>`;
   $("resultCard").innerHTML=html;
   $("results").classList.add("show");
   $("results").scrollIntoView({behavior:"smooth"});
+}
+
+function esc(s){ return (s==null?"":String(s)).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+
+function renderFoodItem(f){
+  if(typeof f==="string") return `<div class="food-item">${esc(f)}</div>`;
+  const tags=[]; if(f.taste&&f.taste.length) tags.push("taste: "+f.taste.join(", ")); if(f.thermal) tags.push("thermal: "+f.thermal);
+  return `<div class="food-item"><b>${esc(f.food)}</b>${tags.length?`<div class="ftags">${esc(tags.join(" · "))}</div>`:""}<div class="fwhy">${esc(f.why||"")}</div></div>`;
+}
+
+function renderPatternPlan(p){
+  const favorHtml=Object.entries(p.favor||{}).map(([cat,foods])=>{
+    if(!Array.isArray(foods)||!foods.length) return "";
+    return `<div class="food-cat">${esc(cat.replace(/_/g," "))}</div><div class="food-grid">${foods.map(renderFoodItem).join("")}</div>`;
+  }).join("");
+
+  const avoidHtml=(p.avoid||[]).map(a=>{
+    if(typeof a==="string") return `<div class="avoid-item">${esc(a)}</div>`;
+    return `<div class="avoid-item"><b>${esc(a.food)}:</b> ${esc(a.why)}</div>`;
+  }).join("");
+
+  const cook=p.cooking_methods||{};
+  const cookHtml=(cook.favor||cook.avoid)? `
+    <div class="pat-sub">Cooking Methods</div>
+    ${cook.favor?`<div><b>Favour:</b> ${esc(cook.favor.join(", "))}</div>`:""}
+    ${cook.avoid?`<div><b>Avoid:</b> ${esc(cook.avoid.join(", "))}</div>`:""}` : "";
+
+  const sample=p.sample_day||{};
+  const sampleHtml=Object.keys(sample).length? `
+    <div class="pat-sub">Sample Day</div>
+    <div class="sample-grid">${Object.entries(sample).map(([meal,desc])=>`<div><b>${esc(meal)}</b>${esc(desc)}</div>`).join("")}</div>` : "";
+
+  const herbsHtml=(p.herbs_detail||[]).map(h=>`
+    <div class="herb-item"><b>${esc(h.name)}</b>${h.tradition?` <span class="htrad">(${esc(h.tradition)})</span>`:""} — ${esc(h.action||"")}
+      ${h.note?`<span class="hnote">${esc(h.note)}</span>`:""}</div>`).join("");
+
+  const lifeHtml=(p.lifestyle||[]).length? `<div class="pat-sub">Lifestyle</div><ul class="life-list">${p.lifestyle.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>` : "";
+
+  return `
+  <details class="pat-block">
+    <summary><span>${esc(p.pattern)}</span><span class="tag">${esc(p.role)} · ${Math.round(p.confidence*100)}%</span></summary>
+    <div class="pat-body">
+      <p class="pat-overview">${esc(p.overview)}</p>
+      ${favorHtml?`<div class="pat-sub">Foods To Favour</div>${favorHtml}`:""}
+      ${avoidHtml?`<div class="pat-sub">Foods To Avoid &amp; Why</div><div class="avoid-list">${avoidHtml}</div>`:""}
+      ${cookHtml}
+      ${p.meal_rhythm?`<div class="pat-sub">Meal Rhythm &amp; Timing</div><div>${esc(p.meal_rhythm)}</div>`:""}
+      ${sampleHtml}
+      ${herbsHtml?`<div class="pat-sub">Herbs &amp; Formulas</div>${herbsHtml}`:""}
+      ${lifeHtml}
+      ${p.caution?`<div class="caution-line">Caution: ${esc(p.caution)}</div>`:""}
+    </div>
+  </details>`;
+}
+
+function renderGlossaryTerm(name,g,isThermal){
+  return `<div class="glossary-term">
+    <b>${esc(name.replace(/_/g," "))}</b>${g.also_called?` <span class="gmeta">(${esc(g.also_called)})</span>`:""}
+    <div class="gmeta">${esc(g.description||"")}</div>
+    <div class="gmeta"><b>Action:</b> ${esc(g.action||"")}</div>
+    <div class="gmeta"><b>Helpful when:</b> ${esc(g.when_helpful||"")}</div>
+    <div class="gmeta"><b>Harmful when:</b> ${esc(g.when_harmful||"")}</div>
+    <div class="gex">${esc((g.example_foods_herbs||g.examples||[]).join(", "))}</div>
+  </div>`;
+}
+
+function renderTreatmentPlan(tp){
+  let html=`<div class="h3">Your Treatment Plan</div>`;
+  html+=`<div class="plan-narrative">${tp.narrative.split("\n\n").map(p=>`<p>${esc(p)}</p>`).join("")}</div>`;
+
+  if(tp.glossary){
+    const g=tp.glossary;
+    html+=`<details class="pat-block"><summary><span>Understanding Tastes &amp; Properties</span><span class="tag">glossary</span></summary>
+      <div class="pat-body">
+        <p class="pat-overview">${esc(g.how_to_read||"")}</p>
+        <div class="pat-sub">The Six Tastes</div>
+        ${Object.entries(g.tastes||{}).map(([n,v])=>renderGlossaryTerm(n,v,false)).join("")}
+        <div class="pat-sub">Thermal Properties</div>
+        ${Object.entries(g.thermal_properties||{}).map(([n,v])=>renderGlossaryTerm(n,v,true)).join("")}
+      </div></details>`;
+  }
+
+  (tp.by_pattern||[]).forEach(p=>{ html+=renderPatternPlan(p); });
+
+  if((tp.reconciliation_notes||[]).length || tp.sequencing){
+    html+=`<details class="pat-block" open><summary><span>Cross-Pattern Reconciliation &amp; Sequencing</span></summary>
+      <div class="pat-body">
+        ${tp.sequencing?`<div class="pat-sub">How To Sequence This Plan</div><div>${esc(tp.sequencing)}</div>`:""}
+        ${(tp.reconciliation_notes||[]).length?`<div class="pat-sub">Where Patterns Interact</div>${tp.reconciliation_notes.map(n=>`<div class="recon-note">${esc(n)}</div>`).join("")}`:""}
+      </div></details>`;
+  }
+
+  if((tp.master_avoid||[]).length){
+    html+=`<details class="pat-block"><summary><span>Quick Reference — Everything To Avoid</span></summary>
+      <div class="pat-body"><div class="master-avoid">
+        ${tp.master_avoid.map(it=>`<div class="mi"><b>${esc(it.food)}</b> <span class="patlist">(${esc(it.patterns.join(", "))})</span> — ${esc(it.why.join(" / "))}</div>`).join("")}
+      </div></div></details>`;
+  }
+  return html;
 }
 
 async function downloadPdf(){
