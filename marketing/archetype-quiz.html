@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Archetype Result — Whole Woman Lab</title>
+<base target="_top">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap');
+.rc-quiz, .rc-quiz * { box-sizing: border-box; }
+.rc-quiz {
+  --bg-0:      #2b2416;
+  --bg-1:      #3d3421;
+  --cream:     #f5eee0;
+  --cream-dim: rgba(245,238,224,0.72);
+  --line:      rgba(245,238,224,0.28);
+  --card:      #ece3d0;
+  --card-text: #2b2416;
+  --gold:      #b8862a;
+  --rust:      #b04a34;
+  --sage:      #4a9760;
+  margin: 0;
+  padding: 64px 20px 90px;
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
+  color: var(--cream);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+.rc-quiz .rc-wrap { max-width: 780px; margin: 0 auto; }
+.rc-quiz .rc-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--line);
+}
+.rc-quiz .rc-tile h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 10px;
+  color: var(--cream);
+}
+.rc-quiz .rc-tile p {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--cream-dim);
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .rc-quiz .rc-tiles { grid-template-columns: 1fr; gap: 26px; }
+}
+.rc-quiz .rc-take-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: clamp(30px, 5vw, 46px);
+  text-align: center;
+  margin: 0 0 40px;
+}
+.rc-quiz .rc-progress-track { max-width: 560px; margin: 0 auto 8px; }
+.rc-quiz .rc-progress-outer { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.rc-quiz .rc-progress-inner {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--gold), var(--rust), var(--sage));
+  transition: width 0.3s ease;
+}
+.rc-quiz .rc-progress-label {
+  text-align: center; font-size: 12px; letter-spacing: 0.08em;
+  color: var(--cream-dim); margin: 10px 0 34px;
+}
+.rc-quiz .rc-q-card {
+  max-width: 560px; margin: 0 auto;
+  animation: rcFade 0.25s ease;
+}
+@keyframes rcFade { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: translateY(0);} }
+.rc-quiz .rc-q-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(20px, 3vw, 26px);
+  line-height: 1.4;
+  text-align: center;
+  margin: 0 0 30px;
+  color: var(--cream);
+}
+.rc-quiz .rc-q-options { display: flex; flex-direction: column; gap: 12px; }
+.rc-quiz .rc-q-option {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: var(--card);
+  color: var(--card-text);
+  border-radius: 6px;
+  padding: 16px 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.rc-quiz .rc-q-option:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+.rc-quiz .rc-q-option input { display: none; }
+.rc-quiz .rc-checkbox {
+  flex: 0 0 auto; width: 16px; height: 16px; margin-top: 1px;
+  border: 1.5px solid var(--card-text); border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+}
+.rc-quiz .rc-q-option.selected .rc-checkbox { background: var(--card-text); }
+.rc-quiz .rc-checkbox::after {
+  content: ""; width: 8px; height: 8px; border-radius: 1px;
+  background: var(--card); opacity: 0; transition: opacity 0.1s ease;
+}
+.rc-quiz .rc-q-option.selected .rc-checkbox::after { opacity: 1; }
+.rc-quiz .rc-nav-row {
+  max-width: 560px; margin: 30px auto 0;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.rc-quiz .rc-btn {
+  appearance: none; cursor: pointer; background: transparent;
+  border: 1px solid var(--line); color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 14px 26px; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+}
+.rc-quiz .rc-btn:hover { border-color: var(--cream); }
+.rc-quiz .rc-btn:disabled { opacity: 0.32; cursor: not-allowed; }
+.rc-quiz .rc-btn-primary { margin-left: auto; }
+.rc-quiz #rc-results { display: none; max-width: 620px; margin: 0 auto; }
+.rc-quiz .rc-result-eyebrow {
+  text-align: center; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500;
+  font-size: 16px; letter-spacing: 0.01em;
+  color: var(--cream-dim); margin-bottom: 8px;
+}
+.rc-quiz .rc-result-headline {
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.01em;
+  font-size: clamp(30px, 5vw, 42px); text-align: center; line-height: 1.2;
+  margin: 0 0 22px;
+}
+.rc-quiz .rc-result-divider {
+  width: 90px; height: 1px; background: var(--line);
+  margin: 0 auto 30px;
+}
+.rc-quiz .rc-result-sub {
+  text-align: center; font-size: 13.5px; line-height: 1.7;
+  color: var(--cream-dim); margin: 0 0 36px;
+}
+/* ---- PDF report card (download state) ---- */
+.rc-quiz .rc-report-card {
+  background: var(--card); color: var(--card-text);
+  border-radius: 10px; padding: 26px 26px 24px; text-align: center;
+  margin: 0 0 36px;
+}
+.rc-quiz .rc-report-card h3 {
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  font-size: 19px; margin: 0 0 8px;
+}
+.rc-quiz .rc-report-status { font-size: 13px; line-height: 1.65; margin: 0; opacity: 0.82; }
+.rc-quiz .rc-spinner {
+  display: inline-block; width: 14px; height: 14px;
+  border: 2px solid rgba(43,36,22,0.25); border-top-color: var(--card-text);
+  border-radius: 50%; animation: rcSpin 0.8s linear infinite;
+  vertical-align: -2px; margin-right: 8px;
+}
+@keyframes rcSpin { to { transform: rotate(360deg); } }
+.rc-quiz .rc-download-btn {
+  display: inline-block; background: var(--gold); color: #2b2416;
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px;
+  letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+  padding: 15px 32px; border-radius: 999px; margin-top: 8px;
+  transition: filter 0.15s ease;
+}
+.rc-quiz .rc-download-btn:hover { filter: brightness(1.08); }
+.rc-quiz .rc-bar-row { margin-bottom: 16px; }
+.rc-quiz .rc-bar-label-row { display: flex; justify-content: space-between; font-size: 12.5px; letter-spacing: 0.04em; margin-bottom: 6px; }
+.rc-quiz .rc-bar-label-row .rc-name { font-weight: 700; }
+.rc-quiz .rc-bar-label-row .rc-pct { color: var(--cream-dim); }
+.rc-quiz .rc-bar-track { height: 8px; border-radius: 4px; background: rgba(244,236,219,0.14); overflow: hidden; }
+.rc-quiz .rc-bar-fill { height: 100%; border-radius: 4px; width: 0%; transition: width 0.6s ease; }
+.rc-quiz .rc-profile-block { margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--line); }
+.rc-quiz .rc-profile-block h3 {
+  font-family: 'Playfair Display', serif; font-style: italic; font-weight: 600;
+  font-size: 19px; margin: 0 0 10px; display: flex; align-items: center; gap: 10px;
+}
+.rc-quiz .rc-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.rc-quiz .rc-profile-block p { font-size: 13.5px; line-height: 1.75; color: var(--cream-dim); margin: 0 0 10px; }
+.rc-quiz .rc-profile-block strong { color: var(--cream); }
+.rc-quiz .rc-hint-line {
+  margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line);
+  font-size: 13px; line-height: 1.7; font-style: italic;
+  color: var(--cream-dim); text-align: center;
+}
+.rc-quiz .rc-footnote { margin-top: 30px; font-size: 11.5px; line-height: 1.7; color: rgba(244,236,219,0.5); text-align: center; }
+.rc-quiz .rc-retake-wrap { text-align: center; margin-top: 30px; }
+.rc-quiz .rc-locked-btn {
+  display: inline-block; background: var(--card-text); color: var(--card);
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px;
+  letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+  padding: 15px 30px; border-radius: 999px;
+}
+.rc-quiz .rc-lead-card {
+  max-width: 480px; margin: 0 auto; text-align: center;
+  background: var(--card); color: var(--card-text);
+  border-radius: 10px; padding: 40px 32px;
+}
+.rc-quiz .rc-lead-card h2 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 23px; margin: 0 0 10px; }
+.rc-quiz .rc-lead-card p { font-size: 13.5px; line-height: 1.6; margin: 0 0 24px; opacity: 0.85; }
+.rc-quiz .rc-lead-field {
+  width: 100%; font-family: 'Inter', sans-serif; font-size: 14px;
+  padding: 13px 14px; border-radius: 6px; border: 1px solid rgba(43,36,22,0.25);
+  margin-bottom: 12px; background: #fff;
+}
+.rc-quiz .rc-lead-error { color: var(--rust); font-size: 12.5px; margin: -4px 0 12px; display: none; }
+</style>
+</head>
+<body style="margin:0;">
+<div class="rc-quiz" id="root-cause-quiz">
+  <div class="rc-wrap">
+    <div class="rc-tiles">
+      <div class="rc-tile">
+        <h3>DEPLETED QI</h3>
+        <p>Wired, quick, and always moving — until the reserves run dry.</p>
+      </div>
+      <div class="rc-tile">
+        <h3>RISING FIRE</h3>
+        <p>Sharp, driven, and running hot — but the fire has no fuel underneath.</p>
+      </div>
+      <div class="rc-tile">
+        <h3>STILL WATERS</h3>
+        <p>Steady and grounded once — now heavy, slow, and hard to move.</p>
+      </div>
+    </div>
+    <h2 class="rc-take-heading">Take the Quiz</h2>
+    <div class="rc-progress-track">
+      <div class="rc-progress-outer"><div class="rc-progress-inner" id="rcProgressInner"></div></div>
+      <div class="rc-progress-label" id="rcProgressLabel">1 / 30</div>
+    </div>
+    <div id="rcQuizStage">
+      <div class="rc-q-card" id="rcQuestionContainer"></div>
+      <div class="rc-nav-row">
+        <button type="button" class="rc-btn" id="rcBackBtn" disabled>&larr; Back</button>
+        <button type="button" class="rc-btn rc-btn-primary" id="rcNextBtn" disabled>Next &rarr;</button>
+      </div>
+    </div>
+    <section id="rc-results">
+      <div class="rc-result-eyebrow">your pattern is:</div>
+      <h2 class="rc-result-headline" id="rcResultHeadline"></h2>
+      <div class="rc-result-divider"></div>
+      <p class="rc-result-sub" id="rcResultSub"></p>
+      <div class="rc-report-card" id="rcReportArea" style="display:none;"></div>
+      <div class="rc-bar-row">
+        <div class="rc-bar-label-row"><span class="rc-name">Depleted Qi</span><span class="rc-pct" id="rcPctV"></span></div>
+        <div class="rc-bar-track"><div class="rc-bar-fill" id="rcBarV" style="background:var(--gold)"></div></div>
+      </div>
+      <div class="rc-bar-row">
+        <div class="rc-bar-label-row"><span class="rc-name">Rising Fire</span><span class="rc-pct" id="rcPctP"></span></div>
+        <div class="rc-bar-track"><div class="rc-bar-fill" id="rcBarP" style="background:var(--rust)"></div></div>
+      </div>
+      <div class="rc-bar-row">
+        <div class="rc-bar-label-row"><span class="rc-name">Still Waters</span><span class="rc-pct" id="rcPctK"></span></div>
+        <div class="rc-bar-track"><div class="rc-bar-fill" id="rcBarK" style="background:var(--sage)"></div></div>
+      </div>
+      <div id="rcProfileArea"></div>
+      <p class="rc-hint-line" id="rcHintLine" style="display:none;"></p>
+      <p class="rc-footnote">This reflects patterns and tendencies from your answers, not lab results — it doesn't measure your actual mineral or hormone levels. If a pattern here resonates, a hair tissue mineral analysis (HTMA) or hormone panel with a qualified practitioner can confirm what's really going on in your body.</p>
+    </section>
+  </div>
+</div>
+<script>
+(function () {
+// ---- CONFIGURE THIS LINE BEFORE LAUNCH ----
+const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/jdtajvyaf2uqr8mtbkb4fqm5e7rjhx6y";
+// --------------------------------------------------
+const QUESTIONS = [
+  { cat: "Body weight", opts: [
+    "Difficulty gaining weight — if I do gain, it collects around my belly",
+    "I gain weight fairly evenly all over",
+    "I gain weight easily, especially around my hips and bust" ]},
+  { cat: "Joints", opts: [
+    "Tend to be stiff, cracking, or painful",
+    "Tend to run hot, swollen, or inflamed",
+    "Feel loose and well-cushioned, sometimes achy or watery" ]},
+  { cat: "Weather preference", opts: [
+    "I crave warmth and dislike wind, cold, and dryness",
+    "I crave cool weather and dislike heat, fire, and sun",
+    "I crave dryness and dislike damp, humid weather" ]},
+  { cat: "Body odor", opts: [
+    "When present, it's faint and astringent",
+    "Tends to be sour or sharp, especially when I'm warm",
+    "Mild to nonexistent, even sweet-smelling" ]},
+  { cat: "Lips", opts: [
+    "Dry, chapped, or prone to cracking",
+    "Prone to cold sores or fever blisters",
+    "Full and naturally moist" ]},
+  { cat: "Gums", opts: [
+    "Tend to recede over time",
+    "Prone to inflammation or bleeding",
+    "Thick and generally healthy" ]},
+  { cat: "Tongue", opts: [
+    "Dry, thin, pale or grayish",
+    "Red, inflamed, with a yellow-orange coating",
+    "Thick, with swollen or curled edges and a whitish coating" ]},
+  { cat: "Eyes", opts: [
+    "Dry and scratchy",
+    "Whites tend toward red or yellowish",
+    "Tend to look puffy" ]},
+  { cat: "Hair", opts: [
+    "Dry, lusterless, prone to split ends",
+    "Oily, tends to gray or thin early",
+    "Thick, wavy, and lustrous" ]},
+  { cat: "Appetite", opts: [
+    "Variable — some days ravenous, some days I forget to eat",
+    "Strong, sometimes excessive — I get irritable if I skip a meal",
+    "Steady and slow — I can easily skip meals without much bother" ]},
+  { cat: "Bowel movements", opts: [
+    "Irregular, hard, and dry — I get constipated easily",
+    "Loose, 2+ times a day, prone to diarrhea",
+    "Large and full, once a day, sometimes with mucus" ]},
+  { cat: "Thirst", opts: [
+    "Irregular — I often forget to drink water",
+    "Strong and frequent",
+    "Slight — I rarely feel very thirsty" ]},
+  { cat: "Urine", opts: [
+    "Scanty and sometimes cloudy",
+    "Profuse and yellowish",
+    "Moderate in amount" ]},
+  { cat: "Circulation / skin touch", opts: [
+    "My hands and feet run cold",
+    "My skin feels warm to the touch",
+    "My skin feels cool, but not cold" ]},
+  { cat: "Sweat", opts: [
+    "I sweat scantily, even in heat",
+    "I sweat profusely, easily",
+    "I sweat moderately" ]},
+  { cat: "Emotional nature", opts: [
+    "Prone to fear, anxiety, or nervousness — but also communicative, dynamic, flexible, and I adapt to change easily",
+    "Prone to anger or irritability under pressure — but also caring, perceptive, and tolerant",
+    "Prone to attachment or desire — but also loyal, devoted, harmonious, and patient" ]},
+  { cat: "Feelings & opinions", opts: [
+    "My feelings and moods change easily and quickly",
+    "I'm opinionated — I offer my views even when not asked",
+    "I tend to avoid giving my opinion, especially in difficult situations" ]},
+  { cat: "Dreams", opts: [
+    "About flying, running, or restless/anxious dreams",
+    "Vivid and colorful — passion, conflict, speed, moving fast",
+    "About romance, and often involve water" ]},
+  { cat: "At my best", opts: [
+    "Upbeat, cheerful, spontaneous, imaginative, and enthusiastic",
+    "Intelligent, fiery, enterprising, confident, a natural leader",
+    "Compassionate, peaceful, loving, patient, and steady" ]},
+  { cat: "Under stress", opts: [
+    "I become nervous, insecure, unfocused, and worry a lot",
+    "I become angry, critical, impatient, and hot-headed",
+    "I become stagnant, stubborn, possessive, and withdrawn" ]},
+  { cat: "Mind", opts: [
+    "Restless and active — I like constant motion",
+    "Driven — I enjoy finishing things, can be aggressive about it",
+    "Calm and relaxed — I enjoy leisure and taking my time" ]},
+  { cat: "Memory & concentration", opts: [
+    "Quick short-term memory, but I forget easily",
+    "Strong long-term memory, logical and rational thinking",
+    "Excellent memory once something is learned, but I take time to learn it" ]},
+  { cat: "Organization", opts: [
+    "I dislike rigid structure",
+    "I like planning things out in advance",
+    "I'm naturally well-organized" ]},
+  { cat: "Decision making", opts: [
+    "I change my mind easily and find deciding difficult",
+    "I see things clearly and decide rapidly",
+    "I'm slow to decide, but once I do, I stick with it" ]},
+  { cat: "Thinking style", opts: [
+    "Creative",
+    "Strategic and organized",
+    "Follows a set plan of action" ]},
+  { cat: "Projects", opts: [
+    "I take on many projects at once",
+    "I proceed in an orderly way, constantly organizing",
+    "I resist new projects and prefer simplicity" ]},
+  { cat: "Friendships", opts: [
+    "A few close friends, but I know a lot of people",
+    "Warm friendships, but I'm very selective about who I let in",
+    "Loyal, with many friends" ]},
+  { cat: "Money habits", opts: [
+    "I spend quickly and impulsively — saving is hard",
+    "I plan my spending and save, but can splurge for a purpose",
+    "I spend reluctantly, save regularly, and accumulate wealth" ]},
+  { cat: "Speech pace", opts: [
+    "Fast talker, rapid, I change subjects often",
+    "Sharp, fluid, and orderly",
+    "Slow, thoughtful, and melodious" ]},
+  { cat: "Voice", opts: [
+    "High-pitched and quick",
+    "Clear, moderate pitch",
+    "Low-pitched, deep, and resonant" ]}
+];
+const DOSHA_KEYS = ["V", "P", "K"];
+const DOSHA_INFO = {
+  V: {
+    label: "Depleted Qi", color: "var(--gold)",
+    strengths: "At your best, you're the one who sparks the idea and gets the whole room moving — quick-thinking, endlessly adaptable, three steps ahead of everyone else. But that same quickness runs on borrowed fuel: you're the type who forgets to eat until you're suddenly starving, whose mind won't switch off at 11pm even though your body is wiped, who feels \"fine\" on four hours of sleep right up until you very suddenly aren't.",
+    body: "In Traditional Chinese Medicine, this pattern is known as Qi Deficiency — your body's vital energy running out faster than it can be replenished. In functional-medicine terms, this usually tracks with a low sodium-to-magnesium ratio — adrenals that are still answering the call, but drawing down your reserves faster than you're refilling them. It tends to show up as constipation that comes and goes with stress, an appetite that swings between forgetting food entirely and sudden ravenous hunger, and hormonally, irregular cycles or that specific \"tired but wired\" feeling — exhausted, and still unable to fall asleep.",
+    tip: "The fix isn't more willpower, it's fewer decisions: the same wake time, the same bedtime, the same few meals — warm and cooked rather than raw and rushed. Regularity does for this pattern what no supplement can."
+  },
+  P: {
+    label: "Rising Fire", color: "var(--rust)",
+    strengths: "At your best, you're magnetic — sharp, decisive, the one who turns intensity into results and doesn't flinch under pressure. But that fire runs hot for a reason: you're the type who gets \"hangry\" fast enough to scare people, who feels a conversation go sideways in your chest before you can name why, who's fine right up until you're suddenly snapping at someone over nothing.",
+    body: "In Traditional Chinese Medicine, this is closest to what's called Liver Fire — heat and pressure building faster than the body can release it. In functional-medicine terms, this usually tracks with a fast oxidation rate — adrenals and thyroid both running hot, burning through nutrients quicker than they're replaced (sometimes called a \"four-highs\" pattern). It tends to show up as acid reflux or heartburn after rich meals, loose stools when you're stressed rather than relaxed, and hormonally, heat intolerance, breakouts or irritability right before your cycle, or skin that flares the moment life gets loud.",
+    tip: "The fix is building in downtime before you're forced to — cooling, unhurried meals instead of eating at your desk, and letting go of the need to win every argument. This pattern burns bright either way; the only question is whether it burns out."
+  },
+  K: {
+    label: "Still Waters", color: "var(--sage)",
+    strengths: "At your best, you're the steady one — the friend everyone leans on, unflappable, loyal to a fault. But that steadiness has a cost: you're the type who needs an alarm and a second alarm just to get moving, who could sleep nine hours and still feel like you're wading through fog, who picks the couch over the walk every single time, even knowing the walk would help.",
+    body: "In Traditional Chinese Medicine, this pattern points to Damp accumulation with an underlying Yang deficiency — the body's inner fire running too low to keep fluids moving, so dampness settles in instead. In functional-medicine terms, this usually tracks with a \"four-lows\" pattern — sodium, potassium, calcium, and magnesium all running low, which is what true depletion looks like once the reserves are already spent. It tends to show up as sluggish digestion, bloating, a low or absent appetite, and hormonally, low-thyroid-type fatigue and stubborn weight that won't budge no matter what you cut.",
+    tip: "The fix runs against instinct: brisk movement and lighter, spiced food do more here than rest ever will. This pattern doesn't need permission to slow down — it needs a reason to speed back up."
+  }
+};
+let rcIndex = 0;
+const rcAnswers = new Array(QUESTIONS.length).fill(null);
+const rcQuestionContainer = document.getElementById("rcQuestionContainer");
+const rcBackBtn = document.getElementById("rcBackBtn");
+const rcNextBtn = document.getElementById("rcNextBtn");
+const rcProgressInner = document.getElementById("rcProgressInner");
+const rcProgressLabel = document.getElementById("rcProgressLabel");
+function rcRenderQuestion(i) {
+  const q = QUESTIONS[i];
+  rcQuestionContainer.innerHTML =
+    '<div class="rc-q-title">' + q.cat + '</div>' +
+    '<div class="rc-q-options">' +
+    q.opts.map((optText, oi) => {
+      const key = DOSHA_KEYS[oi];
+      const selected = rcAnswers[i] === key ? " selected" : "";
+      const checked = rcAnswers[i] === key ? "checked" : "";
+      const letter = String.fromCharCode(65 + oi);
+      return '<label class="rc-q-option' + selected + '"><input type="radio" name="rcqnav" value="' + key + '" ' + checked + '><span class="rc-checkbox"></span>' + letter + '. ' + optText + '</label>';
+    }).join("") +
+    '</div>';
+  rcQuestionContainer.querySelectorAll('input[type=radio]').forEach(inp => {
+    inp.addEventListener("change", () => {
+      rcAnswers[i] = inp.value;
+      rcQuestionContainer.querySelectorAll(".rc-q-option").forEach(el => el.classList.remove("selected"));
+      inp.closest(".rc-q-option").classList.add("selected");
+      rcNextBtn.disabled = false;
+      rcUpdateProgress();
+    });
+  });
+  rcBackBtn.disabled = i === 0;
+  rcNextBtn.disabled = rcAnswers[i] === null;
+  rcNextBtn.innerHTML = (i === QUESTIONS.length - 1) ? "See My Result &rarr;" : "Next &rarr;";
+  rcUpdateProgress();
+}
+function rcUpdateProgress() {
+  const total = QUESTIONS.length;
+  const answeredCount = rcAnswers.filter(a => a !== null).length;
+  rcProgressInner.style.width = (answeredCount / total * 100) + "%";
+  rcProgressLabel.textContent = (rcIndex + 1) + " / " + total;
+}
+rcBackBtn.addEventListener("click", () => {
+  if (rcIndex > 0) {
+    rcIndex--;
+    rcRenderQuestion(rcIndex);
+    document.getElementById("root-cause-quiz").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+});
+rcNextBtn.addEventListener("click", () => {
+  if (rcAnswers[rcIndex] === null) return;
+  if (rcIndex === QUESTIONS.length - 1) {
+    rcShowLeadCapture();
+    return;
+  }
+  rcIndex++;
+  rcRenderQuestion(rcIndex);
+  document.getElementById("root-cause-quiz").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+function rcShowLeadCapture() {
+  document.getElementById("rcQuizStage").innerHTML =
+    '<div class="rc-lead-card">' +
+      '<h2>One Last Step</h2>' +
+      '<p>Enter your name and email so we can send your full personalized report.</p>' +
+      '<input type="text" id="rcLeadName" class="rc-lead-field" placeholder="Full name">' +
+      '<input type="email" id="rcLeadEmail" class="rc-lead-field" placeholder="Email address">' +
+      '<p class="rc-lead-error" id="rcLeadError">Please enter your name and a valid email address.</p>' +
+      '<button type="button" class="rc-locked-btn" id="rcLeadSubmit" style="width:100%; border:none; cursor:pointer;">See My Result &rarr;</button>' +
+    '</div>';
+  document.getElementById("rcLeadSubmit").addEventListener("click", () => {
+    const name = document.getElementById("rcLeadName").value.trim();
+    const email = document.getElementById("rcLeadEmail").value.trim();
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!name || !emailOk) {
+      document.getElementById("rcLeadError").style.display = "block";
+      return;
+    }
+    rcSubmitLead(name, email);
+    rcRenderResults();
+  });
+}
+function rcGetPaymentId() {
+  // GoDaddy can render custom-code blocks in an isolated frame whose own URL
+  // has no query string — so check our URL, the parent page's URL, and the referrer.
+  try {
+    var p = new URLSearchParams(window.location.search).get("razorpay_payment_id");
+    if (p) return p;
+  } catch (e) {}
+  try {
+    var p2 = new URLSearchParams(window.parent.location.search).get("razorpay_payment_id");
+    if (p2) return p2;
+  } catch (e) {}
+  try {
+    if (document.referrer && document.referrer.indexOf("razorpay_payment_id=") > -1) {
+      var p3 = new URL(document.referrer).searchParams.get("razorpay_payment_id");
+      if (p3) return p3;
+    }
+  } catch (e) {}
+  return "";
+}
+function rcSubmitLead(name, email) {
+  const { counts, pct, ranked } = rcComputeResults();
+  const paymentId = rcGetPaymentId();
+  const payload = {
+    name: name,
+    email: email,
+    top_pattern: DOSHA_INFO[ranked[0]].label,
+    counts: counts,
+    percentages: { depleted_qi: Math.round(pct.V), rising_fire: Math.round(pct.P), still_waters: Math.round(pct.K) },
+    razorpay_payment_id: paymentId
+  };
+  if (MAKE_WEBHOOK_URL.indexOf("PASTE_YOUR") === 0) return;
+  const reportArea = document.getElementById("rcReportArea");
+  if (paymentId) {
+    reportArea.style.display = "block";
+    reportArea.innerHTML =
+      '<h3>Your Archetype Map Report</h3>' +
+      '<p class="rc-report-status"><span class="rc-spinner"></span>Preparing your personalized 5-page report&hellip; this takes about 15 seconds. Please stay on this page.</p>';
+  }
+  const controller = ("AbortController" in window) ? new AbortController() : null;
+  const timeoutId = setTimeout(function () { if (controller) controller.abort(); }, 60000);
+  fetch(MAKE_WEBHOOK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+    signal: controller ? controller.signal : undefined
+  })
+  .then(function (res) { return res.json(); })
+  .then(function (data) {
+    clearTimeout(timeoutId);
+    if (!paymentId) return;
+    if (data && data.download_url) {
+      reportArea.innerHTML =
+        '<h3>Your Report Is Ready</h3>' +
+        '<p class="rc-report-status" style="margin-bottom:6px;">Your personalized 5-page Archetype Map — save it somewhere safe.</p>' +
+        '<a class="rc-download-btn" id="rcDownloadBtn" href="' + data.download_url + '" target="_blank" rel="noopener">Download Your Report &darr;</a>' +
+        '<p class="rc-report-status" id="rcDownloadAlt" style="margin-top:12px; font-size:11.5px;">This download link is active for 1 hour — please download it now.</p>';
+      document.getElementById("rcDownloadBtn").addEventListener("click", function (ev) {
+        ev.preventDefault();
+        rcStartDownload(data.download_url);
+      });
+    } else {
+      rcReportFallback();
+    }
+  })
+  .catch(function () {
+    clearTimeout(timeoutId);
+    if (paymentId) rcReportFallback();
+  });
+}
+function rcStartDownload(url) {
+  // GoDaddy sandboxes this code block, and that sandbox follows links into new
+  // tabs — killing the download there. So: hand the click to the un-sandboxed
+  // parent page first, then fall back through progressively blunter methods.
+  try {
+    var pd = window.parent.document;
+    var a = pd.createElement("a");
+    a.href = url;
+    a.rel = "noopener";
+    pd.body.appendChild(a);
+    a.click();
+    setTimeout(function () { try { pd.body.removeChild(a); } catch (e) {} }, 3000);
+    return;
+  } catch (e) {}
+  try { window.top.location.href = url; return; } catch (e) {}
+  try {
+    var w = window.open(url, "_blank");
+    if (w) return;
+  } catch (e) {}
+  try { window.location.href = url; return; } catch (e) {}
+  var alt = document.getElementById("rcDownloadAlt");
+  if (alt) {
+    alt.innerHTML = 'If the download didn\'t start, copy this link and open it in a new tab:<br>' +
+      '<span style="word-break:break-all; user-select:all; font-size:10.5px;">' + url + '</span>';
+  }
+}
+function rcReportFallback() {
+  const reportArea = document.getElementById("rcReportArea");
+  reportArea.style.display = "block";
+  reportArea.innerHTML =
+    '<h3>Your Report Is On Its Way</h3>' +
+    '<p class="rc-report-status">We hit a small delay generating your PDF. Don\'t worry — your answers were saved. Write to us at <strong>mail@wholewomanlab.com</strong> with the name you used, and we\'ll send your report over personally.</p>';
+}
+function rcComputeResults() {
+  const counts = { V: 0, P: 0, K: 0 };
+  rcAnswers.forEach(a => { if (a) counts[a]++; });
+  const total = QUESTIONS.length;
+  const pct = { V: counts.V / total * 100, P: counts.P / total * 100, K: counts.K / total * 100 };
+  const ranked = DOSHA_KEYS.slice().sort((a, b) => counts[b] - counts[a]);
+  const [first, second, third] = ranked;
+  const gapClose = total * 0.13;
+  let resultType, hint = null;
+  if (counts[first] === counts[second] && counts[second] === counts[third]) {
+    resultType = "tie3";
+  } else if (counts[first] === counts[second]) {
+    resultType = "tie2";
+  } else {
+    resultType = "single";
+    if (counts[first] - counts[second] <= gapClose) hint = second;
+  }
+  return { counts, pct, ranked, resultType, hint };
+}
+function rcProfileBlock(key) {
+  const info = DOSHA_INFO[key];
+  const block = document.createElement("div");
+  block.className = "rc-profile-block";
+  block.innerHTML =
+    '<h3><span class="rc-dot" style="background:' + info.color + '"></span>' + info.label + '</h3>' +
+    '<p>' + info.strengths + '</p>' +
+    '<p>' + info.body + '</p>' +
+    '<p><strong>To stay balanced:</strong> ' + info.tip + '</p>';
+  return block;
+}
+function rcRenderResults() {
+  const { counts, pct, ranked, resultType, hint } = rcComputeResults();
+  const [first, second, third] = ranked;
+  document.getElementById("rcPctV").textContent = Math.round(pct.V) + "%  (" + counts.V + "/30)";
+  document.getElementById("rcPctP").textContent = Math.round(pct.P) + "%  (" + counts.P + "/30)";
+  document.getElementById("rcPctK").textContent = Math.round(pct.K) + "%  (" + counts.K + "/30)";
+  document.getElementById("rcBarV").style.width = pct.V + "%";
+  document.getElementById("rcBarP").style.width = pct.P + "%";
+  document.getElementById("rcBarK").style.width = pct.K + "%";
+  const headlineEl = document.getElementById("rcResultHeadline");
+  const subEl = document.getElementById("rcResultSub");
+  const profileArea = document.getElementById("rcProfileArea");
+  const hintEl = document.getElementById("rcHintLine");
+  profileArea.innerHTML = "";
+  hintEl.style.display = "none";
+  hintEl.textContent = "";
+  if (resultType === "tie3") {
+    headlineEl.textContent = "An Even Split, All Three";
+    subEl.textContent = "Your answers spread almost equally across all three patterns — rather than one dominant pattern, it's worth sitting with all three descriptions below.";
+    DOSHA_KEYS.forEach(k => profileArea.appendChild(rcProfileBlock(k)));
+  } else if (resultType === "tie2") {
+    const p1 = DOSHA_INFO[first], p2 = DOSHA_INFO[second];
+    headlineEl.innerHTML = p1.label + " <span style='opacity:0.6; font-weight:400;'>&amp;</span> " + p2.label;
+    subEl.textContent = "These two came out exactly tied — you carry both patterns closely, so it's worth reading both descriptions below rather than just one.";
+    profileArea.appendChild(rcProfileBlock(first));
+    profileArea.appendChild(rcProfileBlock(second));
+  } else {
+    const info = DOSHA_INFO[first];
+    headlineEl.textContent = info.label;
+    subEl.textContent = hint
+      ? "This pattern came out on top — " + Math.round(pct[first]) + "% of your answers pointed this way."
+      : "This pattern showed up clearly ahead of your others — " + Math.round(pct[first]) + "% of your answers pointed this way.";
+    profileArea.appendChild(rcProfileBlock(first));
+    if (hint) {
+      const hintInfo = DOSHA_INFO[hint];
+      hintEl.textContent = "Worth noting: " + hintInfo.label + " was a close second — a few habits from that pattern may be worth borrowing too.";
+      hintEl.style.display = "block";
+    }
+  }
+  document.getElementById("rcQuizStage").style.display = "none";
+  document.querySelector('.rc-progress-track').style.display = "none";
+  document.getElementById("rc-results").style.display = "block";
+  document.getElementById("rc-results").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+rcRenderQuestion(0);
+})();
+</script>
+</body>
+</html>
