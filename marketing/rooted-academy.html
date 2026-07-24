@@ -14,9 +14,9 @@
      support.thejamiesea.com/start-page (deep oxblood/cream palette, serif
      display type with italic emphasis, left-aligned hero, scrolling ticker
      band, numbered two-column sections). Copy is original.
-  3. VALUE FIGURES: the "$X value" tags in the pricing stack are illustrative
-     starting points (a normal sales-page convention for stacking perceived
-     value) — adjust them to numbers you're comfortable standing behind.
+  3. PRICING: Standard $2,900 / VIP $4,999, both pay-in-full, per Vandana's
+     direction. No payment-plan split is shown since none was specified —
+     add one (e.g. "or 4 payments of $X") if you want to offer it.
   4. FOUNDER NOTE: search for "FOUNDER NOTE — REPLACE" and swap in your own
      words — it's left as a clearly-marked template rather than invented.
   5. TESTIMONIALS / STATS: none are included, on purpose — do not add fake
@@ -125,6 +125,7 @@ section:not(.dark) .numsection .bignum{color:rgba(74,20,32,.045)}
 .num-item:last-child{border-bottom:none}
 .num-item .n{font-family:var(--font-display);font-style:italic;font-weight:700;font-size:22px;color:var(--rose-deep);flex-shrink:0;width:44px;padding-top:2px}
 .num-item h3{margin:0 0 6px;font-size:19px;font-family:var(--font-display);font-weight:600}
+.tier-tag{display:inline-block;font-family:var(--font-sans);font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--rose-deep);background:var(--cream-2);border:1px solid var(--rose);border-radius:999px;padding:2px 8px;margin-left:8px;vertical-align:middle}
 .num-item p{margin:0;font-size:15px;color:var(--muted)}
 
 /* phase / rhythm cards */
@@ -161,9 +162,10 @@ section:not(.dark) .numsection .bignum{color:rgba(74,20,32,.045)}
 .tier-info h3{font-family:var(--font-display);font-size:24px;font-weight:600;margin:0 0 12px}
 .tier-info .tier-desc{font-size:14.5px;color:var(--muted);margin:0 0 20px;line-height:1.6}
 .tier-checklist{display:flex;flex-direction:column;gap:12px}
-.check-item{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-family:var(--font-sans);font-size:11.5px;letter-spacing:.03em}
-.check-item .check-label{position:relative;flex:1;overflow:hidden;white-space:nowrap;color:var(--ink);text-transform:uppercase;font-weight:600}
-.check-item .check-label::before{content:"✓ "}
+.check-item{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-family:var(--font-sans);font-size:12px;letter-spacing:.03em;padding-bottom:10px;border-bottom:1px dashed var(--line-light)}
+.check-item:last-child{border-bottom:none;padding-bottom:0}
+.check-item .check-label{position:relative;flex:1;color:var(--ink);text-transform:uppercase;font-weight:600}
+.check-item .check-label::before{content:"✓ ";color:var(--rose-deep)}
 .check-item .check-val{flex-shrink:0;color:var(--muted);white-space:nowrap;text-transform:uppercase}
 .check-item.pending .check-label,.check-item.pending .check-val{color:var(--muted);font-style:italic;text-transform:none;font-weight:500}
 .check-item.pending .check-label::before{content:"+ "}
@@ -274,7 +276,7 @@ body{padding-bottom:78px}
     <div class="lead-block center" style="margin-left:auto;margin-right:auto;text-align:center">
       <div class="eyebrow center">No. 02 · What's Inside</div>
       <h2 class="display center" style="max-width:none">Whole Woman Academy.</h2>
-      <p class="lead muted">Twelve months of Root Cause Club, upgraded into a complete year of ongoing diagnosis, education and support.</p>
+      <p class="lead muted">The method is the same for every member. VIP adds direct, personal time with Vandana across the year.</p>
     </div>
 
     <div class="wrap-narrow" style="padding:0">
@@ -284,19 +286,27 @@ body{padding-bottom:78px}
       </div>
       <div class="num-item">
         <div class="n">02</div>
-        <div><h3>Monthly Rotating Assessment</h3><p>One month you're re-assessed through TCM; the next, through Ayurveda. Across the year you see your body through both lenses, and watch your own pattern shift with the seasons instead of guessing at it once and moving on.</p></div>
+        <div><h3>Academy Community</h3><p>A full year of access to the community space, so you're never applying any of this alone.</p></div>
       </div>
       <div class="num-item">
         <div class="n">03</div>
-        <div><h3>Monthly Live Class</h3><p>A live monthly session breaking down that month's theme, your rotating assessment, and how to apply it — nutrition, herbs, and lifestyle, explained in plain language.</p></div>
+        <div><h3>Personalised Support Inside Community <span class="tier-tag">VIP</span></h3><p>Closer, more direct support from Vandana inside the community space, not just the general room.</p></div>
       </div>
       <div class="num-item">
         <div class="n">04</div>
-        <div><h3>The Root Cause Club Community</h3><p>A full year of access to the community space, so you're never applying any of this alone.</p></div>
+        <div><h3>Monthly Live (1 Hour) <span class="tier-tag">VIP</span></h3><p>A live monthly hour with Vandana to work through your report and how to apply it.</p></div>
       </div>
       <div class="num-item">
         <div class="n">05</div>
-        <div><h3>Progress Tracking</h3><p>See your pattern move over the year — which findings resolved, which are still active, and what to watch next — instead of a single static snapshot.</p></div>
+        <div><h3>Private HTMA Reading <span class="tier-tag">VIP</span></h3><p>A one-on-one reading of your Hair Tissue Mineral Analysis results with Vandana.</p></div>
+      </div>
+      <div class="num-item">
+        <div class="n">06</div>
+        <div><h3>Private Tongue Reading <span class="tier-tag">VIP</span></h3><p>A one-on-one tongue diagnosis reading with Vandana.</p></div>
+      </div>
+      <div class="num-item">
+        <div class="n">07</div>
+        <div><h3>Direct Access Messaging <span class="tier-tag">VIP</span></h3><p>Message Vandana directly throughout the year, rather than through the community space alone.</p></div>
       </div>
     </div>
   </div>
@@ -311,8 +321,8 @@ body{padding-bottom:78px}
     </div>
     <div class="phase-grid">
       <div class="phase-card"><div class="pn">PHASE 1</div><h4>Discover</h4><p>Baseline constitution report</p></div>
-      <div class="phase-card"><div class="pn">PHASE 2</div><h4>Correct</h4><p>Root-cause protocol, live classes</p></div>
-      <div class="phase-card"><div class="pn">PHASE 3</div><h4>Recalibrate</h4><p>Mid-year reassessment</p></div>
+      <div class="phase-card"><div class="pn">PHASE 2</div><h4>Correct</h4><p>Apply it inside the community</p></div>
+      <div class="phase-card"><div class="pn">PHASE 3</div><h4>Recalibrate</h4><p>Private readings <span class="tier-tag" style="margin-left:4px">VIP</span></p></div>
       <div class="phase-card"><div class="pn">PHASE 4</div><h4>Sustain</h4><p>Integrate into a lasting rhythm</p></div>
     </div>
     <div class="phase-detail">
@@ -321,15 +331,15 @@ body{padding-bottom:78px}
     </div>
     <div class="phase-detail">
       <h4>Phase 2 — Correct</h4>
-      <p>Monthly live classes translate that report into a food, herb and lifestyle plan you can actually follow — one root cause at a time, not everything at once.</p>
+      <p>You translate that report into a food, herb and lifestyle plan you can actually follow inside the Academy Community — one root cause at a time, not everything at once. VIP members work through it live with Vandana every month.</p>
     </div>
     <div class="phase-detail">
       <h4>Phase 3 — Recalibrate</h4>
-      <p>Your rotating monthly assessments resurface what's shifted. Bodies change with seasons, stress and cycles — Whole Woman Academy is built to notice that instead of working from a single report all year.</p>
+      <p>Bodies change with seasons, stress and cycles. VIP members get a private HTMA and tongue reading to resurface what's shifted; Standard members can track changes for themselves inside the community.</p>
     </div>
     <div class="phase-detail">
       <h4>Phase 4 — Sustain</h4>
-      <p>By the end of the year, reading your own constitution is a skill you carry with you — with a full year of tracked data behind it.</p>
+      <p>By the end of the year, reading your own constitution is a skill you carry with you.</p>
     </div>
   </div>
 </section>
@@ -338,36 +348,29 @@ body{padding-bottom:78px}
   <div class="wrap">
     <div class="eyebrow center">No. 04 · Your Investment</div>
     <h2 class="display center" style="max-width:none">Join <em>Whole Woman</em> Academy.</h2>
-    <p class="lead center" style="color:var(--muted);max-width:640px;margin-left:auto;margin-right:auto">Both options give you the complete Whole Woman Academy framework — your Integrated Constitution Report and a full year of monthly diagnosis, education and support. The difference is how much personal access and support you want alongside it.</p>
+    <p class="lead center" style="color:var(--muted);max-width:640px;margin-left:auto;margin-right:auto">Every member gets the method: your Integrated Constitution Report and a full year inside the Academy Community. VIP adds direct, personal support alongside it.</p>
 
-    <!--
-      VIP TIER — PLACEHOLDER: Vandana said she'll specify the additional
-      VIP-only benefits and price separately. Until then, this card repeats
-      the Standard inclusions plus one clearly-marked "pending" line instead
-      of inventing perks or a number. Replace the "pending" check-item and
-      the tier-amount below once the details are provided.
-    -->
     <div class="tier-stack">
       <div class="tier-card featured">
         <div class="ribbon">Most Popular</div>
         <div class="tier-grid">
           <div class="tier-info">
             <h3>Whole Woman Academy <em>VIP</em></h3>
-            <p class="tier-desc">Everything in Standard, plus closer, more direct access to Vandana across the year for members who want extra support while they work the Academy Rhythm. Full VIP breakdown coming soon.</p>
+            <p class="tier-desc">Everything in Standard, plus closer, personal support across the year — live time with Vandana, private readings, and direct messaging access.</p>
             <div class="tier-checklist">
-              <div class="check-item"><span class="check-label">Your Integrated Constitution Report</span><span class="check-val">$997 value</span></div>
-              <div class="check-item"><span class="check-label">12 Monthly Rotating Assessments</span><span class="check-val">$1,997 value</span></div>
-              <div class="check-item"><span class="check-label">12 Monthly Live Classes</span><span class="check-val">$2,400 value</span></div>
-              <div class="check-item"><span class="check-label">Academy Community (12 months)</span><span class="check-val">$576 value</span></div>
-              <div class="check-item"><span class="check-label">Year-Long Progress Tracking</span><span class="check-val">$497 value</span></div>
-              <div class="check-item pending"><span class="check-label">Additional VIP-only benefits</span><span class="check-val">details soon</span></div>
+              <div class="check-item"><span class="check-label">Your Integrated Constitution Report</span></div>
+              <div class="check-item"><span class="check-label">Academy Community (12 months)</span></div>
+              <div class="check-item"><span class="check-label">Personalised Support Inside Community</span></div>
+              <div class="check-item"><span class="check-label">Monthly Live (1 Hour)</span></div>
+              <div class="check-item"><span class="check-label">Private HTMA Reading</span></div>
+              <div class="check-item"><span class="check-label">Private Tongue Reading</span></div>
+              <div class="check-item"><span class="check-label">Direct Access Messaging</span></div>
             </div>
           </div>
           <div class="tier-price">
-            <div class="valued-at">Valued at <s>$6,467+</s></div>
-            <div class="tier-amount" style="font-size:26px">Pricing coming soon</div>
-            <div class="tier-plan">Join the waitlist to hear first</div>
-            <a href="#" class="btn solid block">Join VIP Waitlist →</a>
+            <div class="tier-amount">$4,999</div>
+            <div class="tier-amount-note">Pay in full</div>
+            <a href="#" class="btn solid block">Join VIP →</a>
           </div>
         </div>
       </div>
@@ -376,20 +379,15 @@ body{padding-bottom:78px}
         <div class="tier-grid">
           <div class="tier-info">
             <h3>Whole Woman Academy <em>Standard</em></h3>
-            <p class="tier-desc">If you're ready to stop guessing at your own body and finally understand your constitution, Standard gives you the complete Whole Woman Academy framework to do exactly that.</p>
+            <p class="tier-desc">The method, on its own — your report and a full year inside the Academy Community. No monthly live, private readings, or personalised support.</p>
             <div class="tier-checklist">
-              <div class="check-item"><span class="check-label">Your Integrated Constitution Report</span><span class="check-val">$997 value</span></div>
-              <div class="check-item"><span class="check-label">12 Monthly Rotating Assessments</span><span class="check-val">$1,997 value</span></div>
-              <div class="check-item"><span class="check-label">12 Monthly Live Classes</span><span class="check-val">$2,400 value</span></div>
-              <div class="check-item"><span class="check-label">Academy Community (12 months)</span><span class="check-val">$576 value</span></div>
-              <div class="check-item"><span class="check-label">Year-Long Progress Tracking</span><span class="check-val">$497 value</span></div>
+              <div class="check-item"><span class="check-label">Your Integrated Constitution Report</span></div>
+              <div class="check-item"><span class="check-label">Academy Community (12 months)</span></div>
             </div>
           </div>
           <div class="tier-price">
-            <div class="valued-at">Valued at <s>$6,467</s></div>
-            <div class="tier-amount">$5,000</div>
+            <div class="tier-amount">$2,900</div>
             <div class="tier-amount-note">Pay in full</div>
-            <div class="tier-plan">or 4 payments of $1,500 (total $6,000)</div>
             <a href="#" class="btn solid block">Join Standard →</a>
           </div>
         </div>
@@ -405,15 +403,15 @@ body{padding-bottom:78px}
 
     <details class="faq">
       <summary>I already took the free Constitution Mini Quiz. Why do I need this?</summary>
-      <p>The free quiz gives you a snapshot. Whole Woman Academy gives you the full diagnostic report, then a whole year of watching that pattern move with your seasons, cycle and life — plus the monthly class and community to actually act on it.</p>
+      <p>The free quiz gives you a snapshot. Whole Woman Academy gives you the full diagnostic report, then a whole year inside the Academy Community to actually act on it — and if you join VIP, a monthly live hour with Vandana to work through it together.</p>
     </details>
     <details class="faq">
       <summary>I don't know anything about TCM or Ayurveda. Is this over my head?</summary>
-      <p>No — everything is explained in plain language as you go. You don't need to arrive knowing the terms; that's what the monthly classes are for.</p>
+      <p>No — everything in your report and inside the Academy Community is explained in plain language. VIP members also get a monthly live hour with Vandana to walk through it in real time.</p>
     </details>
     <details class="faq">
-      <summary>What's the difference between Root Cause Club and Whole Woman Academy?</summary>
-      <p>Root Cause Club is the monthly membership on its own. Whole Woman Academy is the full year, with your Integrated Constitution Report and progress tracking built in from day one — it's a different, more complete commitment, not just a longer subscription.</p>
+      <summary>What's the difference between Standard and VIP?</summary>
+      <p>Both include your Integrated Constitution Report and a full year inside the Academy Community — that's the method. VIP adds personal, direct support on top: personalised attention inside the community, a monthly live hour, a private HTMA reading, a private tongue reading, and direct messaging access to Vandana.</p>
     </details>
     <details class="faq">
       <summary>Is this a replacement for seeing a doctor?</summary>
@@ -421,7 +419,7 @@ body{padding-bottom:78px}
     </details>
     <details class="faq">
       <summary>What if I want more direct, personal support?</summary>
-      <p>That's what the Whole Woman Diagnostic™ and Whole Woman Clinical Partnership™ are for — a deeper 1:1 diagnostic experience and ongoing personal guidance. Many Whole Woman Academy members go on to book one of those when they're ready for that level of attention.</p>
+      <p>That's exactly what VIP is for. If you want an even deeper 1:1 experience beyond the Academy year, the Whole Woman Diagnostic™ and Whole Woman Clinical Partnership™ are there too.</p>
     </details>
   </div>
 </section>
@@ -438,7 +436,7 @@ body{padding-bottom:78px}
 
 <div class="stickybar">
   <div class="wrap">
-    <span class="price-line">Whole Woman Academy · $5,000/yr or 4×$1,500</span>
+    <span class="price-line">Whole Woman Academy · Standard $2,900 · VIP $4,999</span>
     <a href="#pricing" class="btn solid-cream lg">Enroll Now →</a>
   </div>
 </div>
