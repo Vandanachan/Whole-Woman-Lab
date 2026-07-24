@@ -6,24 +6,25 @@
 <title>Root Cause Club — Whole Woman Lab</title>
 <base target="_top">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap');
 .wwl-page, .wwl-page * { box-sizing: border-box; }
 .wwl-page {
-  --bg-0:      #1b120c;
-  --bg-1:      #241811;
-  --cream:     #f4ecdb;
-  --cream-dim: rgba(244,236,219,0.72);
-  --line:      rgba(244,236,219,0.28);
-  --gold:      #b8862a;
+  --bg-0:      #3a0f19;
+  --bg-1:      #5c1a28;
+  --cream:     #f6f0e4;
+  --cream-dim: rgba(246,240,228,0.72);
+  --line:      rgba(246,240,228,0.28);
+  --gold:      #c98a6b;
   margin: 0;
   background: var(--bg-0);
   color: var(--cream);
-  font-family: 'Space Mono', ui-monospace, monospace;
+  font-family: 'Lora', Georgia, serif;
 }
 .wwl-page .wwl-wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 .wwl-page section { padding: 72px 0; border-bottom: 1px solid var(--line); }
 .wwl-page section:last-of-type { border-bottom: none; }
 .wwl-page .wwl-eyebrow {
+  font-family: 'Inter', sans-serif;
   font-size: 12.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--gold); margin: 0 0 14px;
 }
@@ -39,14 +40,14 @@
 .wwl-page .wwl-btn {
   display: inline-flex; align-items: center; gap: 10px;
   border: 1px solid var(--line); color: var(--cream);
-  font-family: 'Space Mono', monospace; font-size: 12.5px; font-weight: 700;
+  font-family: 'Inter', sans-serif; font-size: 12.5px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   padding: 15px 28px; border-radius: 999px; text-decoration: none;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 .wwl-page .wwl-btn:hover { border-color: var(--cream); background: rgba(244,236,219,0.06); }
 .wwl-page .wwl-btn-solid { background: var(--gold); border-color: var(--gold); color: var(--bg-0); }
-.wwl-page .wwl-btn-solid:hover { background: #c99730; border-color: #c99730; }
+.wwl-page .wwl-btn-solid:hover { background: #d9a186; border-color: #d9a186; }
 /* ============ HERO / BANNER ============ */
 .wwl-page .rcc-hero { text-align: center; padding-top: 88px; }
 .wwl-page .rcc-hero .wwl-eyebrow { text-align: center; }
@@ -66,7 +67,7 @@
 .wwl-page .rcc-instant-list li {
   display: flex; gap: 14px; align-items: baseline;
   padding: 17px 0; border-bottom: 1px solid var(--line);
-  font-family: 'Space Mono', monospace; font-weight: 700; font-size: 14.5px;
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14.5px;
   letter-spacing: 0.03em; text-transform: uppercase; color: var(--cream);
 }
 .wwl-page .rcc-instant-list li:last-child { border-bottom: none; }
@@ -106,7 +107,7 @@
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;
   background: none; border: none; margin: 0; cursor: pointer; text-align: left;
   padding: 23px 0; color: var(--cream);
-  font-family: 'Space Mono', monospace; font-weight: 700; font-size: 13.5px;
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13.5px;
   letter-spacing: 0.04em; text-transform: uppercase;
 }
 .wwl-page .rcc-faq-icon { flex-shrink: 0; color: var(--gold); font-size: 19px; line-height: 1; width: 18px; text-align: center; }
