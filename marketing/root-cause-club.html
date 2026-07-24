@@ -21,6 +21,11 @@
   font-family: 'Lora', Georgia, serif;
 }
 .wwl-page .wwl-wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+.wwl-page .wwl-nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; padding: 20px 24px; border-bottom: 1px solid var(--line); }
+.wwl-page .wwl-nav-brand { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+.wwl-page .wwl-nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+.wwl-page .wwl-nav-links a { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream-dim); text-decoration: none; }
+.wwl-page .wwl-nav-links a:hover { color: var(--cream); }
 .wwl-page section { padding: 72px 0; border-bottom: 1px solid var(--line); }
 .wwl-page section:last-of-type { border-bottom: none; }
 .wwl-page .wwl-eyebrow {
@@ -49,7 +54,7 @@
 .wwl-page .wwl-btn-solid { background: var(--gold); border-color: var(--gold); color: var(--bg-0); }
 .wwl-page .wwl-btn-solid:hover { background: #d9a186; border-color: #d9a186; }
 /* ============ HERO / BANNER ============ */
-.wwl-page .rcc-hero { text-align: center; padding-top: 88px; }
+.wwl-page .rcc-hero { text-align: center; padding-top: 56px; }
 .wwl-page .rcc-hero .wwl-eyebrow { text-align: center; }
 .wwl-page .rcc-hero h1 {
   font-size: clamp(30px, 4.6vw, 48px); line-height: 1.22; color: var(--cream);
@@ -120,6 +125,15 @@
 </head>
 <body style="margin:0;">
 <div class="wwl-page" id="root-cause-club-page">
+  <div class="wwl-nav">
+    <a class="wwl-nav-brand" href="/">Whole Woman Lab</a>
+    <div class="wwl-nav-links">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/whole-woman-academy">Whole Woman Academy</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+  </div>
   <!-- ============================================================
        BANNER
   ============================================================ -->
@@ -140,16 +154,15 @@
   <section>
    <div class="wwl-wrap">
     <div class="rcc-panel rcc-instant">
-      <p class="wwl-eyebrow">The Moment You Join</p>
-      <h2>Get Instant Access To:</h2>
+      <p class="wwl-eyebrow">Inside The Club</p>
+      <h2>What you get, every month:</h2>
       <ul class="rcc-instant-list">
-        <li>Discover Your Root Cause</li>
-        <li>The Root Cause Healing Method Workshop</li>
-
-        <li>Your Healing Framework Blueprint</li>
-        <li>Bonus: Monthly Live Support Training</li>
+        <li>Your Personalized Diagnosis</li>
+        <li>A Monthly Live Lecture</li>
+        <li>Community Support</li>
+        <li>A Worksheet To Improve Your Health</li>
       </ul>
-      <p class="rcc-instant-note">These four foundations are yours immediately &mdash; no waiting on a schedule, no falling behind.</p>
+      <p class="rcc-instant-note">One home base for root-cause education &mdash; not four courses dumped on you at once.</p>
       <div class="rcc-instant-ctas">
         <a class="wwl-btn" href="https://www.skool.com/root-cause-club" target="_blank" rel="noopener">Get Instant Access &rarr;</a>
       </div>
@@ -163,30 +176,26 @@
    <div class="wwl-wrap">
     <div class="wwl-section-head">
       <p class="wwl-eyebrow" style="text-align:center;">How It Works</p>
-      <h2 class="wwl-title">An open library, not a countdown.</h2>
-      <p class="wwl-body">You don't need four new workshops the day you join &mdash; you need the right five to start. Here's how Root Cause Club actually unfolds from there.</p>
+      <h2 class="wwl-title">One room. One rhythm. Every month.</h2>
+      <p class="wwl-body">Root Cause Club isn't a library of pre-recorded courses to binge through &mdash; it's an ongoing space you show up to, month after month.</p>
     </div>
     <div class="rcc-cadence-grid">
       <div class="rcc-panel rcc-cadence-card">
-        <p class="wwl-eyebrow">Day One</p>
-        <h3>What's instantly yours</h3>
+        <p class="wwl-eyebrow">When You Join</p>
+        <h3>Your Personalized Diagnosis</h3>
         <ul>
-          <li>Your Root Cause discovery training</li>
-          <li>The Root Cause Healing Method workshop</li>
-          <li>Your Root + Right Method audit</li>
-          <li>Your Healing Framework blueprint</li>
-          <li>Bonus monthly live-support training</li>
+          <li>A short intake to place you in your root-cause pattern</li>
+          <li>Your starting point for that month's live lecture and worksheet</li>
         </ul>
-        <span class="rcc-cadence-tag">Unlocked the moment you join &mdash; no wait.</span>
+        <span class="rcc-cadence-tag">Your entry point into the club, not a one-time extra.</span>
       </div>
       <div class="rcc-panel rcc-cadence-card">
-        <p class="wwl-eyebrow">Every Month After</p>
-        <h3>What gets added</h3>
+        <p class="wwl-eyebrow">Every Month</p>
+        <h3>The Live Lecture + Worksheet</h3>
         <ul>
-          <li>One new root-cause lesson, added to your library</li>
-          <li>A worksheet to put that lesson into practice</li>
-          <li>One live monthly Q&amp;A call</li>
-          <li>Ongoing access to the community space</li>
+          <li>One live root-cause lecture, taught monthly</li>
+          <li>A worksheet to put that month's lecture into practice</li>
+          <li>Ongoing community support in the group space</li>
         </ul>
         <span class="rcc-cadence-tag">No fixed order &mdash; everything you unlock, you keep.</span>
       </div>
@@ -206,10 +215,10 @@
       <div class="rcc-pricing-amount"><sup>$</sup>47</div>
       <p class="rcc-pricing-per">per month &middot; founding-member rate</p>
       <ul class="rcc-pricing-list">
-        <li> 4 foundational trainings, instantly</li>
-        <li>One new root-cause lesson every month</li>
-        <li>Monthly live Q&amp;A call</li>
-        <li>Self-led community space</li>
+        <li>Your personalized diagnosis</li>
+        <li>A monthly live lecture</li>
+        <li>Community support</li>
+        <li>A worksheet to improve your health, every month</li>
         <li>Cancel anytime, no contracts</li>
       </ul>
       <a class="wwl-btn wwl-btn-solid" style="width:100%; justify-content:center;" href="https://rzp.io/rzp/rccwwl" target="_blank" rel="noopener">Join for $47/month &rarr;</a>
@@ -232,7 +241,7 @@
         <span class="rcc-faq-icon">+</span>
       </button>
       <div class="rcc-faq-a">
-        <p>No &mdash; Root Cause Club is education and community. If you want a protocol built specifically around your labs and history, that's what The Integrative Personal Institute is for. Many members start here and move into 1:1 once they understand their root pattern.</p>
+        <p>No &mdash; Root Cause Club is education and community. It's built for ongoing support and monthly guidance, not a protocol built specifically around your individual labs and history. Many members start here to understand their root pattern first.</p>
       </div>
     </div>
     <div class="rcc-faq-item">
@@ -241,7 +250,7 @@
         <span class="rcc-faq-icon">+</span>
       </button>
       <div class="rcc-faq-a">
-        <p>No. There's no fixed schedule to fall behind on. Every lesson already published stays open in your library the moment you join, and new lessons keep getting added on top &mdash; you just start wherever you are.</p>
+        <p>No. There's no fixed schedule to fall behind on. You'll get your personalized diagnosis, that month's live lecture, and its worksheet the moment you join &mdash; and each month after adds a new lecture and worksheet on top.</p>
       </div>
     </div>
     <div class="rcc-faq-item">
@@ -277,7 +286,7 @@
         <span class="rcc-faq-icon">+</span>
       </button>
       <div class="rcc-faq-a">
-        <p>That's exactly what the club is for. Start with your Root Cause discovery training and the Healing Method workshop &mdash; most members walk in unsure and walk out with a clear next step.</p>
+        <p>That's exactly what the club is for. Your personalized diagnosis when you join is built for that &mdash; most members walk in unsure and walk out with a clear next step.</p>
       </div>
     </div>
    </div>

@@ -16,8 +16,11 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--oxblood-3);color:var(--on-dark);font-family:var(--font-sans);min-height:100vh;display:flex;flex-direction:column}
-.nav{padding:20px 28px;border-bottom:1px solid rgba(244,234,221,.14)}
-.nav a{font-family:var(--font-sans);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark);text-decoration:none}
+.nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:20px 28px;border-bottom:1px solid rgba(244,234,221,.14)}
+.nav>a{font-family:var(--font-sans);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark);text-decoration:none}
+.nav-links{display:flex;gap:22px;flex-wrap:wrap}
+.nav-links a{font-family:var(--font-sans);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-muted);text-decoration:none}
+.nav-links a:hover{color:var(--on-dark)}
 main{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:64px 28px}
 .eyebrow{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--rose);font-weight:700;margin-bottom:18px}
 h1{font-family:var(--font-display);font-style:italic;font-weight:600;font-size:clamp(28px,5vw,46px);margin:0 0 20px;max-width:16ch}
@@ -27,13 +30,20 @@ p{max-width:480px;margin:0 auto 34px;color:var(--on-dark-muted);font-size:15.5px
 </style>
 </head>
 <body>
-<div class="nav"><a href="/">Whole Woman Lab</a></div>
+<div class="nav">
+  <a href="/">Whole Woman Lab</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/whole-woman-academy">Whole Woman Academy</a>
+    <a href="/contact">Contact Us</a>
+  </div>
+</div>
 <main>
   <div>
     <div class="eyebrow">Coming Soon</div>
     <h1>Apply for 1:1</h1>
     <p>The application for personalised 1:1 diagnostic and partnership work is being finalized. Whole Woman Academy is open now if you'd like to start there in the meantime.</p>
-    <a href="/audit" class="btn">Learn About The Audit →</a>
     <a href="/whole-woman-academy" class="btn">Explore Whole Woman Academy →</a>
     <a href="/" class="btn">Back to Home →</a>
   </div>

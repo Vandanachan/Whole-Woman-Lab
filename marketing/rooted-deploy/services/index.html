@@ -14,8 +14,11 @@
   font-family: 'Lora', Georgia, serif;
 }
 .wwl-page .wwl-wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; }
-.wwl-page .wwl-nav { border-bottom: 1px solid var(--line); padding: 20px 24px; }
-.wwl-page .wwl-nav a { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+.wwl-page .wwl-nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; border-bottom: 1px solid var(--line); padding: 20px 24px; }
+.wwl-page .wwl-nav > a { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+.wwl-page .wwl-nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+.wwl-page .wwl-nav-links a { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream-dim); text-decoration: none; }
+.wwl-page .wwl-nav-links a:hover { color: var(--cream); }
 .wwl-page section { padding: 72px 0; border-bottom: 1px solid var(--line); }
 .wwl-page section:last-of-type { border-bottom: none; }
 .wwl-page .wwl-eyebrow {
@@ -93,7 +96,15 @@
 .wwl-page .wwl-footer-cta { text-align: center; }
 </style>
 <div class="wwl-page" id="whole-woman-lab-services">
-  <div class="wwl-nav"><a href="/">Whole Woman Lab</a></div>
+  <div class="wwl-nav">
+    <a href="/">Whole Woman Lab</a>
+    <div class="wwl-nav-links">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/whole-woman-academy">Whole Woman Academy</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+  </div>
   <!-- ============================================================
        HERO — "Let's Work Together" (text-only, no photo)
   ============================================================ -->
@@ -109,6 +120,7 @@
     <div class="wwl-section-head">
       <p class="wwl-eyebrow" style="text-align:center;">Work With Us</p>
       <h2 class="wwl-title"> Select Your Method.</h2>
+      <p class="wwl-body">Not sure where to start? The Archetype Map is a quick, low-cost read on your pattern. Root Cause Club is ongoing monthly education and support. Whole Woman Academy is a full year working through it, guided.</p>
     </div>
     <div class="wwl-offers-grid">
       <div class="wwl-offer-card featured">
@@ -128,12 +140,6 @@
         <h3>Whole Woman Academy</h3>
         <p class="wwl-body">A full year inside the Academy &mdash; your Integrated Constitution Report plus the Academy Community, with VIP adding closer, personal support along the way.</p>
         <div><a class="wwl-btn" href="/whole-woman-academy">Explore the Academy &rarr;</a></div>
-      </div>
-      <div class="wwl-offer-card">
-        <p class="wwl-eyebrow">1:1 Work</p>
-        <h3>The Audit</h3>
-        <p class="wwl-body">A personalised mentorship dive &mdash; breaking down your labs, symptoms, and tongue diagnosis to formulate your protocol, one-on-one.</p>
-        <div><a class="wwl-btn" href="/audit">Learn More &rarr;</a></div>
       </div>
     </div>
    </div>

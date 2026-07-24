@@ -25,12 +25,17 @@
   font-family: 'Lora', Georgia, serif;
 }
 .am-page section { padding: 90px 20px; max-width: 900px; margin: 0 auto; }
+.am-page .am-nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; padding: 20px 28px; border-bottom: 1px solid var(--line); }
+.am-page .am-nav .am-nav-brand { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+.am-page .am-nav .am-nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+.am-page .am-nav .am-nav-links a { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream-dim); text-decoration: none; }
+.am-page .am-nav .am-nav-links a:hover { color: var(--cream); }
 .am-page .am-eyebrow {
   text-align: center; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500;
   font-size: 17px; color: var(--cream-dim); margin: 0 0 14px;
 }
 .am-page h1, .am-page h2 { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--cream); margin: 0; }
-.am-page .am-hero { text-align: center; padding-top: 110px; }
+.am-page .am-hero { text-align: center; padding-top: 70px; }
 .am-page .am-hero h1 {
   font-size: clamp(34px, 5.5vw, 58px); line-height: 1.18; max-width: 780px; margin: 0 auto 26px;
 }
@@ -104,12 +109,21 @@
 </head>
 <body style="margin:0;">
 <div class="am-page">
+  <div class="am-nav">
+    <a class="am-nav-brand" href="/">Whole Woman Lab</a>
+    <div class="am-nav-links">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/whole-woman-academy">Whole Woman Academy</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+  </div>
   <section class="am-hero">
-    <div class="am-eyebrow">the archetype map</div>
+    <div class="am-eyebrow">the archetype map · a root cause assessment</div>
     <h1>Your body has a pattern.<br>It's time you knew yours.</h1>
-    <p class="am-sub">A 10-minute assessment rooted in Traditional Chinese Medicine that reveals whether you're running on Depleted Qi, Rising Fire, or Still Waters — and exactly what to do about it.</p>
+    <p class="am-sub">A short assessment rooted in Ayurveda and Traditional Chinese Medicine that surfaces which pattern — Depleted Qi, Rising Fire, or Still Waters — is showing up in your body right now, and what tends to trigger it.</p>
     <a class="am-cta" href="https://rzp.io/rzp/archetypemapwwl">Take The Archetype Map — $28</a>
-    <div class="am-cta-note">2-minute quiz &nbsp;·&nbsp; Instant result &nbsp;·&nbsp; Personalised report </div>
+    <div class="am-cta-note">2-minute assessment &nbsp;·&nbsp; Instant result &nbsp;·&nbsp; Educational report</div>
   </section>
   <div class="am-divider"></div>
   <section class="am-prose">
@@ -136,7 +150,7 @@
       <div class="am-step">
         <div class="am-step-num">03</div>
         <h3>Get Your Report</h3>
-        <p>An 8-page personalized guide on what's driving your pattern, what makes it worse, and exactly what to eat, do, and avoid.</p>
+        <p>An educational report covering your Ayurveda and TCM constitution, the symptom patterns tied to it, and the initial patterns worth paying attention to — not a treatment plan, a starting point for awareness.</p>
       </div>
     </div>
   </section>
@@ -158,6 +172,19 @@
       </div>
     </div>
   </section>
+  <section>
+    <div class="am-eyebrow" style="margin-bottom: 6px; text-align:center;">what's inside</div>
+    <h2 style="text-align:center; font-size: clamp(26px,4vw,36px);">A starting point, not a diagnosis</h2>
+    <p style="text-align:center;max-width:620px;margin:0 auto 34px;color:var(--cream-dim);font-size:15px;line-height:1.75;">This is a Root Cause Assessment — not a quiz for fun, and not a full clinical workup. It's built to show you where to look. Awareness first, treatment later.</p>
+    <div class="am-feel-list">
+      <div class="am-feel-item"><span class="am-dot">—</span> Your Ayurveda constitution</div>
+      <div class="am-feel-item"><span class="am-dot">—</span> Your TCM (Traditional Chinese Medicine) constitution</div>
+      <div class="am-feel-item"><span class="am-dot">—</span> The symptom patterns tied to your result</div>
+      <div class="am-feel-item"><span class="am-dot">—</span> Initial clinical hypotheses worth exploring further</div>
+      <div class="am-feel-item"><span class="am-dot">—</span> A personalized educational report you keep</div>
+    </div>
+    <p style="text-align:center;max-width:560px;margin:26px auto 0;color:var(--cream-dim);font-size:13.5px;line-height:1.7;font-style:italic;">These are the patterns that deserve attention — not a treatment plan. If something here resonates, that's the signal to look closer, together.</p>
+  </section>
   <section class="am-prose">
     <div class="am-eyebrow" style="margin-bottom: 6px;">who this is for</div>
     <h2>You're exhausted by generic answers</h2>
@@ -173,19 +200,19 @@
     <div class="am-eyebrow" style="margin-bottom: 30px; text-align:center;">frequently asked</div>
     <div class="am-faq-item">
       <h3>What exactly is the Archetype Map?</h3>
-      <p>A 30-question assessment based on Traditional Chinese Medicine patterns. It identifies which of three root patterns — Depleted Qi, Rising Fire, or Still Waters — best describes what's happening in your body right now, then explains why, and what to do about it.</p>
+      <p>A Root Cause Assessment, not a quiz. It's a 30-question assessment based on Ayurveda and Traditional Chinese Medicine patterns. It identifies which of three root patterns — Depleted Qi, Rising Fire, or Still Waters — is showing up in your body right now, and what tends to trigger it.</p>
     </div>
     <div class="am-faq-item">
       <h3>How long does it take?</h3>
-      <p>About 2 minutes for the quiz itself. Your instant result appears the moment you finish, and your full personalized report arrives by email shortly after.</p>
+      <p>About 2 minutes for the assessment itself. Your instant result appears the moment you finish, and your full personalized report arrives by email shortly after.</p>
     </div>
     <div class="am-faq-item">
       <h3>What do I actually get?</h3>
-      <p>Your on-screen result with a breakdown of your pattern, plus a personalized PDF report covering the root cause of your pattern, what tends to make it worse, and support food, ritual, and lifestyle guidance to help bring your body back into balance.</p>
+      <p>Your on-screen result with a breakdown of your pattern, plus a personalized educational report covering your Ayurveda constitution, your TCM constitution, the symptom patterns tied to your result, and initial hypotheses worth paying attention to. It's a starting point for awareness — not a full clinical workup, and not a treatment plan.</p>
     </div>
     <div class="am-faq-item">
       <h3>Is this a medical diagnosis?</h3>
-      <p>No. The Archetype Map offers wellness insights inspired by Traditional Chinese Medicine, intended for general educational and self-awareness purposes. It is not a medical diagnosis and isn't a substitute for 1:1 work.</p>
+      <p>No. The Archetype Map offers wellness insights inspired by Ayurveda and Traditional Chinese Medicine, intended for general educational and self-awareness purposes. It only touches on which pattern your body may be leaning into and what can trigger it — it is not a medical diagnosis, not a full diagnostic workup, and isn't a substitute for 1:1 work.</p>
     </div>
     <div class="am-faq-item">
       <h3>What if my result doesn't feel quite right?</h3>

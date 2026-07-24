@@ -20,12 +20,17 @@
   --rust:      #9c4a35;
   --sage:      #7c8f5e;
   margin: 0;
-  padding: 64px 20px 90px;
+  padding: 0 0 90px;
   background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
   color: var(--cream);
   font-family: 'Lora', Georgia, serif;
 }
-.rc-quiz .rc-wrap { max-width: 780px; margin: 0 auto; }
+.rc-quiz .rc-nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; padding: 20px 28px; border-bottom: 1px solid var(--line); margin-bottom: 64px; }
+.rc-quiz .rc-nav .rc-nav-brand { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+.rc-quiz .rc-nav .rc-nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+.rc-quiz .rc-nav .rc-nav-links a { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream-dim); text-decoration: none; }
+.rc-quiz .rc-nav .rc-nav-links a:hover { color: var(--cream); }
+.rc-quiz .rc-wrap { max-width: 780px; margin: 0 auto; padding: 0 20px; }
 .rc-quiz .rc-tiles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -218,6 +223,15 @@
 </head>
 <body style="margin:0;">
 <div class="rc-quiz" id="root-cause-quiz">
+  <div class="rc-nav">
+    <a class="rc-nav-brand" href="/">Whole Woman Lab</a>
+    <div class="rc-nav-links">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/whole-woman-academy">Whole Woman Academy</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+  </div>
   <div class="rc-wrap">
     <div class="rc-tiles">
       <div class="rc-tile">
@@ -233,7 +247,7 @@
         <p>Steady and grounded once — now heavy, slow, and hard to move.</p>
       </div>
     </div>
-    <h2 class="rc-take-heading">Take the Quiz</h2>
+    <h2 class="rc-take-heading">Your Root Cause Assessment</h2>
     <div class="rc-progress-track">
       <div class="rc-progress-outer"><div class="rc-progress-inner" id="rcProgressInner"></div></div>
       <div class="rc-progress-label" id="rcProgressLabel">1 / 30</div>

@@ -21,8 +21,11 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--oxblood-3);color:var(--on-dark);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased}
-.nav{padding:20px 28px;border-bottom:1px solid var(--line-dark)}
-.nav a{font-family:var(--font-sans);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark);text-decoration:none}
+.nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:20px 28px;border-bottom:1px solid var(--line-dark)}
+.nav>a{font-family:var(--font-sans);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark);text-decoration:none}
+.nav-links{display:flex;gap:22px;flex-wrap:wrap}
+.nav-links a{font-family:var(--font-sans);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-muted);text-decoration:none}
+.nav-links a:hover{color:var(--on-dark)}
 main{max-width:640px;margin:0 auto;padding:110px 28px 90px;text-align:center}
 .eyebrow{font-family:var(--font-sans);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--on-dark-muted);font-weight:700;margin-bottom:18px}
 h1{font-family:var(--font-display);font-weight:600;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 26px}
@@ -34,7 +37,15 @@ p.sub{font-size:16.5px;color:var(--on-dark-muted);margin:0 0 40px}
 </style>
 </head>
 <body>
-<div class="nav"><a href="/">Whole Woman Lab</a></div>
+<div class="nav">
+  <a href="/">Whole Woman Lab</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/whole-woman-academy">Whole Woman Academy</a>
+    <a href="/contact">Contact Us</a>
+  </div>
+</div>
 <main>
   <div class="eyebrow">free resource · eastern medicine quiz</div>
   <h1>Find your Chinese diagnosis.</h1>
