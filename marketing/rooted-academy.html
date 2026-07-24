@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROOTED — Whole Woman Lab</title>
+<!--
+  ============================================================================
+  HOW TO USE THIS FILE
+  ============================================================================
+  1. NAME PLACEHOLDER: "ROOTED" is a suggested one-word name, used ~14 times
+     below. Search/replace "ROOTED" with your chosen name before publishing.
+     A few other one-word options if you want them: PRAKRITI, WHOLEWOMAN,
+     INNATE, ELEMENTA.
+  2. VALUE FIGURES: the "$X value" tags in the pricing stack are illustrative
+     starting points (a normal sales-page convention for stacking perceived
+     value) — adjust them to numbers you're comfortable standing behind.
+  3. FOUNDER NOTE: search for "FOUNDER NOTE — REPLACE" and swap in your own
+     words — it's left as a clearly-marked template rather than invented.
+  4. TESTIMONIALS / STATS: none are included, on purpose — do not add fake
+     client quotes or numbers. Swap in real ones once you have them (there
+     are marked slots below where they'd go).
+  5. PUBLISHING ON GODADDY: if you use GoDaddy's drag-and-drop Website
+     Builder, paste this into an "HTML/Embed" section (Website Builder →
+     Add Section → Embed Code). If you use GoDaddy cPanel/WordPress hosting,
+     upload this file directly via File Manager or a custom-HTML page/block.
+  ============================================================================
+-->
+<style>
+:root{
+  --bg:#f7f4ee; --panel:#ffffff; --ink:#20241f; --muted:#5c6459; --line:#e3ded2;
+  --brand:#3a6f5f; --brand-ink:#20463a; --brand-bg:#e9f1ec;
+  --accent:#9c5b3c; --accent-bg:#f5e9e0;
+  --shadow:0 1px 3px rgba(20,25,20,.06),0 10px 30px rgba(20,25,20,.06);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.sans{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+.kicker{font-family:ui-sans-serif,system-ui,sans-serif;letter-spacing:.24em;text-transform:uppercase;font-size:11.5px;font-weight:700;color:var(--brand-ink)}
+.kicker.on-dark{color:#cfe6da}
+a{color:inherit}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(247,244,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:760px;margin:0 auto;padding:14px 22px;display:flex;justify-content:space-between;align-items:center}
+.nav-inner .word{font-weight:700;font-size:18px;letter-spacing:.02em}
+.btn{font-family:ui-sans-serif,system-ui,sans-serif;font-weight:700;font-size:13.5px;padding:11px 20px;border-radius:999px;border:1px solid var(--brand);background:var(--brand);color:#fff;cursor:pointer;display:inline-block;text-decoration:none;white-space:nowrap}
+.btn:hover{background:var(--brand-ink);border-color:var(--brand-ink)}
+.btn.ghost{background:transparent;color:var(--brand-ink)}
+.btn.lg{padding:15px 30px;font-size:15px}
+
+/* hero */
+.hero{padding:64px 0 40px;text-align:center}
+.hero h1{font-size:clamp(40px,9vw,72px);margin:.1em 0;letter-spacing:.01em;font-weight:600}
+.hero .sub{font-size:clamp(17px,2.6vw,21px);max-width:560px;margin:14px auto 8px;color:var(--brand-ink)}
+.hero .body{max-width:560px;margin:16px auto 26px;font-size:16.5px;color:var(--ink)}
+.divider{width:52px;height:2px;background:var(--accent);margin:26px auto}
+
+/* generic section */
+section{padding:52px 0}
+section.tinted{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2.display{font-size:clamp(27px,5vw,38px);font-weight:600;line-height:1.2;margin:.2em 0 .4em}
+.eyebrow{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+p.lead{font-size:17px}
+.center{text-align:center}
+
+/* tappable "feels true" list */
+.taplist{display:flex;flex-direction:column;gap:9px;margin:22px 0}
+.tap{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--panel);cursor:pointer;font-size:15px;transition:.12s}
+.tap:hover{border-color:var(--brand)}
+.tap.on{background:var(--brand-bg);border-color:var(--brand)}
+.tap .box{flex-shrink:0;width:18px;height:18px;border:2px solid var(--muted);border-radius:5px;margin-top:2px}
+.tap.on .box{background:var(--brand);border-color:var(--brand)}
+
+/* numbered "what you get" items */
+.num-item{display:flex;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.num-item:last-child{border-bottom:none}
+.num-item .n{font-family:ui-sans-serif,system-ui,sans-serif;font-weight:800;font-size:13px;color:var(--accent);flex-shrink:0;width:34px;padding-top:3px}
+.num-item h3{margin:0 0 6px;font-size:19px}
+.num-item p{margin:0;font-size:15px;color:var(--muted)}
+
+/* phase / rhythm cards */
+.phase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0}
+@media(max-width:680px){.phase-grid{grid-template-columns:1fr 1fr}}
+.phase-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 14px;text-align:center}
+.phase-card .pn{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;color:var(--accent);font-weight:800;letter-spacing:.08em}
+.phase-card h4{margin:6px 0 4px;font-size:15.5px}
+.phase-card p{margin:0;font-size:12.8px;color:var(--muted)}
+.phase-detail{margin:14px 0;padding:18px 20px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px}
+.phase-detail h4{margin:0 0 6px;font-size:17px}
+.phase-detail p{margin:0;font-size:14.8px;color:var(--muted)}
+
+/* pricing */
+.price-card{background:var(--panel);border:2px solid var(--brand);border-radius:18px;padding:30px 26px;box-shadow:var(--shadow);margin:28px 0}
+.price-card .badge{display:inline-block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;font-weight:800;letter-spacing:.08em;background:var(--brand);color:#fff;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.stack{margin:18px 0;display:flex;flex-direction:column;gap:10px}
+.stack-item{display:flex;justify-content:space-between;gap:10px;font-size:14.5px;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.stack-item:last-child{border-bottom:none}
+.stack-item .val{font-family:ui-sans-serif,system-ui,sans-serif;color:var(--muted);white-space:nowrap;font-size:12.5px}
+.total-line{display:flex;justify-content:space-between;font-family:ui-sans-serif,system-ui,sans-serif;font-weight:700;font-size:14px;margin:14px 0 4px;color:var(--muted)}
+.price-tag{font-size:44px;font-weight:700;margin:6px 0 2px}
+.price-note{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--muted);margin-bottom:18px}
+
+/* faq */
+details.faq{border-bottom:1px solid var(--line);padding:16px 0}
+details.faq summary{cursor:pointer;list-style:none;font-weight:700;font-size:16px;display:flex;justify-content:space-between;gap:10px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--accent);font-size:20px}
+details.faq[open] summary::after{content:"–"}
+details.faq p{margin:10px 0 0;color:var(--muted);font-size:15px}
+
+/* founder note */
+.founder-note{background:var(--accent-bg);border-radius:16px;padding:28px 26px;margin:28px 0;font-size:16px}
+.founder-note .who{margin-top:14px;font-family:ui-sans-serif,system-ui,sans-serif;font-weight:700;font-size:14px;color:var(--accent)}
+
+/* footer */
+footer{padding:40px 0 60px;text-align:center}
+.disc{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;color:var(--muted);max-width:620px;margin:0 auto 18px;line-height:1.6}
+.finePrint{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;color:var(--muted)}
+
+/* sticky bottom bar (mobile-friendly nudge) */
+.stickybar{position:sticky;bottom:0;background:rgba(247,244,238,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:12px 0;text-align:center;z-index:20}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="word">ROOTED</span>
+    <a href="#pricing" class="btn">Enroll Now</a>
+  </div>
+</nav>
+
+<div class="hero wrap">
+  <div class="kicker">Whole Woman Lab presents</div>
+  <h1>ROOTED</h1>
+  <div class="sub">A year inside your own constitution — not someone else's health advice.</div>
+  <p class="body">Every wellness plan you've tried was built for a body that isn't yours. ROOTED is where you finally understand your own — through Traditional Chinese Medicine and Ayurveda together — and build a year of care around it, month by month.</p>
+  <a href="#pricing" class="btn lg">Enroll in ROOTED →</a>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow center">Before we go further</div>
+    <h2 class="display center">Show me the health advice you've already tried,</h2>
+    <p class="lead center" style="color:var(--muted)">and I'll show you why it never quite held.</p>
+    <p class="lead">Not because you didn't try hard enough. Because almost everything handed to you — the supplement stack, the elimination diet, the influencer's morning routine — was designed for an average body. Not yours.</p>
+    <div class="taplist" id="taplist">
+      <label class="tap" data-i="1"><span class="box"></span><span>You've followed a "clean eating" plan exactly and still felt bloated, tired, or foggy.</span></label>
+      <label class="tap" data-i="2"><span class="box"></span><span>You've been told your labs are "normal" while you still don't feel like yourself.</span></label>
+      <label class="tap" data-i="3"><span class="box"></span><span>You've taken a quiz once, gotten a result, and then quietly forgotten what to do with it a month later.</span></label>
+      <label class="tap" data-i="4"><span class="box"></span><span>Your energy, mood, skin or cycle shift with the seasons — but your health advice never does.</span></label>
+      <label class="tap" data-i="5"><span class="box"></span><span>You've paid for a program that gave you information, but never taught you how to keep reading your own body.</span></label>
+    </div>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <div class="eyebrow">The real problem</div>
+    <h2 class="display">Every woman has a Constitution.</h2>
+    <p class="lead">In Traditional Chinese Medicine it's your pattern — Qi, Blood, Yin, Yang, damp, heat, stagnation. In Ayurveda it's your dosha — Vata, Pitta, Kapha. Two different languages describing the same thing: the underlying blueprint that decides how you digest, sleep, cycle, recover from stress, and respond to food, weather and the seasons.</p>
+    <p class="lead">Most wellness advice never asks what your constitution is. It hands you someone else's template and calls it a protocol. ROOTED starts from the opposite direction — your body first, then the plan.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow center">What you get inside</div>
+    <h2 class="display center">ROOTED.</h2>
+    <p class="lead center" style="color:var(--muted)">Twelve months of Root Cause Club, upgraded into a complete year of ongoing diagnosis, education and support.</p>
+
+    <div class="num-item">
+      <div class="n">01</div>
+      <div><h3>Your Integrated Constitution Report</h3><p>A full personal report generated by the Whole Woman diagnostic engine — the same clinical-reasoning system used in our 1:1 Diagnostic — mapping your root pattern, secondary patterns, and what to prioritise first.</p></div>
+    </div>
+    <div class="num-item">
+      <div class="n">02</div>
+      <div><h3>Monthly Rotating Assessment</h3><p>One month you're re-assessed through TCM; the next, through Ayurveda. Across the year you see your body through both lenses, and watch your own pattern shift with the seasons instead of guessing at it once and moving on.</p></div>
+    </div>
+    <div class="num-item">
+      <div class="n">03</div>
+      <div><h3>Monthly Live Class</h3><p>A live monthly session breaking down that month's theme, your rotating assessment, and how to apply it — nutrition, herbs, and lifestyle, explained in plain language.</p></div>
+    </div>
+    <div class="num-item">
+      <div class="n">04</div>
+      <div><h3>The Root Cause Club Community</h3><p>A full year of access to the community space, so you're never applying any of this alone.</p></div>
+    </div>
+    <div class="num-item">
+      <div class="n">05</div>
+      <div><h3>Progress Tracking</h3><p>See your pattern move over the year — which findings resolved, which are still active, and what to watch next — instead of a single static snapshot.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <div class="eyebrow center">How the year is structured</div>
+    <h2 class="display center">The ROOTED Rhythm.</h2>
+    <div class="phase-grid">
+      <div class="phase-card"><div class="pn">PHASE 1</div><h4>Discover</h4><p>Baseline constitution report</p></div>
+      <div class="phase-card"><div class="pn">PHASE 2</div><h4>Correct</h4><p>Root-cause protocol, live classes</p></div>
+      <div class="phase-card"><div class="pn">PHASE 3</div><h4>Recalibrate</h4><p>Mid-year reassessment</p></div>
+      <div class="phase-card"><div class="pn">PHASE 4</div><h4>Sustain</h4><p>Integrate into a lasting rhythm</p></div>
+    </div>
+    <div class="phase-detail">
+      <h4>Phase 1 — Discover</h4>
+      <p>Your first full Integrated Constitution Report — your root pattern, secondary patterns, and what deserves attention first, before you change a single habit.</p>
+    </div>
+    <div class="phase-detail">
+      <h4>Phase 2 — Correct</h4>
+      <p>Monthly live classes translate that report into a food, herb and lifestyle plan you can actually follow — one root cause at a time, not everything at once.</p>
+    </div>
+    <div class="phase-detail">
+      <h4>Phase 3 — Recalibrate</h4>
+      <p>Your rotating monthly assessments resurface what's shifted. Bodies change with seasons, stress and cycles — ROOTED is built to notice that instead of working from a single report all year.</p>
+    </div>
+    <div class="phase-detail">
+      <h4>Phase 4 — Sustain</h4>
+      <p>By the end of the year, reading your own constitution is a skill you carry with you — with a full year of tracked data behind it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="eyebrow center">Your investment</div>
+    <h2 class="display center">Join ROOTED.</h2>
+    <div class="price-card">
+      <div class="badge">12 MONTHS · FULL ACCESS</div>
+      <div class="stack">
+        <div class="stack-item"><span>Your Integrated Constitution Report</span><span class="val">$997 value</span></div>
+        <div class="stack-item"><span>12 Monthly Rotating Assessments (TCM + Ayurveda)</span><span class="val">$1,997 value</span></div>
+        <div class="stack-item"><span>12 Monthly Live Classes</span><span class="val">$2,400 value</span></div>
+        <div class="stack-item"><span>Root Cause Club Community (12 months)</span><span class="val">$576 value</span></div>
+        <div class="stack-item"><span>Year-Long Progress Tracking</span><span class="val">$497 value</span></div>
+      </div>
+      <div class="total-line"><span>Valued at</span><span>$6,467</span></div>
+      <div class="price-tag">$5,000</div>
+      <div class="price-note">Pay in full, one payment</div>
+      <a href="#" class="btn lg" style="width:100%;text-align:center">Enroll in ROOTED →</a>
+      <p class="sans" style="text-align:center;font-size:13px;color:var(--muted);margin-top:14px">or 4 payments of $1,500 (total $6,000) — <a href="#" style="text-decoration:underline">choose the payment plan</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <div class="eyebrow center">Before you go</div>
+    <h2 class="display center">Questions worth asking.</h2>
+
+    <details class="faq">
+      <summary>I already took the free Constitution Mini Quiz. Why do I need this?</summary>
+      <p>The free quiz gives you a snapshot. ROOTED gives you the full diagnostic report, then a whole year of watching that pattern move with your seasons, cycle and life — plus the monthly class and community to actually act on it.</p>
+    </details>
+    <details class="faq">
+      <summary>I don't know anything about TCM or Ayurveda. Is this over my head?</summary>
+      <p>No — everything is explained in plain language as you go. You don't need to arrive knowing the terms; that's what the monthly classes are for.</p>
+    </details>
+    <details class="faq">
+      <summary>What's the difference between Root Cause Club and ROOTED?</summary>
+      <p>Root Cause Club is the monthly membership on its own. ROOTED is the full year, with your Integrated Constitution Report and progress tracking built in from day one — it's a different, more complete commitment, not just a longer subscription.</p>
+    </details>
+    <details class="faq">
+      <summary>Is this a replacement for seeing a doctor?</summary>
+      <p>No. ROOTED is educational — it teaches you to understand your own constitution and apply food, herb and lifestyle strategy around it. It is not a diagnosis of disease and does not replace medical care. Please continue working with your physician for any medical concern, and always disclose new supplements or herbs to your care team.</p>
+    </details>
+    <details class="faq">
+      <summary>What if I want more direct, personal support?</summary>
+      <p>That's what the Whole Woman Diagnostic™ and Whole Woman Clinical Partnership™ are for — a deeper 1:1 diagnostic experience and ongoing personal guidance. Many ROOTED members go on to book one of those when they're ready for that level of attention.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <!-- FOUNDER NOTE — REPLACE with your own words. Left as a template, not invented. -->
+    <div class="founder-note">
+      <div class="eyebrow">a note from the founder</div>
+      <p>[Replace this paragraph with a short, personal note in your own voice — why you built ROOTED, what you kept seeing in clients that made a single quiz or a one-off report feel incomplete, and what you want a member to feel by the end of the year.]</p>
+      <div class="who">— Vandana, Whole Woman Lab</div>
+    </div>
+  </div>
+</section>
+
+<div class="stickybar">
+  <a href="#pricing" class="btn lg">Enroll in ROOTED →</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="disc">ROOTED is an educational programme offered by Whole Woman Lab. The information provided is for personal and educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified physician with any questions regarding a medical condition, and before starting any new supplement, herb, or lifestyle protocol. Individual results vary.</p>
+    <p class="finePrint">© 2026 Whole Woman Lab · All Rights Reserved</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tap').forEach(t=>{
+  t.addEventListener('click', ()=> t.classList.toggle('on'));
+});
+</script>
+</body>
+</html>
