@@ -175,6 +175,9 @@ section:not(.dark) .numsection .bignum{color:rgba(74,20,32,.045)}
 .tier-price .tier-amount{font-family:var(--font-display);font-style:italic;font-weight:600;font-size:38px;color:var(--oxblood);margin:6px 0 2px}
 .tier-price .tier-amount-note{font-family:var(--font-sans);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .tier-price .tier-plan{font-family:var(--font-sans);font-size:12px;color:var(--muted);margin-bottom:16px}
+.pay-options{display:flex;flex-direction:column;align-items:stretch;gap:10px;width:100%;margin-top:16px}
+.pay-options .or{font-family:var(--font-sans);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pay-options .plan-note{font-family:var(--font-sans);font-size:11px;color:var(--muted);margin-top:-2px}
 
 /* faq */
 details.faq{border-bottom:1px solid var(--line-dark);padding:20px 0}
@@ -332,8 +335,13 @@ body{padding-bottom:78px}
           <div class="tier-price">
             <div class="valued-at">Valued at <s>$15,473</s></div>
             <div class="tier-amount">$4,999</div>
-            <div class="tier-amount-note">Pay in full</div>
-            <a href="#" class="btn solid block">Join VIP →</a>
+            <div class="tier-amount-note">Choose how you'd like to pay</div>
+            <div class="pay-options">
+              <a href="https://rzp.io/rzp/wwacademy4VIPfull" target="_blank" rel="noopener" class="btn solid block">Pay In Full — $4,999 →</a>
+              <span class="or">or</span>
+              <a href="https://rzp.io/rzp/wwacademy4VIPpart" target="_blank" rel="noopener" class="btn block">Payment Plan — 4 × $1,250 →</a>
+              <span class="plan-note">4 quarterly payments, $5,000 total</span>
+            </div>
           </div>
         </div>
       </div>
@@ -354,8 +362,13 @@ body{padding-bottom:78px}
           <div class="tier-price">
             <div class="valued-at">Valued at <s>$8,485</s></div>
             <div class="tier-amount">$2,900</div>
-            <div class="tier-amount-note">Pay in full</div>
-            <a href="#" class="btn solid block">Join Standard →</a>
+            <div class="tier-amount-note">Choose how you'd like to pay</div>
+            <div class="pay-options">
+              <a href="https://rzp.io/rzp/wwacademy4fullstandard" target="_blank" rel="noopener" class="btn solid block">Pay In Full — $2,900 →</a>
+              <span class="or">or</span>
+              <a href="https://rzp.io/rzp/wwlacademy4partstandard" target="_blank" rel="noopener" class="btn block">Payment Plan — 4 × $725 →</a>
+              <span class="plan-note">4 quarterly payments, $2,900 total</span>
+            </div>
           </div>
         </div>
       </div>
