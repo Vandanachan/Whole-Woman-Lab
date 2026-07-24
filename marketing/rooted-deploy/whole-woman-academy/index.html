@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whole Woman Academy — Whole Woman Lab</title>
+<!--
+  ============================================================================
+  HOW TO USE THIS FILE
+  ============================================================================
+  1. NAME: finalized as "Whole Woman Academy" (shorthand "the Academy" is
+     used in a few buttons/headings for brevity).
+  2. DESIGN: colors, fonts and alignment are modeled on the reference page at
+     support.thejamiesea.com/start-page (deep oxblood/cream palette, serif
+     display type with italic emphasis, left-aligned hero, scrolling ticker
+     band, numbered two-column sections). Copy is original.
+  3. PRICING: Standard $2,900 / VIP $4,999, both pay-in-full, per Vandana's
+     direction. No payment-plan split is shown since none was specified —
+     add one (e.g. "or 4 payments of $X") if you want to offer it.
+  4. FOUNDER NOTE: search for "FOUNDER NOTE — REPLACE" and swap in your own
+     words — it's left as a clearly-marked template rather than invented.
+  5. TESTIMONIALS / STATS: none are included, on purpose — do not add fake
+     client quotes or numbers. Swap in real ones once you have them (there
+     are marked slots below where they'd go).
+  6. PUBLISHING: this file is deployed as a static site on Netlify.
+  ============================================================================
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --oxblood:#4a1420; --oxblood-2:#5c1a28; --oxblood-3:#3a0f19;
+  --cream:#f6f0e4; --cream-2:#efe6d4;
+  --ink:#2a1e17; --muted:#7a6a5c;
+  --on-dark:#f4eadd; --on-dark-muted:#d9b3a6;
+  --rose:#c98a6b; --rose-deep:#9c4a35;
+  --line-light:#e2d5bf; --line-dark:rgba(244,234,221,.18);
+  --shadow:0 1px 3px rgba(30,15,10,.08),0 16px 40px rgba(30,15,10,.14);
+  --font-display:"Playfair Display",Georgia,serif;
+  --font-body:"Lora",Georgia,serif;
+  --font-sans:"Inter",ui-sans-serif,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased}
+.sans{font-family:var(--font-sans)}
+em,i{font-style:italic;color:var(--rose-deep)}
+.dark em,.dark i{color:var(--rose)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.wrap-narrow{max-width:760px;margin:0 auto;padding:0 28px}
+.kicker{font-family:var(--font-sans);letter-spacing:.24em;text-transform:uppercase;font-size:11px;font-weight:600;color:var(--rose-deep)}
+.dark .kicker{color:var(--on-dark-muted)}
+a{color:inherit}
+section.dark{background:var(--oxblood);color:var(--on-dark)}
+section.dark .muted{color:var(--on-dark-muted)}
+.muted{color:var(--muted)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(246,240,228,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-light)}
+.nav-inner{max-width:1080px;margin:0 auto;padding:16px 28px;display:flex;justify-content:space-between;align-items:center}
+.nav-inner .word{font-family:var(--font-sans);font-weight:600;font-size:clamp(12px,3.6vw,14px);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:var(--ink)}
+
+/* buttons — outlined pill, Jamie-style */
+.btn{font-family:var(--font-sans);font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;white-space:nowrap;transition:.15s}
+.btn:hover{background:var(--ink);color:var(--cream)}
+.dark .btn, .hero .btn, .btn.on-dark{border-color:var(--on-dark);color:var(--on-dark)}
+.dark .btn:hover, .hero .btn:hover, .btn.on-dark:hover{background:var(--on-dark);color:var(--oxblood)}
+.btn.solid{background:var(--oxblood);border-color:var(--oxblood);color:var(--cream)}
+.btn.solid:hover{background:var(--oxblood-3);border-color:var(--oxblood-3)}
+.btn.solid-cream{background:var(--cream);border-color:var(--cream);color:var(--oxblood)}
+.btn.solid-cream:hover{background:#fff;border-color:#fff}
+.btn.lg{padding:17px 32px;font-size:12.5px}
+.btn.block{width:100%;justify-content:center}
+
+/* hero — two column, left aligned */
+.hero{background:var(--oxblood);color:var(--on-dark);padding:0}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:40px;min-height:560px}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;min-height:0}}
+.hero-copy{padding:88px 0 72px}
+@media(max-width:860px){.hero-copy{padding:64px 0 48px}}
+.hero h1{font-family:var(--font-display);font-size:clamp(38px,5.2vw,60px);line-height:1.08;margin:.28em 0 .3em;font-weight:600;max-width:11ch}
+.hero .sub{font-family:var(--font-body);font-style:italic;font-size:clamp(16px,2vw,19px);max-width:480px;margin:0 0 16px;color:var(--on-dark-muted)}
+.hero .body{max-width:460px;margin:0 0 30px;font-size:15.5px;color:var(--on-dark)}
+.hero-visual{position:relative;height:100%;min-height:420px;border-radius:2px;overflow:hidden;background:radial-gradient(circle at 68% 32%, var(--oxblood-2) 0%, var(--oxblood-3) 70%)}
+@media(max-width:860px){.hero-visual{min-height:260px}}
+.hero-visual svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* ticker / marquee band */
+.ticker{background:var(--cream);border-top:1px solid var(--line-light);border-bottom:1px solid var(--line-light);overflow:hidden;padding:16px 0}
+.ticker-track{display:flex;width:max-content;animation:scroll 32s linear infinite}
+.ticker-track span{font-family:var(--font-display);font-style:italic;font-size:clamp(16px,2.6vw,22px);color:var(--rose-deep);white-space:nowrap;padding:0 22px}
+.ticker-track span.dot{font-style:normal;color:var(--muted)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* generic section */
+section{padding:88px 0}
+@media(max-width:680px){section{padding:60px 0}}
+h2.display{font-family:var(--font-display);font-size:clamp(28px,4.4vw,42px);font-weight:600;line-height:1.18;margin:.15em 0 .5em;max-width:15ch}
+.eyebrow{font-family:var(--font-sans);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-deep);font-weight:700;margin-bottom:10px}
+.dark .eyebrow{color:var(--on-dark-muted)}
+p.lead{font-size:16.5px}
+.center{text-align:center}
+
+/* numbered two-column section (like Jamie's "NO. 01") */
+.numsection{position:relative;overflow:hidden}
+.numsection .bignum{position:absolute;top:-.28em;left:-.02em;font-family:var(--font-display);font-size:clamp(160px,26vw,340px);font-weight:700;color:rgba(244,234,221,.06);line-height:1;user-select:none;pointer-events:none}
+section:not(.dark) .numsection .bignum{color:rgba(74,20,32,.045)}
+.numsection .inner{position:relative;z-index:1}
+.numsection .lead-block{max-width:640px;margin-bottom:40px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+@media(max-width:820px){.two-col{grid-template-columns:1fr}}
+
+/* tappable "feels true" list */
+.tap-card{background:var(--cream);color:var(--ink);border-radius:14px;padding:22px 22px 8px;box-shadow:var(--shadow)}
+.tap-card .taphead{display:flex;justify-content:space-between;align-items:center;font-family:var(--font-sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--rose-deep);margin-bottom:14px}
+.taplist{display:flex;flex-direction:column}
+.tap{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line-light);cursor:pointer;font-size:14.5px;transition:.12s}
+.tap:last-child{border-bottom:none}
+.tap .box{flex-shrink:0;width:17px;height:17px;border:1.5px solid var(--muted);border-radius:50%;margin-top:2px;transition:.12s}
+.tap.on .box{background:var(--rose-deep);border-color:var(--rose-deep)}
+.tap.on span:last-child{color:var(--ink)}
+
+/* numbered "what you get" items */
+.num-item{display:flex;gap:20px;padding:26px 0;border-bottom:1px solid var(--line-light)}
+.num-item:last-child{border-bottom:none}
+.num-item .n{font-family:var(--font-display);font-style:italic;font-weight:700;font-size:22px;color:var(--rose-deep);flex-shrink:0;width:44px;padding-top:2px}
+.num-item h3{margin:0 0 6px;font-size:19px;font-family:var(--font-display);font-weight:600}
+.tier-tag{display:inline-block;font-family:var(--font-sans);font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--rose-deep);background:var(--cream-2);border:1px solid var(--rose);border-radius:999px;padding:2px 8px;margin-left:8px;vertical-align:middle}
+.num-item p{margin:0;font-size:15px;color:var(--muted)}
+
+/* phase / rhythm cards */
+.phase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:8px 0 28px}
+@media(max-width:680px){.phase-grid{grid-template-columns:1fr 1fr}}
+.phase-card{background:rgba(244,234,221,.06);border:1px solid var(--line-dark);border-radius:12px;padding:18px 16px;text-align:center}
+.phase-card .pn{font-family:var(--font-sans);font-size:10.5px;color:var(--on-dark-muted);font-weight:700;letter-spacing:.1em}
+.phase-card h4{margin:8px 0 4px;font-size:16px;font-family:var(--font-display);font-weight:600}
+.phase-card p{margin:0;font-size:12.5px;color:var(--on-dark-muted)}
+.phase-detail{margin:14px 0;padding:20px 22px;background:rgba(244,234,221,.05);border:1px solid var(--line-dark);border-left:3px solid var(--rose);border-radius:8px}
+.phase-detail h4{margin:0 0 6px;font-size:17px;font-family:var(--font-display);font-weight:600}
+.phase-detail p{margin:0;font-size:14.5px;color:var(--on-dark-muted)}
+
+/* pricing */
+.price-card{background:var(--cream);color:var(--ink);border:1.5px solid var(--oxblood);border-radius:4px;padding:36px 34px;box-shadow:var(--shadow);margin:32px 0;max-width:560px}
+.price-card .badge{display:inline-block;font-family:var(--font-sans);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--oxblood);color:var(--cream);padding:6px 14px;border-radius:999px;margin-bottom:18px}
+.stack{margin:18px 0;display:flex;flex-direction:column;gap:11px}
+.stack-item{display:flex;justify-content:space-between;gap:10px;font-size:14.5px;padding-bottom:11px;border-bottom:1px dashed var(--line-light)}
+.stack-item:last-child{border-bottom:none}
+.stack-item .val{font-family:var(--font-sans);color:var(--muted);white-space:nowrap;font-size:12px}
+.total-line{display:flex;justify-content:space-between;font-family:var(--font-sans);font-weight:700;font-size:13px;margin:16px 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.price-tag{font-family:var(--font-display);font-style:italic;font-size:48px;font-weight:600;margin:4px 0 2px;color:var(--oxblood)}
+.price-note{font-family:var(--font-sans);font-size:12.5px;color:var(--muted);margin-bottom:22px}
+
+/* two-tier VIP / Standard cards */
+.tier-stack{display:flex;flex-direction:column;gap:28px;margin:36px 0}
+.tier-card{position:relative;background:var(--cream);color:var(--ink);border:1.5px solid var(--oxblood);border-radius:4px;overflow:hidden;box-shadow:var(--shadow)}
+.tier-card.featured{border-color:var(--rose-deep)}
+.tier-card .ribbon{position:absolute;top:22px;right:-46px;width:190px;background:var(--rose-deep);color:var(--cream);font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 0;text-align:center;transform:rotate(45deg);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.tier-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:0}
+@media(max-width:760px){.tier-grid{grid-template-columns:1fr}}
+.tier-info{padding:34px 32px;border-right:1px solid var(--line-light)}
+@media(max-width:760px){.tier-info{border-right:none;border-bottom:1px solid var(--line-light)}}
+.tier-info h3{font-family:var(--font-display);font-size:24px;font-weight:600;margin:0 0 12px}
+.tier-info .tier-desc{font-size:14.5px;color:var(--muted);margin:0 0 20px;line-height:1.6}
+.tier-checklist{display:flex;flex-direction:column;gap:12px}
+.check-item{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-family:var(--font-sans);font-size:12px;letter-spacing:.03em;padding-bottom:10px;border-bottom:1px dashed var(--line-light)}
+.check-item:last-child{border-bottom:none;padding-bottom:0}
+.check-item .check-label{position:relative;flex:1;color:var(--ink);text-transform:uppercase;font-weight:600}
+.check-item .check-label::before{content:"✓ ";color:var(--rose-deep)}
+.check-item .check-val{flex-shrink:0;color:var(--muted);white-space:nowrap;text-transform:uppercase}
+.check-item.pending .check-label,.check-item.pending .check-val{color:var(--muted);font-style:italic;text-transform:none;font-weight:500}
+.check-item.pending .check-label::before{content:"+ "}
+.tier-price{padding:34px 30px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:rgba(74,20,32,.03)}
+.tier-price .valued-at{font-family:var(--font-sans);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tier-price .valued-at s{margin-left:4px}
+.tier-price .tier-amount{font-family:var(--font-display);font-style:italic;font-weight:600;font-size:38px;color:var(--oxblood);margin:6px 0 2px}
+.tier-price .tier-amount-note{font-family:var(--font-sans);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tier-price .tier-plan{font-family:var(--font-sans);font-size:12px;color:var(--muted);margin-bottom:16px}
+
+/* faq */
+details.faq{border-bottom:1px solid var(--line-dark);padding:20px 0}
+details.faq summary{cursor:pointer;list-style:none;font-weight:600;font-size:17px;font-family:var(--font-display);display:flex;justify-content:space-between;gap:10px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--rose);font-size:20px;font-family:var(--font-sans)}
+details.faq[open] summary::after{content:"–"}
+details.faq p{margin:12px 0 0;color:var(--on-dark-muted);font-size:15px;font-family:var(--font-body)}
+
+/* founder note */
+.founder-note{background:var(--cream-2);border-left:3px solid var(--rose-deep);border-radius:4px;padding:34px 32px;margin:8px 0;font-size:17px;font-family:var(--font-display);font-style:italic;line-height:1.55}
+.founder-note .who{margin-top:18px;font-family:var(--font-sans);font-weight:700;font-size:13px;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--rose-deep)}
+
+/* footer */
+footer{padding:48px 0 110px;text-align:center;background:var(--cream)}
+.disc{font-family:var(--font-sans);font-size:11.5px;color:var(--muted);max-width:620px;margin:0 auto 18px;line-height:1.6}
+.finePrint{font-family:var(--font-sans);font-size:11px;color:var(--muted);letter-spacing:.04em}
+
+/* sticky bottom bar */
+.stickybar{position:fixed;left:0;right:0;bottom:0;background:var(--oxblood);border-top:1px solid var(--line-dark);padding:14px 0;z-index:20}
+.stickybar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.stickybar .price-line{font-family:var(--font-sans);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-dark-muted)}
+@media(max-width:560px){.stickybar .price-line{display:none}}
+body{padding-bottom:78px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="word">Whole Woman Academy</span>
+    <a href="#pricing" class="btn">Enroll Now</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="kicker">Whole Woman Lab presents</div>
+      <h1>Show me the health advice you've already tried.</h1>
+      <p class="sub">And I'll show you where you've been living by someone else's blueprint.</p>
+      <p class="body">Every wellness plan you've tried was built for a body that isn't yours. Whole Woman Academy is where you finally understand your own — through Traditional Chinese Medicine and Ayurveda together — and build a year of care around <em>it</em>, month by month.</p>
+      <a href="#pricing" class="btn lg">Enroll in the Academy →</a>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="230" cy="150" r="120" fill="none" stroke="rgba(244,234,221,.22)" stroke-width="1"/>
+        <circle cx="230" cy="150" r="86" fill="none" stroke="rgba(244,234,221,.16)" stroke-width="1"/>
+        <circle cx="230" cy="150" r="50" fill="none" stroke="rgba(201,138,107,.5)" stroke-width="1.2"/>
+        <path d="M110 330 C 150 260, 190 380, 230 300 S 320 260, 340 330" fill="none" stroke="rgba(244,234,221,.25)" stroke-width="1.2"/>
+        <path d="M90 300 C 90 230, 160 230, 160 300 C 160 370, 90 370, 90 300 Z" fill="none" stroke="rgba(201,138,107,.4)" stroke-width="1"/>
+        <path d="M300 300 C 300 230, 370 230, 370 300 C 370 370, 300 370, 300 300 Z" fill="none" stroke="rgba(244,234,221,.18)" stroke-width="1"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Whose constitution are you actually living by?</span><span class="dot">•</span>
+    <span>Whose constitution are you actually living by?</span><span class="dot">•</span>
+    <span>Whose constitution are you actually living by?</span><span class="dot">•</span>
+    <span>Whose constitution are you actually living by?</span><span class="dot">•</span>
+    <span>Whose constitution are you actually living by?</span><span class="dot">•</span>
+    <span>Whose constitution are you actually living by?</span><span class="dot">•</span>
+  </div>
+</div>
+
+<section class="dark numsection">
+  <div class="bignum">01</div>
+  <div class="wrap inner">
+    <div class="lead-block">
+      <div class="eyebrow">No. 01 · Your Constitution</div>
+      <h2 class="display">Every woman has a <em>Constitution</em>.</h2>
+      <p class="lead muted">Not because you didn't try hard enough. Because almost everything handed to you — the supplement stack, the elimination diet, the influencer's morning routine — was designed for an average body. Not yours.</p>
+    </div>
+    <div class="two-col">
+      <div class="tap-card">
+        <div class="taphead"><span>Tap the ones that feel true</span><span class="sans" id="tapcount">0 of 5</span></div>
+        <div class="taplist" id="taplist">
+          <label class="tap" data-i="1"><span class="box"></span><span>You've followed a "clean eating" plan exactly and still felt bloated, tired, or foggy.</span></label>
+          <label class="tap" data-i="2"><span class="box"></span><span>You've been told your labs are "normal" while you still don't feel like yourself.</span></label>
+          <label class="tap" data-i="3"><span class="box"></span><span>You've taken a quiz once, gotten a result, and forgotten what to do with it a month later.</span></label>
+          <label class="tap" data-i="4"><span class="box"></span><span>Your energy, mood, skin or cycle shift with the seasons — but your health advice never does.</span></label>
+          <label class="tap" data-i="5"><span class="box"></span><span>You've paid for a program that gave you information, but never taught you to read your own body.</span></label>
+        </div>
+      </div>
+      <div>
+        <p>In Traditional Chinese Medicine it's your <em>pattern</em> — Qi, Blood, Yin, Yang, damp, heat, stagnation. In Ayurveda it's your <em>dosha</em> — Vata, Pitta, Kapha. Two languages describing the same thing: the underlying blueprint that decides how you digest, sleep, cycle, recover from stress, and respond to food, weather and the seasons.</p>
+        <p>Most wellness advice never asks what your constitution is. It hands you someone else's template and calls it a protocol. <strong>Whole Woman Academy starts from the opposite direction — your body first, then the plan.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="numsection">
+  <div class="bignum">02</div>
+  <div class="wrap inner">
+    <div class="lead-block center" style="margin-left:auto;margin-right:auto;text-align:center">
+      <div class="eyebrow center">No. 02 · What's Inside</div>
+      <h2 class="display center" style="max-width:none">Whole Woman Academy.</h2>
+      <p class="lead muted">The method is the same for every member. VIP adds direct, personal time with Vandana across the year.</p>
+    </div>
+
+    <div class="wrap-narrow" style="padding:0">
+      <div class="num-item">
+        <div class="n">01</div>
+        <div><h3>Your Integrated Constitution Report</h3><p>A full personal report generated by the Whole Woman diagnostic engine — the same clinical-reasoning system used in our 1:1 Diagnostic — mapping your root pattern, secondary patterns, and what to prioritise first.</p></div>
+      </div>
+      <div class="num-item">
+        <div class="n">02</div>
+        <div><h3>Academy Community</h3><p>A full year of access to the community space, so you're never applying any of this alone.</p></div>
+      </div>
+      <div class="num-item">
+        <div class="n">03</div>
+        <div><h3>Personalised Support Inside Community <span class="tier-tag">VIP</span></h3><p>Closer, more direct support from Vandana inside the community space, not just the general room.</p></div>
+      </div>
+      <div class="num-item">
+        <div class="n">04</div>
+        <div><h3>Monthly Live (1 Hour) <span class="tier-tag">VIP</span></h3><p>A live monthly hour with Vandana to work through your report and how to apply it.</p></div>
+      </div>
+      <div class="num-item">
+        <div class="n">05</div>
+        <div><h3>Private HTMA Reading <span class="tier-tag">VIP</span></h3><p>A one-on-one reading of your Hair Tissue Mineral Analysis results with Vandana.</p></div>
+      </div>
+      <div class="num-item">
+        <div class="n">06</div>
+        <div><h3>Private Tongue Reading <span class="tier-tag">VIP</span></h3><p>A one-on-one tongue diagnosis reading with Vandana.</p></div>
+      </div>
+      <div class="num-item">
+        <div class="n">07</div>
+        <div><h3>Direct Access Messaging <span class="tier-tag">VIP</span></h3><p>Message Vandana directly throughout the year, rather than through the community space alone.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark numsection">
+  <div class="bignum">03</div>
+  <div class="wrap inner">
+    <div class="lead-block center" style="margin-left:auto;margin-right:auto;text-align:center;max-width:640px">
+      <div class="eyebrow center">No. 03 · The Rhythm</div>
+      <h2 class="display center" style="max-width:none">The <em>Academy</em> Rhythm.</h2>
+    </div>
+    <div class="phase-grid">
+      <div class="phase-card"><div class="pn">PHASE 1</div><h4>Discover</h4><p>Baseline constitution report</p></div>
+      <div class="phase-card"><div class="pn">PHASE 2</div><h4>Correct</h4><p>Apply it inside the community</p></div>
+      <div class="phase-card"><div class="pn">PHASE 3</div><h4>Recalibrate</h4><p>Private readings <span class="tier-tag" style="margin-left:4px">VIP</span></p></div>
+      <div class="phase-card"><div class="pn">PHASE 4</div><h4>Sustain</h4><p>Integrate into a lasting rhythm</p></div>
+    </div>
+    <div class="phase-detail">
+      <h4>Phase 1 — Discover</h4>
+      <p>Your first full Integrated Constitution Report — your root pattern, secondary patterns, and what deserves attention first, before you change a single habit.</p>
+    </div>
+    <div class="phase-detail">
+      <h4>Phase 2 — Correct</h4>
+      <p>You translate that report into a food, herb and lifestyle plan you can actually follow inside the Academy Community — one root cause at a time, not everything at once. VIP members work through it live with Vandana every month.</p>
+    </div>
+    <div class="phase-detail">
+      <h4>Phase 3 — Recalibrate</h4>
+      <p>Bodies change with seasons, stress and cycles. VIP members get a private HTMA and tongue reading to resurface what's shifted; Standard members can track changes for themselves inside the community.</p>
+    </div>
+    <div class="phase-detail">
+      <h4>Phase 4 — Sustain</h4>
+      <p>By the end of the year, reading your own constitution is a skill you carry with you.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="eyebrow center">No. 04 · Your Investment</div>
+    <h2 class="display center" style="max-width:none">Join <em>Whole Woman</em> Academy.</h2>
+    <p class="lead center" style="color:var(--muted);max-width:640px;margin-left:auto;margin-right:auto">Every member gets the method: your Integrated Constitution Report and a full year inside the Academy Community. VIP adds direct, personal support alongside it.</p>
+
+    <div class="tier-stack">
+      <div class="tier-card featured">
+        <div class="ribbon">Most Popular</div>
+        <div class="tier-grid">
+          <div class="tier-info">
+            <h3>Whole Woman Academy <em>VIP</em></h3>
+            <p class="tier-desc">Everything in Standard, plus closer, personal support across the year — live time with Vandana, private readings, and direct messaging access.</p>
+            <div class="tier-checklist">
+              <div class="check-item"><span class="check-label">Your Integrated Constitution Report</span></div>
+              <div class="check-item"><span class="check-label">Academy Community (12 months)</span></div>
+              <div class="check-item"><span class="check-label">Personalised Support Inside Community</span></div>
+              <div class="check-item"><span class="check-label">Monthly Live (1 Hour)</span></div>
+              <div class="check-item"><span class="check-label">Private HTMA Reading</span></div>
+              <div class="check-item"><span class="check-label">Private Tongue Reading</span></div>
+              <div class="check-item"><span class="check-label">Direct Access Messaging</span></div>
+            </div>
+          </div>
+          <div class="tier-price">
+            <div class="tier-amount">$4,999</div>
+            <div class="tier-amount-note">Pay in full</div>
+            <a href="#" class="btn solid block">Join VIP →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-grid">
+          <div class="tier-info">
+            <h3>Whole Woman Academy <em>Standard</em></h3>
+            <p class="tier-desc">The method, on its own — your report and a full year inside the Academy Community. No monthly live, private readings, or personalised support.</p>
+            <div class="tier-checklist">
+              <div class="check-item"><span class="check-label">Your Integrated Constitution Report</span></div>
+              <div class="check-item"><span class="check-label">Academy Community (12 months)</span></div>
+            </div>
+          </div>
+          <div class="tier-price">
+            <div class="tier-amount">$2,900</div>
+            <div class="tier-amount-note">Pay in full</div>
+            <a href="#" class="btn solid block">Join Standard →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap-narrow">
+    <div class="eyebrow center">No. 05 · Before You Go</div>
+    <h2 class="display center" style="max-width:none">Questions worth asking.</h2>
+
+    <details class="faq">
+      <summary>I already took the free Constitution Mini Quiz. Why do I need this?</summary>
+      <p>The free quiz gives you a snapshot. Whole Woman Academy gives you the full diagnostic report, then a whole year inside the Academy Community to actually act on it — and if you join VIP, a monthly live hour with Vandana to work through it together.</p>
+    </details>
+    <details class="faq">
+      <summary>I don't know anything about TCM or Ayurveda. Is this over my head?</summary>
+      <p>No — everything in your report and inside the Academy Community is explained in plain language. VIP members also get a monthly live hour with Vandana to walk through it in real time.</p>
+    </details>
+    <details class="faq">
+      <summary>What's the difference between Standard and VIP?</summary>
+      <p>Both include your Integrated Constitution Report and a full year inside the Academy Community — that's the method. VIP adds personal, direct support on top: personalised attention inside the community, a monthly live hour, a private HTMA reading, a private tongue reading, and direct messaging access to Vandana.</p>
+    </details>
+    <details class="faq">
+      <summary>Is this a replacement for seeing a doctor?</summary>
+      <p>No. Whole Woman Academy is educational — it teaches you to understand your own constitution and apply food, herb and lifestyle strategy around it. It is not a diagnosis of disease and does not replace medical care. Please continue working with your physician for any medical concern, and always disclose new supplements or herbs to your care team.</p>
+    </details>
+    <details class="faq">
+      <summary>What if I want more direct, personal support?</summary>
+      <p>That's exactly what VIP is for. If you want an even deeper 1:1 experience beyond the Academy year, the Whole Woman Diagnostic™ and Whole Woman Clinical Partnership™ are there too.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap-narrow">
+    <!-- FOUNDER NOTE — REPLACE with your own words. Left as a template, not invented. -->
+    <div class="founder-note">
+      <p>"[Replace this paragraph with a short, personal note in your own voice — why you built Whole Woman Academy, what you kept seeing in clients that made a single quiz or a one-off report feel incomplete, and what you want a member to feel by the end of the year.]"</p>
+      <div class="who">— Vandana, Whole Woman Lab</div>
+    </div>
+  </div>
+</section>
+
+<div class="stickybar">
+  <div class="wrap">
+    <span class="price-line">Whole Woman Academy · Standard $2,900 · VIP $4,999</span>
+    <a href="#pricing" class="btn solid-cream lg">Enroll Now →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap-narrow">
+    <p class="disc">Whole Woman Academy is an educational programme offered by Whole Woman Lab. The information provided is for personal and educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified physician with any questions regarding a medical condition, and before starting any new supplement, herb, or lifestyle protocol. Individual results vary.</p>
+    <p class="finePrint">© 2026 Whole Woman Lab · All Rights Reserved</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tap').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    t.classList.toggle('on');
+    const n = document.querySelectorAll('.tap.on').length;
+    const el = document.getElementById('tapcount');
+    if(el) el.textContent = n + ' of 5';
+  });
+});
+</script>
+</body>
+</html>
