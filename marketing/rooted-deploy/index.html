@@ -149,6 +149,31 @@ section:not(.dark) .numsection .bignum{color:rgba(74,20,32,.045)}
 .price-tag{font-family:var(--font-display);font-style:italic;font-size:48px;font-weight:600;margin:4px 0 2px;color:var(--oxblood)}
 .price-note{font-family:var(--font-sans);font-size:12.5px;color:var(--muted);margin-bottom:22px}
 
+/* two-tier VIP / Standard cards */
+.tier-stack{display:flex;flex-direction:column;gap:28px;margin:36px 0}
+.tier-card{position:relative;background:var(--cream);color:var(--ink);border:1.5px solid var(--oxblood);border-radius:4px;overflow:hidden;box-shadow:var(--shadow)}
+.tier-card.featured{border-color:var(--rose-deep)}
+.tier-card .ribbon{position:absolute;top:22px;right:-46px;width:190px;background:var(--rose-deep);color:var(--cream);font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 0;text-align:center;transform:rotate(45deg);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.tier-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:0}
+@media(max-width:760px){.tier-grid{grid-template-columns:1fr}}
+.tier-info{padding:34px 32px;border-right:1px solid var(--line-light)}
+@media(max-width:760px){.tier-info{border-right:none;border-bottom:1px solid var(--line-light)}}
+.tier-info h3{font-family:var(--font-display);font-size:24px;font-weight:600;margin:0 0 12px}
+.tier-info .tier-desc{font-size:14.5px;color:var(--muted);margin:0 0 20px;line-height:1.6}
+.tier-checklist{display:flex;flex-direction:column;gap:12px}
+.check-item{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-family:var(--font-sans);font-size:11.5px;letter-spacing:.03em}
+.check-item .check-label{position:relative;flex:1;overflow:hidden;white-space:nowrap;color:var(--ink);text-transform:uppercase;font-weight:600}
+.check-item .check-label::before{content:"✓ "}
+.check-item .check-val{flex-shrink:0;color:var(--muted);white-space:nowrap;text-transform:uppercase}
+.check-item.pending .check-label,.check-item.pending .check-val{color:var(--muted);font-style:italic;text-transform:none;font-weight:500}
+.check-item.pending .check-label::before{content:"+ "}
+.tier-price{padding:34px 30px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:rgba(74,20,32,.03)}
+.tier-price .valued-at{font-family:var(--font-sans);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tier-price .valued-at s{margin-left:4px}
+.tier-price .tier-amount{font-family:var(--font-display);font-style:italic;font-weight:600;font-size:38px;color:var(--oxblood);margin:6px 0 2px}
+.tier-price .tier-amount-note{font-family:var(--font-sans);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tier-price .tier-plan{font-family:var(--font-sans);font-size:12px;color:var(--muted);margin-bottom:16px}
+
 /* faq */
 details.faq{border-bottom:1px solid var(--line-dark);padding:20px 0}
 details.faq summary{cursor:pointer;list-style:none;font-weight:600;font-size:17px;font-family:var(--font-display);display:flex;justify-content:space-between;gap:10px}
@@ -313,20 +338,62 @@ body{padding-bottom:78px}
   <div class="wrap">
     <div class="eyebrow center">No. 04 · Your Investment</div>
     <h2 class="display center" style="max-width:none">Join <em>Whole Woman</em> Academy.</h2>
-    <div class="price-card" style="margin-left:auto;margin-right:auto">
-      <div class="badge">12 Months · Full Access</div>
-      <div class="stack">
-        <div class="stack-item"><span>Your Integrated Constitution Report</span><span class="val">$997 value</span></div>
-        <div class="stack-item"><span>12 Monthly Rotating Assessments (TCM + Ayurveda)</span><span class="val">$1,997 value</span></div>
-        <div class="stack-item"><span>12 Monthly Live Classes</span><span class="val">$2,400 value</span></div>
-        <div class="stack-item"><span>Root Cause Club Community (12 months)</span><span class="val">$576 value</span></div>
-        <div class="stack-item"><span>Year-Long Progress Tracking</span><span class="val">$497 value</span></div>
+    <p class="lead center" style="color:var(--muted);max-width:640px;margin-left:auto;margin-right:auto">Both options give you the complete Whole Woman Academy framework — your Integrated Constitution Report and a full year of monthly diagnosis, education and support. The difference is how much personal access and support you want alongside it.</p>
+
+    <!--
+      VIP TIER — PLACEHOLDER: Vandana said she'll specify the additional
+      VIP-only benefits and price separately. Until then, this card repeats
+      the Standard inclusions plus one clearly-marked "pending" line instead
+      of inventing perks or a number. Replace the "pending" check-item and
+      the tier-amount below once the details are provided.
+    -->
+    <div class="tier-stack">
+      <div class="tier-card featured">
+        <div class="ribbon">Most Popular</div>
+        <div class="tier-grid">
+          <div class="tier-info">
+            <h3>Whole Woman Academy <em>VIP</em></h3>
+            <p class="tier-desc">Everything in Standard, plus closer, more direct access to Vandana across the year for members who want extra support while they work the Academy Rhythm. Full VIP breakdown coming soon.</p>
+            <div class="tier-checklist">
+              <div class="check-item"><span class="check-label">Your Integrated Constitution Report</span><span class="check-val">$997 value</span></div>
+              <div class="check-item"><span class="check-label">12 Monthly Rotating Assessments</span><span class="check-val">$1,997 value</span></div>
+              <div class="check-item"><span class="check-label">12 Monthly Live Classes</span><span class="check-val">$2,400 value</span></div>
+              <div class="check-item"><span class="check-label">Academy Community (12 months)</span><span class="check-val">$576 value</span></div>
+              <div class="check-item"><span class="check-label">Year-Long Progress Tracking</span><span class="check-val">$497 value</span></div>
+              <div class="check-item pending"><span class="check-label">Additional VIP-only benefits</span><span class="check-val">details soon</span></div>
+            </div>
+          </div>
+          <div class="tier-price">
+            <div class="valued-at">Valued at <s>$6,467+</s></div>
+            <div class="tier-amount" style="font-size:26px">Pricing coming soon</div>
+            <div class="tier-plan">Join the waitlist to hear first</div>
+            <a href="#" class="btn solid block">Join VIP Waitlist →</a>
+          </div>
+        </div>
       </div>
-      <div class="total-line"><span>Valued at</span><span>$6,467</span></div>
-      <div class="price-tag">$5,000</div>
-      <div class="price-note">Pay in full, one payment</div>
-      <a href="#" class="btn solid block lg">Enroll in the Academy →</a>
-      <p class="sans" style="text-align:center;font-size:12.5px;color:var(--muted);margin-top:16px">or 4 payments of $1,500 (total $6,000) — <a href="#" style="text-decoration:underline">choose the payment plan</a></p>
+
+      <div class="tier-card">
+        <div class="tier-grid">
+          <div class="tier-info">
+            <h3>Whole Woman Academy <em>Standard</em></h3>
+            <p class="tier-desc">If you're ready to stop guessing at your own body and finally understand your constitution, Standard gives you the complete Whole Woman Academy framework to do exactly that.</p>
+            <div class="tier-checklist">
+              <div class="check-item"><span class="check-label">Your Integrated Constitution Report</span><span class="check-val">$997 value</span></div>
+              <div class="check-item"><span class="check-label">12 Monthly Rotating Assessments</span><span class="check-val">$1,997 value</span></div>
+              <div class="check-item"><span class="check-label">12 Monthly Live Classes</span><span class="check-val">$2,400 value</span></div>
+              <div class="check-item"><span class="check-label">Academy Community (12 months)</span><span class="check-val">$576 value</span></div>
+              <div class="check-item"><span class="check-label">Year-Long Progress Tracking</span><span class="check-val">$497 value</span></div>
+            </div>
+          </div>
+          <div class="tier-price">
+            <div class="valued-at">Valued at <s>$6,467</s></div>
+            <div class="tier-amount">$5,000</div>
+            <div class="tier-amount-note">Pay in full</div>
+            <div class="tier-plan">or 4 payments of $1,500 (total $6,000)</div>
+            <a href="#" class="btn solid block">Join Standard →</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
